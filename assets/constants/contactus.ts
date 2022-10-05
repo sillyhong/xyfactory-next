@@ -108,3 +108,6 @@ export const ProductCategories = [
     path: 'waterproof-seal',
   },
 ];
+
+const test = '123'
+export default test;
