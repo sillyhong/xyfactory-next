@@ -24,3 +24,15 @@ a {
     background: black;
   }
 }
+
+.iconbox {
+  width: 60px;
+  height: 60px;
+  margin-left: 3px;
+  
+}
+
+.iconbox .icon  {
+  width: 60px;
+  height: 60px;
+}

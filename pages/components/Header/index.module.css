@@ -1,0 +1,19 @@
+.navigatorMargin {
+    margin-bottom: 30px;
+}
+
+
+.svgStyle {
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    transform: rotate(-180deg);
+    margin-top: -1px;
+    enable-background: new 0 0 1440 126;
+
+
+}
+
+.pathStyle {
+    fill: #116efd !important
+}
