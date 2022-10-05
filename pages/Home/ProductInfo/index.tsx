@@ -1,10 +1,10 @@
 // import Card from 'react-bootstrap/Card';
 import styles from './index.module.css';
 import Image from 'next/image';
-import hot1 from '../../../assets/images/hot/hot1.jpg';
-import hot2 from '../../../assets/images/hot/hot2.jpg';
-import hot3 from '../../../assets/images/hot/hot3.jpg';
-import hot4 from '../../../assets/images/hot/hot4.jpg';
+import hot1 from '../../../assets/images/hot/hot-1.jpg';
+import hot2 from '../../../assets/images/hot/hot-2.jpg';
+import hot3 from '../../../assets/images/hot/hot-3.jpg';
+import hot4 from '../../../assets/images/hot/hot-4.jpg';
 import { useMemo } from 'react';
 
 
