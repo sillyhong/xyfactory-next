@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './index.module.css';
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -24,9 +25,11 @@ const Header = () => {
               </a>
             </div>
             <div className="col align-self-bottom align-items-right text-right h-max-380 h-xl-560 position-relative z-index-1">
-              <img
-                src="http://placeimg.com/640/480"
+              <Image
+                src={require('../../../assets/images/logo.png')}
                 className="rounded img-fluid"
+                layout='fill'
+                alt='product'
               />
             </div>
           </div>

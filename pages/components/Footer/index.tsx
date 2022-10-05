@@ -30,7 +30,7 @@ function FooterComp() {
               <small className="d-block mt-3 text-muted">
                 ©{getCurrentYear}
                 Anchor Bootstrap UI Kit, by Sal{' '}
-                <a target="_blank" href="https://www.wowthemes.net">
+                <a target="_blank" href="https://www.wowthemes.net" rel="noreferrer">
                   @wowthemesnet
                 </a>
                 . License MIT.

@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 // import Image from 'react-bootstrap/Image';
 import Image from 'next/image'
-import Logo from '../../../assets/images/logo.png';
+import Logo from '../../../assets/images/logo.svg';
 import styles from './index.module.css';
 
 function Navigator() {
@@ -15,8 +15,8 @@ function Navigator() {
       <Container fluid>
         <Navbar.Brand href="/">
           <div className={styles.logo}>
-            <Image src={Logo} width={100} height={100} />
-            XYHardWareFactory
+            <Image src={Logo} width={60} height={60} alt='logo' />
+            <div className={styles.logoDesc}>XYHardWareFactory</div>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />

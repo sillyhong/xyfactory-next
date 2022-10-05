@@ -3,6 +3,13 @@
     align-items: center;
     animation: animate 3s linear infinite;
 }
+.logo img {
+  border-radius: 50%;
+}
+
+.logoDesc {
+  margin-left: 8px;
+}
 
 
 @keyframes animate {

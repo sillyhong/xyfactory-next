@@ -11,7 +11,7 @@ function ContactusComp() {
             can use it for personal, commercial & client projects.{' '}
             <a
               target="_blank"
-              href="https://www.wowthemes.net/freebies-license/"
+              href="https://www.wowthemes.net/freebies-license/" rel="noreferrer"
             >
               License.
             </a>
@@ -20,7 +20,7 @@ function ContactusComp() {
         <div className="text-center">
           {/* facebook */}
 
-          <a target="_blank" href="https://twitter.com/wowthemesnet">
+          <a target="_blank" href="https://twitter.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle  text-white mr-1"
               data-toggle="tooltip"
@@ -50,7 +50,7 @@ function ContactusComp() {
           </a>
           {/* tiktok */}
 
-          <a target="_blank" href="https://github.com/wowthemesnet">
+          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle  text-white mr-1"
               data-toggle="tooltip"
@@ -80,7 +80,7 @@ function ContactusComp() {
           </a>
           {/* wechat */}
 
-          <a target="_blank" href="https://github.com/wowthemesnet">
+          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle  text-white mr-1"
               data-toggle="tooltip"
@@ -109,7 +109,7 @@ function ContactusComp() {
           </a>
           {/* instagram */}
 
-          <a target="_blank" href="https://github.com/wowthemesnet">
+          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle text-white mr-1"
               data-toggle="tooltip"
@@ -139,7 +139,7 @@ function ContactusComp() {
 
           {/* email */}
 
-          <a target="_blank" href="https://github.com/wowthemesnet">
+          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle text-white mr-1"
               data-toggle="tooltip"
@@ -169,7 +169,7 @@ function ContactusComp() {
 
           {/* whatsapp */}
 
-          <a target="_blank" href="https://github.com/wowthemesnet">
+          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
             <span
               className="iconbox iconmedium rounded-circle text-white mr-1"
               data-toggle="tooltip"
