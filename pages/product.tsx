@@ -1,7 +1,7 @@
 import React, { useMemo } from 'react';
 import type { NextPage } from 'next'
-import PageContainer from './components/PageContainer';
-import ProductComp from './Product/index';
+import PageContainer from '@components/PageContainer';
+import ProductComp from '@pagerenders/ProductPage/index';
 
 
 const Product: NextPage = () => {

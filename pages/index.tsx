@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import { useMemo } from 'react';
-import PageContainer from './components/PageContainer';
-import CarouselComp from './components/Carousel';
-import HotProducts from './Home/HotProducts';
-import ProductInfo from './Home/ProductInfo';
-import carousel1 from '../assets/images/carousel-1.jpg';
-import carousel2 from '../assets/images/carousel-2.jpg';
-import carousel3 from '../assets/images/carousel-3.jpg';
-import carousel4 from '../assets/images/carousel-4.jpg';
+import PageContainer from '@components/PageContainer';
+import CarouselComp from '@components/Carousel';
+import HotProducts from '@pagerenders/Home/HotProducts';
+import ProductInfo from '@pagerenders/Home/ProductInfo';
+import carousel1 from '@assets/images/carousel-1.jpg';
+import carousel2 from '@assets/images/carousel-2.jpg';
+import carousel3 from '@assets/images/carousel-3.jpg';
+import carousel4 from '@assets/images/carousel-4.jpg';
 
 
 

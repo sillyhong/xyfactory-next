@@ -1,6 +1,6 @@
 import React, { useMemo } from 'react';
 import type { NextPage } from 'next'
-import PageContainer from './components/PageContainer';
+import PageContainer from '@components/PageContainer';
 
 
 const ContactUsComp = () => {
