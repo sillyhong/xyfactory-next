@@ -81,11 +81,10 @@
 
 import React from 'react';
 import PageContainer from '../components/PageContainer';
-import CarouselComp from './Carousel';
+import CarouselComp from '../components/Carousel';
 import ProductInfo from './ProductInfo';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import '../assets/css/fontawesome.css';
 
 const HomeComp = () => {
   return (

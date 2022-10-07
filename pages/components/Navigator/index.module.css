@@ -1,3 +1,9 @@
+.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+}
+
 .logo {
     display: flex;
     align-items: center;
@@ -25,4 +31,9 @@
     75% {
       text-shadow: -1.5px 1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
     }
+  }
+
+  .NavDropdown a{
+    color: rgba(33.37.41.1);
+    text-decoration: none;
   }

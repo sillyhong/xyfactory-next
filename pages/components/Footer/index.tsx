@@ -1,5 +1,6 @@
 import React from 'react';
-import { ContactUs, ProductCategories } from '../../../assets/constants/contactus';
+import { ContactUs  } from '../../constants/contactus';
+import { ProductCategories  } from '../../constants/index';
 import styles from './index.module.css';
 
 function FooterComp() {

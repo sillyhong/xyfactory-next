@@ -1,15 +1,31 @@
-import React from 'react';
-import PageContainer from '../components/PageContainer';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from 'react';
+import { useRouter } from "next/router";
+import ProductList from "./ProductList";
+import ProductDetail from "./ProductDetail";
 
-const ProductComp = () => {
-  return <div>about us </div>;
-};
-
-const HomePage = PageContainer(ProductComp);
 
 const Product = () => {
-  return <HomePage />;
+  const router = useRouter();
+  const { asPath = '' } = router || {}
+  const [hasHash, setHasHash] = useState(false)
+  useEffect(()=>{
+    const hasHash = asPath?.includes('#')
+    if(hasHash) {
+      setHasHash(true)
+    } else {
+      setHasHash(false)
+    }
+  },[router])
+
+  
+  // product?page=2
+  // product?id=xxx
+  if(hasHash){
+    const id = asPath.substring(9)
+    return <ProductDetail id={id}/>
+  } else {
+    return <ProductList/>;
+  }
 };
 
 export default Product;

@@ -1,17 +1,1 @@
-.sectionWrapper {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.sectionWrapper .hotProductWrapper {
-   margin: 20px 0;
-  
-}
-
-.sectionWrapper .hotProductWrapper:hover {
-  transform: scale(1.05);
-  transition: all 0.5s;
-}
-
-
 

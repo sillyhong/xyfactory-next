@@ -7,7 +7,6 @@ import Head from 'next/head';
 
 function PageContainer(Component: any) {
   return class Hoc extends React.Component {
-
     render() {
       const Header = () => {
         return (

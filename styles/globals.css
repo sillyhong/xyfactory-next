@@ -1,3 +1,8 @@
+--root{
+  　　--Colors:#dfdfdf;
+     --DefaultColor: #502c6c; 
+  }
+
 html,
 body {
   padding: 0;
@@ -36,4 +41,81 @@ a {
 .iconbox .icon  {
   width: 60px;
   height: 60px;
+}
+
+
+/* section wrapper */
+.sectionWrapper {
+  margin-left: 80px;
+  margin-right: 80px;
+}
+
+.sectionWrapper .hotProductWrapper {
+   margin: 20px 0;
+  
+}
+
+.sectionWrapper .hotProductWrapper:hover {
+  transform: scale(1.05);
+  transition: all 0.5s;
+}
+
+.sectionWrapper .hotProductWrapper .card-title {
+  color: black;
+}
+
+.sectionWrapper .hotProductWrapper  .card-body{
+  margin-top: -20px;
+  /* max-width: 80% !important;
+  min-width: 80% !important;
+  max-height: 80% !important;
+  min-height: 80% !important; */
+}
+
+.sectionWrapper .customCardTitle {
+  color:  var(--bs-gray-dark);
+  font-size: 15px;
+  font-weight: bolds;
+}
+
+.divider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 1px;
+  background-color: var(--bs-primary);
+  margin: 8px 0;
+}
+
+
+/* productinfo detail */
+.product-detail-wrapper {
+  margin: 30px !important;
+}
+
+.product-info-table tr {
+  width: 600px;
+}
+
+
+@media (max-width: 576px) {
+  .sectionWrapper {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .product-detail-wrapper {
+    margin: 0 !important;
+  }
+  
+
+  .product-info-table tr {
+    width: 400px;
+  }
+
+  .product-info-table tr td {
+    width: 300px;
+    word-break: break-all;
+  }
 }
