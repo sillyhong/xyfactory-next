@@ -13,22 +13,27 @@ function ProductInfo() {
       {
         src: hot1,
         title: 'Glass Door Handle',
-        desc: 'Glass Door Handle'
+        desc: 'Glass Door Handle',
+        path: '/product#handle',
       },
       {
         src: hot2,
         title: 'Shower Hinges',
-        desc: 'Shower Hinges'
+        desc: 'Shower Hinges',
+        path: '/product#shower-hinge'
+
       },
       {
         src: hot3,
         title: 'Pipe Connector',
-        desc: 'Pipe Connector'
+        desc: 'Pipe Connector',
+        path: '/product#glass-connection'
       },
       {
         src: hot4,
         title: 'Door Knobs',
-        desc: 'Door Knobs'
+        desc: 'Door Knobs',
+        path: '/product#handle'
       },
     ]
   }, [])

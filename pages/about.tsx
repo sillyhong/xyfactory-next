@@ -1,24 +1,20 @@
 import React, { useMemo } from 'react';
 import type { NextPage } from 'next'
 import PageContainer from '@components/PageContainer';
+import AboutUsPage from '@pagerenders/AboutUs';
 
-
-const ContactUsComp = () => {
-  return <div>about us </div>;
-};
 
 
 const ContactUs: NextPage = () => {
 
   const ContactUsPage = useMemo(() => {
-    return PageContainer(ContactUsComp);
+    return PageContainer(AboutUsPage);
   }, [])
 
   return (
       <ContactUsPage />
   )
 }
-
 
 export default ContactUs
 

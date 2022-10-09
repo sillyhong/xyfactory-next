@@ -31,17 +31,7 @@ a {
   }
 }
 
-.iconbox {
-  width: 60px;
-  height: 60px;
-  margin-left: 3px;
-  
-}
 
-.iconbox .icon  {
-  width: 60px;
-  height: 60px;
-}
 
 
 /* section wrapper */
@@ -74,9 +64,18 @@ a {
 
 .sectionWrapper .customCardTitle {
   color:  var(--bs-gray-dark);
+  margin: 10px 0;
   font-size: 15px;
   font-weight: bolds;
 }
+.sectionWrapper .carousel .carousel-indicators button {
+  background-color: var(--bs-gray-600);
+}
+.sectionWrapper .carousel .carousel-control-prev .carousel-control-prev-icon,
+.sectionWrapper .carousel .carousel-control-next .carousel-control-next-icon {
+  background-color: var(--bs-gray-600);
+}
+
 
 .divider {
   display: flex;
@@ -88,6 +87,19 @@ a {
   margin: 8px 0;
 }
 
+.default-margin-top {
+  margin-top: 48px;
+}
+
+
+/* carousel-inner  */
+.carousel-inner  span {
+  max-height: 700px;
+}
+
+.carousel-inner  img {
+  object-fit:revert;
+}
 
 /* productinfo detail */
 .product-detail-wrapper {
@@ -98,6 +110,75 @@ a {
   width: 600px;
 }
 
+.product-info-table tr td {
+  word-break: break-all;
+}
+/* about page */
+.aboutus-wrapper > span {
+  display: block !important;
+}
+
+/* .aboutus-wrapper  img {
+  height: 400px !important;
+  object-fit: revert;
+} */
+
+/* contact page */
+.iconbox {
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: 3px;
+  
+}
+
+
+.iconbox .icon  {
+  width: 60px;
+  height: 60px;
+}
+
+.contactus-iconbox {
+  margin-top: 4px;
+  width: 30px;
+  height: 30px;
+}
+
+.contactus-iconbox .icon  {
+  width: 30px;
+  height: 30px;
+  margin-right: 8px;
+}
+
+.bs-popover-top .popover-header{
+  background-color: var(--bs-dark);
+  color: white;
+  border-radius: 4px;
+}
+.bs-popover-top .popover-arrow:after {
+  border-top-color: var(--bs-dark)!important;
+}
+
+/* list group */
+.row .list-group-item+.list-group-item.active {
+  margin-top: 0;
+  border-top-width: 0;
+}
+
+
+
+/* btn  */
+.row .btn,
+.card .btn {
+  padding: 0.35rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  border-radius: 0.25rem;
+  border-width: 0;
+}
+.btn-round {
+  border-radius: 30px !important;
+}
 
 @media (max-width: 576px) {
   .sectionWrapper {

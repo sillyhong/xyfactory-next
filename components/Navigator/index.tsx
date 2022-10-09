@@ -69,6 +69,7 @@ function Navigator() {
                 })
               }
             </NavDropdown>
+            <Nav.Link href="/portfolio" active={pathname === '/portfolio'}>Portfolio</Nav.Link>
             <Nav.Link href="/about" active={pathname === '/about'}>About Us</Nav.Link>
             <Nav.Link href="/contact" active={pathname === '/contact'}>Contact Us</Nav.Link>
           </Nav>
@@ -79,7 +80,7 @@ function Navigator() {
               className="me-2"
               aria-label="Search"
             />
-            <Button variant="primary">Search</Button>
+            <Button variant="primary" className="btn-round">Search</Button>
           </Form>
         </Navbar.Collapse>
       </Container>

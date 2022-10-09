@@ -1,0 +1,6 @@
+.customCardTitle {
+    color: var(--bs-gray-dark);
+    margin: 20px 0;
+    font-size: 15px;
+    font-weight: bolds;
+}

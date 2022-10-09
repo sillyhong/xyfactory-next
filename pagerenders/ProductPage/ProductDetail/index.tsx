@@ -43,7 +43,7 @@ function ProductDetail({ id }: any) {
         <>
             <div className='row d-flex flex-row-reverse sectionWrapper product-detail-wrapper'>
                 {renderProductDetail}
-                <div className="col-lg-3">
+                <div className="col-lg-3 row">
                     <ProductMenu handleMenuClick={handleMenuClick}/>
                 </div>
             </div>

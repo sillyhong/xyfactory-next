@@ -23,7 +23,8 @@
         "@pages/*": ["./pages/*"],
         "@pagerenders/*": ["./pagerenders/*"],
         "@papublicges/*": ["./public/*"],
-        "@styles/*": ["./styles/*"]
+        "@styles/*": ["./styles/*"],
+        "@utils/*": ["./utils/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

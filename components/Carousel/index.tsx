@@ -2,7 +2,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image'
 
 
-function CarouselComp({carouselList}:any) {
+function CarouselComp({carouselList, isMobile}:any) {
 
   return (
     <Carousel>
@@ -12,8 +12,8 @@ function CarouselComp({carouselList}:any) {
             <Carousel.Item key={item.title + index}>
             <Image src={item.src} alt={item.title || ''}/>
             <Carousel.Caption>
-              {item.title && <h3>{item.title}</h3>}
-              {item.desc && <p>{item.desc}</p>}
+              {item.title && !isMobile && <h3>{item.title}</h3>}
+              {item.desc && !isMobile && <p>{item.desc}</p>}
             </Carousel.Caption>
           </Carousel.Item>
           )

@@ -42,7 +42,10 @@ function FooterComp() {
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
-                    <li key={item.label + index}>
+                    <li key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
+                      <span className='icon'>
+                      {item.icon()}
+                      </span>
                       <a className="text-muted" href="#">
                         {item.label}
                       </a>

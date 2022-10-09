@@ -3,6 +3,7 @@ import { Button } from 'react-bootstrap'
 import Image from 'next/image'
 import { ProductInfos } from '../../../../../constants/productInfo'
 import { ProductCategoriesKey } from '../../../../../constants/index'
+import styles from './index.module.css'
 
 
 function ProductItemList({ id, handleProductItemClick }: any) {
@@ -20,7 +21,7 @@ function ProductItemList({ id, handleProductItemClick }: any) {
 
     return (
         <section
-            className='pt-4 pb-5 sectionWrapper'
+            className='pt-4 pb-5'
             data-aos="fade-up"
         >
             <div className="row">
@@ -32,8 +33,8 @@ function ProductItemList({ id, handleProductItemClick }: any) {
                               <Image className="card-img" src={item.src} alt={item.desc} />
                               <div className=" d-flex align-items-center text-center">
                                 <div className="card-body d-flex flex-column justify-content-center align-items-center">
-                                  <h3 className='card-title customCardTitle'>{item.desc}</h3>
-                                  <Button variant="primary" onClick={()=>{handleItemClick(item)}}>Details</Button>
+                                  <h3 className={`card-title  ${styles.customCardTitle}`}>{item.desc}</h3>
+                                  <Button variant="primary" className="btn-round" onClick={()=>{handleItemClick(item)}}>Details</Button>
                                 </div>
                               </div>
                             </div>

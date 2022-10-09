@@ -14,7 +14,7 @@ function ProductMenu({handleMenuClick}: any) {
     
 
     return (
-        <>
+        <div className='col-lg-12'>
             <h5 className="h5 mb-4 d-flex justify-content-center fw-bold">Products Category</h5>
             <ListGroup>
                 {
@@ -27,7 +27,7 @@ function ProductMenu({handleMenuClick}: any) {
                     })
                 }
             </ListGroup>
-    </>
+    </div>
 
   );
 }
