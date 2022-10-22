@@ -1,9 +1,12 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next'
 import { ContactUs  } from '@constants/contactus';
 import { ProductCategories  } from '@constants/index';
 import styles from './index.module.css';
 
 function FooterComp() {
+  const { t} = useTranslation('common')
+  
   const getCurrentYear = new Date().getFullYear();
 
   return (
@@ -38,7 +41,7 @@ function FooterComp() {
               </small>
             </div>
             <div className="col-6 col-md">
-              <h5 className="mb-4 text-white">Contact Us</h5>
+              <h5 className="mb-4 text-white">{t('nav.nav_contact_us')}</h5>
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
@@ -55,12 +58,12 @@ function FooterComp() {
               </ul>
             </div>
             <div className="col-6 col-md">
-              <h5 className="mb-4 text-white">Product Categories</h5>
+              <h5 className="mb-4 text-white">{t('home_footer.product_categories')}</h5>
               <ul className="list-unstyled text-small">
                 {ProductCategories.map((item, index) => {
                   return (
                     <li key={item.label + index}>
-                      <a className="text-muted" href="#">
+                      <a className="text-muted" href={item.path}>
                         {item.label}
                       </a>
                     </li>
@@ -68,56 +71,6 @@ function FooterComp() {
                 })}
               </ul>
             </div>
-            {/* <div className="col-6 col-md">
-              <h5 className="mb-4 text-white">Utilities</h5>
-              <ul className="list-unstyled text-small">
-                <li>
-                  <a className="text-muted" href="#">
-                    Business
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Education
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Government
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Gaming
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div className="col-6 col-md">
-              <h5 className="mb-4 text-white">About</h5>
-              <ul className="list-unstyled text-small">
-                <li>
-                  <a className="text-muted" href="#">
-                    Team
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Locations
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Privacy
-                  </a>
-                </li>
-                <li>
-                  <a className="text-muted" href="#">
-                    Terms
-                  </a>
-                </li>
-              </ul>
-            </div> */}
           </div>
         </div>
       </footer>

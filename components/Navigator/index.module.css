@@ -17,6 +17,18 @@
   margin-left: 8px;
 }
 
+.dropdownLink a {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+}
+
+.dropdownLink a:hover, 
+.dropdownLink a:active {
+  background-color: inherit;
+
+}
+
 
 @keyframes animate {
     0%, 100% {

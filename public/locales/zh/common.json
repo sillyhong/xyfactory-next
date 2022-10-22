@@ -1,0 +1,52 @@
+{
+    "test": "中文123",
+    "factory_name": "祥盈五金",
+    "nav": {
+        "nav_home": "首页",
+        "nav_products": "产品分类",
+        "nav_about_us": "公司介绍",
+        "nav_contact_us": "联系我们",
+        "nav_portfolio": "客户案例展示",
+        "nav_search": "搜索",
+        "nav_language": {
+            "language": "语言",
+            "zh": "中文",
+            "en": "英文",
+            "arabic": "阿拉伯文"
+        }
+    },
+    "carousel": {
+        "title1": "追求高质量",
+        "desc1": "产品质量一直是祥盈永恒不变的追求", 
+        "title2": "出色的团队",
+        "desc2": "我们拥有先进的生产设备和一批技术娴熟的工人" ,
+        "title3": "有竞争力的价格",
+        "desc3": "作为工厂方，我们可以为您提供最实惠的产品价格" ,
+        "title4": "便捷的产品运输",
+        "desc4": "我们工厂有许多技术娴熟的员工，可以最大程度满足贵方的订单需求"
+    },
+    "home_sub_header": {
+        "about_us": "公司介绍"
+    },
+    "home_hot_product": {
+        "sub_title": "热卖产品"
+    },
+    "home_product_categories": {
+        "sub_title": "产品分类"
+    },
+    "home_about_us": {
+        "text_homepage_about_us": "<div class='home-aboutus'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，我们专注于客户服务、满意度和完美的工艺。我们拥有先进的生产设备和一批技术娴熟的员工，我们可以为您提供具有竞争力的价格和高品质的产品。 <br/> 我们有很多出口世界各地的经验，尤其是在加拿大、荷兰和澳大利亚。</br>我们欢迎所有关于家用、建筑、商用玻璃和铝制品的问询。<br/>如果您对我们的产品感兴趣，请随时与我们联系。</div>",
+        "text_view_more": "查看更多",
+        "sub_title": "祥盈五金"
+    },
+     "home_contact_us": {
+        "text_connect": "联系我们"
+     },
+     "home_footer": {
+        "product_categories": "产品分类"
+     },
+     "about_us": {
+        "text_company_profile": "公司简介",
+        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，我们专注于客户服务、满意度和完美的工艺。我们拥有先进的生产设备和一批技术娴熟的员工，我们可以为您提供具有竞争力的价格和高品质的产品。<br/> 们有很多出口世界各地的经验，尤其是在加拿大、荷兰和澳大利亚。</br>我们欢迎所有关于家用、建筑、商用玻璃和铝制品的问询。<br/>如果您对我们的产品感兴趣，请随时与我们联系。</div>"
+     }
+}

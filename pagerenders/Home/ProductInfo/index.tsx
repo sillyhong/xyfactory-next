@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import SectionHeader from '@components/SectionHeader';
 import hot1 from '@assets/images/hot/hot-1.jpg';
@@ -8,6 +9,8 @@ import hot4 from '@assets/images/hot/hot-4.jpg';
 
 
 function ProductInfo() {
+  const { t} = useTranslation('common')
+
   const hotProducts = useMemo(() => {
     return [
       {
@@ -44,7 +47,7 @@ function ProductInfo() {
         className='pt-4 pb-5 sectionWrapper'
         data-aos="fade-up"
       >
-       <SectionHeader title='Product Categories'/>
+       <SectionHeader title={t('home_product_categories.sub_title')}/>
         <div className="row">
           {
             hotProducts.map((item, index) => {

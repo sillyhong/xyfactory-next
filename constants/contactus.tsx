@@ -1,4 +1,8 @@
 import react from 'react';
+import tiktok from '@assets/images/contactus/tiktok.png';
+import instagram_self from '@assets/images/contactus/instagram_self.png';
+import whatsapp_self from '@assets/images/contactus/whatsapp_self.png';
+import whatsapp_other from '@assets/images/contactus/whatsapp_other.png';
 
 export const faceBookIcon = () => {
     return (
@@ -131,34 +135,66 @@ export const WhatsappIcon = () => {
 
 export const ContactUs = [
     {
-      value: '+8613124932180',
-      label: 'WhatsApp',
-      icon: WhatsappIcon,
+        label: 'WhatsApp',
+        icon: WhatsappIcon,
+        connects: [{
+            qrcode: whatsapp_self,
+            value: '+8613124932180',
+            name: 'xyhardware_manufactoty'
+        },{
+            qrcode: whatsapp_other,
+            value: '+8613827533255',
+            name: 'Alice'
+        }
+    ]
     },
     {
-      value: '+8613124932180',
-      label: 'FaceBook',
-      icon: faceBookIcon,
+        label: 'FaceBook',
+        icon: faceBookIcon,
+        connects: [
+            {
+                value: '+8618925071790'
+            },
+            {
+                value: '+8613827533255'
+            }
+        ]
     },
     {
-      value: '+8613124932180',
-      label: 'Instagram',
-      icon: InstagramIcon,
+        label: 'Instagram',
+        icon: InstagramIcon,
+        notShowInContactPage: true,
+        connects: [
+            {
+                qrcode: instagram_self,
+                value: '+8613124932180'
+            }
+        ]
     },
     {
-      value: '+8618925071790',
-      label: 'TikTok',
-      icon: TikTokIcon,
+        label: 'TikTok',
+        icon: TikTokIcon,
+        notShowInContactPage: true,
+        connects: [
+            {
+                value: '+8618925071790'
+            }
+        ]
     },
     {
-      value: '+8613124932180',
-      label: 'Wechat',
-      icon: WechatIcon,
+        label: 'Wechat',
+        icon: WechatIcon,
+        connects: [
+            {
+                value: '+8613124932180'
+            }
+        ]
+
     },
     {
         value: 'hotmail',
         label: 'Email',
         icon: EmailIcon,
-      },
-  ];
-  
+        notShowInContactPage: true
+    },
+];

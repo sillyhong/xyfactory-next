@@ -24,9 +24,6 @@ function ProductList() {
                     productIds.map((id, index) => {
                         //@ts-ignore
                         const item = ProductInfos[id]?.[0]
-                        console.log('====================================');
-                        console.log('id', id, 'item123', item);
-                        console.log('====================================');
 
                         return (
                             <div className='col-lg-3 hotProductWrapper' key={item.desc + index} onClick={() => { hanndleProductItemClick(id) }}>

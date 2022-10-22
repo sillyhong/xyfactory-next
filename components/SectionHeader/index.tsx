@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next'
 import styles from './index.module.css';
 
 
@@ -13,7 +14,9 @@ function SectionHeader({
   showDesc = true,
   showSperator = true,
   titleClass = 'justify-content-center',
+
 }: IProps) {
+  const { t} = useTranslation('common')
 
   return (
     <>
@@ -27,7 +30,7 @@ function SectionHeader({
     }
     
     {
-      showDesc && (<h4 className="h4 mb-4 d-flex justify-content-center fw-normal">Xiangying Hardware</h4>)
+      showDesc && (<h4 className="h4 mb-4 d-flex justify-content-center fw-normal">{t('home_about_us.sub_title')}</h4>)
     }
     </>
   );

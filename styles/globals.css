@@ -113,11 +113,25 @@ a {
 .product-info-table tr td {
   word-break: break-all;
 }
-/* about page */
+/* about us page */
 .aboutus-wrapper > span {
   display: block !important;
 }
 
+.home-aboutus {
+  /* font-weight: bold; */
+  /* font-size: 15px; */
+}
+
+.aboutus-custom::first-letter {
+  float: left;
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1;
+  color: var(--bs-primary);
+  text-shadow: 2px 2px 6px var(--bs-primary);
+  margin: -0.07em 0.1em -0.1em 0;
+}
 /* .aboutus-wrapper  img {
   height: 400px !important;
   object-fit: revert;

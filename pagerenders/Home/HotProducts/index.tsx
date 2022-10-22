@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next'
 import Image from 'next/image';
 import SectionHeader from '@components/SectionHeader';
 import hot1 from '@assets/images/hot/hot-1.jpg';
@@ -9,6 +10,7 @@ import { useMemo } from 'react';
 
 
 function ProductInfo() {
+  const { t} = useTranslation('common')
   const router = useRouter();
 
   const hotProducts = useMemo(() => {
@@ -51,7 +53,7 @@ function ProductInfo() {
         className='pt-4 pb-5 sectionWrapper'
         data-aos="fade-up"
       >
-       <SectionHeader title='Hot Products'/>
+       <SectionHeader title={t('home_hot_product.sub_title')}/>
         <div className="row">
           {
             hotProducts.map(item => {

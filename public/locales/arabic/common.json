@@ -1,0 +1,28 @@
+{
+    "test": "中文123",
+    "factory_name": "祥盈五金",
+    "nav": {
+        "nav_home": "首页",
+        "nav_products": "产品分类",
+        "nav_about_us": "公司介绍",
+        "nav_contact_us": "联系我们",
+        "nav_portfolio": "客户案例展示",
+        "nav_search": "搜索",
+        "nav_language": {
+            "language": "language",
+            "zh": "Chinese",
+            "en": "Englias",
+            "arabic": "Arabic"
+        }
+    },
+    "carousel": {
+        "title1": "追求高质量",
+        "desc1": "产品质量一直是祥盈永恒不变的追求",
+        "title2": "出色的团队",
+        "desc2": "我们拥有先进的生产设备和一批技术娴熟的工人",
+        "title3": "有竞争力的价格",
+        "desc3": "作为工厂方，我们可以为您提供最实惠的产品价格",
+        "title4": "便捷的产品运输",
+        "desc4": "我们工厂有许多技术娴熟的员工，可以最大程度满足贵方的订单需求"
+    }
+}

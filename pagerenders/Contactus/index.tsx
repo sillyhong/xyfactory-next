@@ -1,204 +1,105 @@
 import React from 'react';
+import Accordion from 'react-bootstrap/Accordion';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { ContactUs } from '@constants/contactus';
+import Image from 'next/image';
 
-function ContactusComp() {
+
+
+function Contactus() {
+  const handleFormSubmit = (e: any) => {
+    const form = e.currentTarget
+    const { formBasicName, formBasicEmail, formBasicTel, formBasicMessage} = form
+    e.preventDefault()
+    console.log('handleFormSubmit', { formBasicName: formBasicName.value, formBasicEmail: formBasicEmail.value, formBasicTel: formBasicTel.value, formBasicMessage: formBasicMessage.value });
+    // write info to file
+
+  }
+
+  const renderForm = () => {
+    return (
+      <Form onSubmit={handleFormSubmit} >
+
+        <Form.Group className="mb-3 col-md-6" controlId="formBasicName">
+          <Form.Label>Name</Form.Label>
+          <Form.Control required type="tesx" placeholder="Enter Name" />
+        </Form.Group>
+
+        <Form.Group className="mb-3 col-md-6" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control required type="email" placeholder="Enter email" />
+          <Form.Text className="text-muted d-block  mt-1">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+
+        <Form.Group className="mb-3 col-md-6" controlId="formBasicTel">
+          <Form.Label>Tel</Form.Label>
+          <Form.Control required type="telephone" placeholder="Enter Tel" />
+          <Form.Text className="text-muted  d-block  mt-1">
+            We'll never share your Tel with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3 col-md-6" controlId="formBasicMessage">
+          <Form.Label>Message</Form.Label>
+          <Form.Control as="textarea" rows={3} placeholder="Enter Message" />
+        </Form.Group>
+
+        {/* <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group> */}
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+    )
+  }
   return (
-    <div className="row justify-content-center mb-5 pb-3">
-      <div className="col-md-8">
-        <div className="text-center pt-5 mt-5 mb-5">
-          <h1 className="font-weight-light h3">
-            <strong>Anchor UI KIT</strong>, a project by Sal @WowThemes.net. You
-            can use it for personal, commercial & client projects.{' '}
-            <a
-              target="_blank"
-              href="https://www.wowthemes.net/freebies-license/" rel="noreferrer"
-            >
-              License.
-            </a>
-          </h1>
-        </div>
-        <div className="text-center">
-          {/* facebook */}
+    <>
+      <div className="row m-3">
+        <Accordion defaultActiveKey={['0']} alwaysOpen>
+          {ContactUs.map((item, index) => {
+            const { label, connects, notShowInContactPage } = item || {}
+            if (notShowInContactPage) return null
+            return (
+              <Accordion.Item eventKey={index + ''} key={item.label + index}>
+                <Accordion.Header>{label}</Accordion.Header>
+                <Accordion.Body>
+                  <div className='d-f justify-content-start'>
 
-          <a target="_blank" href="https://twitter.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle  text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Twitter"
-            >
-              {/* facebook */}
-              <svg
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="2360"
-                width="100%"
-                height="100%"
-                fill="#7832e2"
-                style={{ transform: 'scale(0.9)' }}
-              >
-                <path
-                  d="M1024 512c0-282.763636-229.236364-512-512-512C229.236364 0 0 229.236364 0 512s229.236364 512 512 512C794.763636 1024 1024 794.763636 1024 512zM374.504727 512 374.504727 414.021818l60.043636 0L434.548364 354.769455c0-79.918545 23.877818-137.495273 111.383273-137.495273l104.075636 0 0 97.745455-73.262545 0c-36.724364 0-45.056 24.389818-45.056 49.943273l0 49.058909 112.919273 0L629.201455 512l-97.512727 0 0 295.517091L434.548364 807.517091 434.548364 512 374.504727 512z"
-                  p-id="2361"
-                ></path>
-              </svg>
-              {/* <i className="fab fa-twitter"></i> */}
-            </span>
-          </a>
-          {/* tiktok */}
+                    {
+                      connects && connects.map((connect: any, connectIndex) => {
+                        const { name, value, qrcode } = connect || {}
+                        return (
+                          <div key={'code' + connectIndex} className="col-md-6">
+                            {name && <div className='fw-bold'>{name}</div>}
+                            {value && <div className='fw-bold '>{value}</div>}
+                            {qrcode && <Image src={qrcode} key={'code' + connectIndex} alt={label} />}
+                          </div>
+                        )
+                      })
+                    }
+                  </div>
+                </Accordion.Body>
+              </Accordion.Item>
+            )
+          })}
+        </Accordion>
 
-          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle  text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Github"
-            >
-              <svg
-                // t="1664894914245"
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="2613"
-                width="200"
-                height="200"
-                fill="#000"
-                style={{ transform: 'scale(1.15)' }}
-              >
-                <path
-                  d="M512 115.456c-219.004018 0-396.544 177.539982-396.544 396.542862 0 219.005156 177.539982 396.545138 396.544 396.545138 219.005156 0 396.544-177.539982 396.544-396.544 0-219.005156-177.538844-396.544-396.544-396.544z m260.551111 345.893547c-51.2 0.572302-98.986667-14.900338-141.084444-43.554134v201.151147c0 89.402027-61.031538 166.197476-147.566365 186.253084-118.055822 26.933476-217.911751-58.455609-230.519466-160.461937-13.181156-102.008604 51.817813-191.411769 151.534933-211.470791 19.484444-4.010667 47.922062-4.010667 63.850951-0.572303v107.738454c-4.551111-1.14688-8.906524-2.291484-13.490631-2.864925-38.968889-6.877867-76.662329 12.606578-92.136107 48.140516-15.471502 35.531662-5.093831 76.793173 26.428302 100.861724 26.361173 20.631324 55.622542 23.492836 85.420943 9.740516 29.800676-13.180018 45.681778-37.246293 49.120142-69.913031 0.57344-4.584107 0.408462-9.742791 0.408462-14.902614V224.664462c0-10.887396 0.362951-10.763378 11.251485-10.763378h85.39136c6.302151 0 8.597049 1.083164 9.170488 8.534472 4.582969 66.47808 55.066169 123.182649 119.823929 131.777422 6.877867 1.145742 14.436124 1.687324 22.400569 2.260764v104.874667H772.551111z"
-                  p-id="2614"
-                ></path>
-              </svg>
-              {/* <i className={`fab ${styles.faGithub}`}></i> */}
-            </span>
-          </a>
-          {/* wechat */}
-
-          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle  text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Github"
-            >
-              <svg
-                className="icon"
-                viewBox="0 0 1025 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="2556"
-                width="200"
-                height="200"
-                fill="#39ac13"
-                style={{ transform: 'scale(0.98)' }}
-              >
-                <path
-                  d="M1024.16 694.816c0-149.92-143.104-271.392-319.584-271.392-176.576 0-319.68 121.504-319.68 271.392S528 966.208 704.576 966.208c55.456 0 107.648-12.096 153.184-33.248l125.984 54.528-14.592-140.544c34.784-43.392 55.04-95.808 55.04-152.128zM596.832 621.28c-25.152 0-45.472-20.352-45.472-45.472s20.32-45.472 45.472-45.472c25.12 0 45.44 20.384 45.44 45.472s-20.384 45.472-45.44 45.472z m215.392 0c-25.056 0-45.44-20.352-45.44-45.472s20.384-45.472 45.44-45.472c25.184 0 45.536 20.384 45.536 45.472s-20.352 45.472-45.536 45.472zM704.576 387.488c49.376 0 96.416 8.8 139.264 24.64 0.32-5.728 0.992-11.232 0.992-16.992 0-198.08-189.152-358.624-422.432-358.624C189.184 36.512 0.032 197.024 0.032 395.136c0 74.496 26.816 143.776 72.704 201.12L53.472 781.92l166.432-72.096c41.216 19.2 86.784 32.16 134.88 38.784-3.616-17.504-5.824-35.424-5.824-53.792 0.032-169.44 159.552-307.296 355.616-307.296z m-139.808-209.6c33.184 0 60 26.88 60 60 0 33.184-26.816 60.064-60 60.064s-60.032-26.88-60.032-60.064c0-33.152 26.88-60 60.032-60zM280.032 297.952c-33.184 0-60-26.88-60-60.064 0-33.152 26.848-60 60-60 33.184 0 60.032 26.88 60.032 60s-26.88 60.064-60.032 60.064z"
-                  p-id="2557"
-                ></path>
-              </svg>
-              {/* <i className={`fab ${styles.faGithub}`}></i> */}
-            </span>
-          </a>
-          {/* instagram */}
-
-          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Github"
-            >
-              <svg
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="3524"
-                width="200"
-                height="200"
-                fill="#ee9d48"
-              >
-                <path
-                  d="M658.247863 512c0-80.566857-65.718857-146.285714-146.285714-146.285714s-146.285714 65.718857-146.285715 146.285714 65.718857 146.285714 146.285715 146.285714 146.285714-65.718857 146.285714-146.285714z m78.848 0c0 124.562286-100.571429 225.133714-225.133714 225.133714S286.828434 636.562286 286.828434 512 387.399863 286.866286 511.962149 286.866286s225.133714 100.571429 225.133714 225.133714z m61.732571-234.276571c0 29.147429-23.442286 52.553143-52.553143 52.553142S693.722149 306.834286 693.722149 277.723429s23.442286-52.553143 52.553142-52.553143 52.553143 23.442286 52.553143 52.553143zM511.962149 151.990857c-64 0-201.142857-5.156571-258.852572 17.700572-20.004571 8.009143-34.852571 17.700571-50.285714 33.133714s-25.161143 30.281143-33.133714 50.285714c-22.857143 57.709714-17.700571 194.852571-17.700572 258.852572s-5.156571 201.142857 17.700572 258.852571c8.009143 20.004571 17.700571 34.852571 33.133714 50.285714s30.281143 25.161143 50.285714 33.133715c57.709714 22.857143 194.852571 17.700571 258.852572 17.700571s201.142857 5.156571 258.852571-17.700571c20.004571-8.009143 34.852571-17.700571 50.285714-33.133715s25.161143-30.281143 33.133715-50.285714c22.857143-57.709714 17.700571-194.852571 17.700571-258.852571s5.156571-201.142857-17.700571-258.852572c-8.009143-20.004571-17.700571-34.852571-33.133715-50.285714s-30.281143-25.161143-50.285714-33.133714C713.105006 146.834286 575.962149 151.990857 511.962149 151.990857zM950.819291 512c0 60.562286 0.585143 120.576-2.852571 181.138286-3.437714 70.290286-19.419429 132.571429-70.838857 183.990857s-113.700571 67.437714-183.990857 70.838857c-60.562286 3.437714-120.576 2.852571-181.138286 2.852571s-120.576 0.585143-181.138286-2.852571c-70.290286-3.437714-132.571429-19.419429-183.990857-70.838857S79.431863 763.428571 76.03072 693.138286C72.593006 632.576 73.178149 572.562286 73.178149 512s-0.585143-120.576 2.852571-181.138286c3.437714-70.290286 19.419429-132.571429 70.838857-183.990857s113.700571-67.437714 183.990857-70.838857c60.562286-3.437714 120.576-2.852571 181.138286-2.852571s120.576-0.585143 181.138286 2.852571c70.290286 3.437714 132.571429 19.419429 183.990857 70.838857s67.437714 113.700571 70.838857 183.990857C951.404434 391.424 950.819291 451.437714 950.819291 512z"
-                  fill=""
-                  p-id="3525"
-                ></path>
-              </svg>
-              {/* <i className={`fab ${styles.faGithub}`}></i> */}
-            </span>
-          </a>
-
-          {/* email */}
-
-          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Github"
-            >
-              <svg
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="9709"
-                width="200"
-                height="200"
-                style={{ transform: 'scale(1.1)' }}
-              >
-                <path
-                  d="M860.177887 258.354116 179.3866 258.354116c-40.220027 0-72.941266 32.721239-72.941266 72.941266l0 437.652711c0 40.22105 32.721239 72.942289 72.941266 72.942289l680.791288 0c40.22105 0 72.943312-32.721239 72.943312-72.942289L933.1212 331.296405C933.1212 291.076378 900.399961 258.354116 860.177887 258.354116L860.177887 258.354116zM155.074891 768.949116 155.074891 340.619748 369.831047 555.37181l-0.208754 0L155.097404 769.900791C155.083078 769.58459 155.074891 769.270435 155.074891 768.949116L155.074891 768.949116zM190.209086 306.984696l659.147338 0L519.785314 636.560924 190.209086 306.984696 190.209086 306.984696zM404.111804 589.656661l115.673509 115.673509 116.257817-116.262934 204.189496 204.194612L200.50764 793.261848 404.111804 589.656661 404.111804 589.656661zM671.117974 555.37181l-1.379417 0 214.752062-214.752062 0 428.129824L671.117974 555.37181 671.117974 555.37181zM671.117974 555.37181"
-                  p-id="9710"
-                  fill="#33ec3d"
-                ></path>
-              </svg>
-              {/* <i className={`fab ${styles.faGithub}`}></i> */}
-            </span>
-          </a>
-
-          {/* whatsapp */}
-
-          <a target="_blank" href="https://github.com/wowthemesnet" rel="noreferrer">
-            <span
-              className="iconbox iconmedium rounded-circle text-white mr-1"
-              data-toggle="tooltip"
-              data-placement="top"
-              title=""
-              data-original-title="Follow Sal on Github"
-            >
-              <svg
-                className="icon"
-                viewBox="0 0 1024 1024"
-                version="1.1"
-                xmlns="http://www.w3.org/2000/svg"
-                p-id="11422"
-                width="200"
-                height="200"
-                style={{ transform: 'scale(0.85)' }}
-              >
-                <path
-                  d="M511.872427 0h0.256C794.45376 0 1024.000427 229.674667 1024.000427 512s-229.589333 512-511.872 512c-104.106667 0-200.704-31.018667-281.6-84.565333L33.707093 1002.325333l63.786667-190.250666A508.245333 508.245333 0 0 1 0.000427 512C0.000427 229.674667 229.58976 0 511.872427 0zM365.39776 281.429333c-9.770667-23.338667-17.194667-24.234667-32-24.832A285.525333 285.525333 0 0 0 316.50176 256c-19.285333 0-39.424 5.632-51.626667 18.048C250.155093 289.109333 213.33376 324.266667 213.33376 396.501333c0 72.149333 52.778667 141.952 59.861333 151.722667 7.424 9.728 102.912 160 251.093334 221.226667 115.925333 47.914667 150.314667 43.477333 176.725333 37.845333 38.528-8.277333 86.826667-36.693333 98.986667-70.954667 12.16-34.346667 12.16-63.616 8.618666-69.845333-3.584-6.186667-13.354667-9.728-28.16-17.152-14.848-7.381333-86.869333-42.88-100.522666-47.616-13.354667-4.992-26.069333-3.242667-36.138667 10.965333-14.250667 19.797333-28.16 39.936-39.466667 52.053334-8.874667 9.472-23.424 10.666667-35.541333 5.632-16.298667-6.826667-61.952-22.784-118.314667-72.789334-43.562667-38.741333-73.216-86.954667-81.792-101.418666-8.618667-14.805333-0.896-23.381333 5.930667-31.36 7.381333-9.173333 14.506667-15.658667 21.930667-24.234667 7.424-8.576 11.52-13.013333 16.298666-23.082667 5.034667-9.770667 1.493333-19.84-2.090666-27.221333-3.541333-7.381333-33.194667-79.573333-45.354667-108.8z"
-                  fill="#25D366"
-                  p-id="11423"
-                ></path>
-              </svg>
-              {/* <i className={`fab ${styles.faGithub}`}></i> */}
-            </span>
-          </a>
-        </div>
       </div>
-    </div>
+      <div className="row m-3">
+        <h3 className='my-3'>Post your feedback
+          <hr /></h3>
+
+        {renderForm()}
+      </div>
+    </>
+
+
   );
 }
 
-export default ContactusComp;
+export default Contactus;
