@@ -33,7 +33,7 @@ import { i18n, } from 'next-i18next'
 
 console.log('i18n12312312 language123');
 
-export const Languages = (t) => {
+export const Languages = (t: any) => {
 
     return [
         {
