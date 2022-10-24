@@ -94,7 +94,7 @@ function Navigator() {
 
         <DropdownButton id="dropdown-basic-button" title={t('nav.nav_language.language')}>
           {
-            Languages(t).map((item, index)=>{
+            Languages(t).map((item: any, index: any)=>{
               return  (
                 // <Dropdown.Item locale={item.value} onclick={()=>{handleLanguageClick(item.prefix)}} active={locale === item.value} key={item.value}>{item.label}</Dropdown.Item>
                 <Dropdown.Item className={styles.dropdownLink} active={locale === item.value} key={item.value + index}>
