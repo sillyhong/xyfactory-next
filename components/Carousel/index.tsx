@@ -9,7 +9,7 @@ function CarouselComp({carouselList, isMobile}:any) {
       {
         carouselList.map((item: any, index: string )=> {
           return (
-            <Carousel.Item key={item.title + index}>
+            <Carousel.Item key={item.title ? item.title + index: index}>
             <Image src={item.src} alt={item.title || ''}/>
             <Carousel.Caption>
               {item.title && !isMobile && <h3>{item.title}</h3>}

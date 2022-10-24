@@ -1,5 +1,4 @@
 {
-    "test": "en123",
     "factory_name": "XYHardWareFactory",
     "nav": {
         "nav_home": "Home",
@@ -41,13 +40,162 @@
     },
     "home_contact_us": {
         "text_connect": "Connect with us"
-     },
-     "home_footer": {
+    },
+    "home_footer": {
         "product_categories": "Product Categories"
-     },
-     "about_us": {
+    },
+    "about_us": {
         "text_company_profile": "Company Profile",
         "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>is 15 years factory with a focus on customer service, satisfaction and impeccable workmanship. We have advanced production equipment and a number of skillfull technical workers and we can offer you with the high quality products with competitive price. <br /><br />We have a lot experience to export all over the world, especially in Canada, Netherlands and Australia.<br /><br />We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications.If you are insterested in our product, pls feel free to contact us.</div>"
-        
-     }
+    },
+    "product": {
+        "btn_detail": "Details",
+        "production_Information": "Product Information",
+        "production_description": "Description",
+        "production_category": "Product Category",
+        "product_categories": {
+            "product_door_handle": {
+                "title": "Door Handles and Knobs",                
+                "0": {
+                    "title": "Door Handles and Knobs",
+                    "desc": "Stainless Steel 304 Shower Room Door Knobs Door Handle",
+                    "profile": {
+                        "product_name": "Door Knob",
+                        "product_no": "XY-D033H",
+                        "product_material": "SUS304",
+                        "product_finish": "Brush Nickel, Black, Chrome, etc",
+                        "product_diameter": "68mm",
+                        "product_size": "/"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Knob",
+                        "product_no": "XY-D033H",
+                        "product_material": "SUS304",
+                        "product_finish": "Brush Nickel, Black, Chrome, etc",
+                        "product_diameter": "68mm",
+                        "product_size": "/"
+                    }
+                },
+                "1": {
+                    "title": "Door Handles and Knobs",
+                    "desc": "Stainless Steel 304 H style Pull Handle",
+                    "profile": {
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D028H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "350mm-1800mm or customized"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D028H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "350mm-1800mm or customized"
+                    }
+                },
+                "2": {
+                    "title": "Door Handles and Knobs",
+                    "desc": "High Quality Shower Glass Door Pull Handle",
+                    "profile": {
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D661H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "25*300*500mm or customized"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D661H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "25*300*500mm or customized"
+                    }
+                },
+                "3": {
+                    "title": "Door Handles and Knobs",
+                    "desc": "High Quality New Door Knob Bathroom Solid Fixed Glass Door Pull Handle",
+                    "profile": {
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D056H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "350mm-1800mm or customized"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D056H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "/",
+                        "product_size": "350mm-1800mm or customized"
+                    }
+                },
+                "4": {
+                    "title": "Door Handles and Knobs",
+                    "desc": "Prime Quality Stainless Steel Seamless Welded Pipe Tube",
+                    "profile": {
+                        "product_name": "Door Knob",
+                        "product_no": "Brass",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "30mm",
+                        "product_glass_thinkness": "6-12mm"
+                        
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Knob",
+                        "product_no": "Brass",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_diameter": "30mm",
+                        "product_glass_thinkness": "6-12mm"
+                    }
+                }
+
+              
+            },
+            "product_shower_hinge": {
+                "title": "Shower Hinges"
+            },
+            "product_pipe_connectors": {
+                "title": "Pipe Connectors"
+            },
+            "product_hanging_wheel": {
+                "title": "Hanging Wheel"
+            },
+            "product_bathroom_sliding_door_accessories": {
+                "title": "Pipe Connectors"
+            },
+            "product_glass_floor_spring": {
+                "title": "Glass Floor Spring"
+            }
+        },
+        "product_labels": {
+            "product_name": "Product Name",
+            "product_no": "Product No.",
+            "product_material": "Material",
+            "product_finish": "Finish",
+            "product_diameter": "Diameter",
+            "product_brand_name": "Brand Name",
+            "place_of_origin": "Place of Origin",
+            "product_size": "Size",
+            "product_glass_thinkness": "Glass Thinkness"
+        }
+    }
 }

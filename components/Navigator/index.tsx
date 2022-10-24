@@ -67,7 +67,7 @@ function Navigator() {
               onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
               >
               {
-                ProductCategories.map((item, index) => {
+                ProductCategories(t).map((item, index) => {
                   return (
                     <NavDropdown.Item key={item.label + index} className={styles.NavDropdown} >
                       <div onClick={() => {handleDropDownItemClick(item.path)}}>

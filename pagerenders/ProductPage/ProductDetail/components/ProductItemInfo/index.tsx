@@ -1,3 +1,5 @@
+
+import { useTranslation } from 'next-i18next'
 import SectionHeader from '@/components/SectionHeader';
 import { useMemo } from 'react';
 import { Table } from 'react-bootstrap';
@@ -7,8 +9,8 @@ import { ProductCategoriesLabel } from '../../../../../constants';
 
 
 function ProductItemInfo({ productItem, id }: any) {
+  const { t} = useTranslation('common')
   const { srcArr, profile, detail = {}, desc } = productItem
-
 
   const renderProdileTable = useMemo(() => {
     const values: any = Object.values(profile)
@@ -21,7 +23,7 @@ function ProductItemInfo({ productItem, id }: any) {
           {
             Object.keys(profile).map((item, index): any => {
               return (
-                <tr key={item}>
+                <tr key={'item' + index}>
                   <td>{item}</td>
                   <td>{values[index]}</td>
                 </tr>
@@ -41,12 +43,12 @@ function ProductItemInfo({ productItem, id }: any) {
       <Table striped bordered hover variant="primary" className="product-info-table" style={{ marginTop: '36px', tableLayout: 'fixed' }}>
         <tbody>
           <tr >
-            <td className='fw-bold' colSpan={2}>Product Information</td>
+            <td className='fw-bold' colSpan={2}>{t('product.production_Information')}</td>
           </tr>
           {
             Object.keys(detail).map((item, index): any => {
               return (
-                <tr key={item}>
+                <tr key={'item' + index}>
                   <td>{item}</td>
                   <td>{values[index]}</td>
                 </tr>
@@ -73,7 +75,8 @@ function ProductItemInfo({ productItem, id }: any) {
           <div className="divider"></div>
           <div className="product-category">
             {/* @ts-ignore */}
-            category: {ProductCategoriesLabel[`${id}`] || 'something go wrong'}
+            {t('product.production_category')}:
+             {ProductCategoriesLabel(t)[`${id}`] || 'something go wrong'}
           </div>
           {renderProdileTable}
         </div>
@@ -82,7 +85,7 @@ function ProductItemInfo({ productItem, id }: any) {
       <hr />
       <div className="row">
         <div className='col-lg-12'>
-          <SectionHeader title="Description" titleClass='justify-content-start' showDesc={false} showSperator={false}/>
+          <SectionHeader title={t('product.production_description')} titleClass='justify-content-start' showDesc={false} showSperator={false}/>
           {renderDetailTable}
         </div>
       </div>

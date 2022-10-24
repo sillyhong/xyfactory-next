@@ -15,7 +15,7 @@ const Product = () => {
     } else {
       setHasHash(false)
     }
-  },[router])
+  },[asPath, router])
 
   
   // product?page=2

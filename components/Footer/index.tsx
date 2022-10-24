@@ -60,7 +60,7 @@ function FooterComp() {
             <div className="col-6 col-md">
               <h5 className="mb-4 text-white">{t('home_footer.product_categories')}</h5>
               <ul className="list-unstyled text-small">
-                {ProductCategories.map((item, index) => {
+                {ProductCategories(t).map((item, index) => {
                   return (
                     <li key={item.label + index}>
                       <a className="text-muted" href={item.path}>

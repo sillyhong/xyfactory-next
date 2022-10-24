@@ -4,11 +4,12 @@ import ProductItemList from './components/ProductItemList'
 import ProductItemInfo from './components/ProductItemInfo'
 
 
-
+/* 产品详情页 左边是 menu， 右面是栏目展示的产品 */
 function ProductDetail({ id }: any) {
     const [producItemDetailShow, setProducItemDetailShow] = useState(false)
     const [selectedProductItem, setSelectedProductItem] = useState({})
 
+    /* 点击产品 */
     const handleProductItemClick = useCallback((productItem: any) => {
         if (!producItemDetailShow) {
             setProducItemDetailShow(true)
@@ -16,15 +17,14 @@ function ProductDetail({ id }: any) {
         }
     }, [producItemDetailShow])
 
+    /* 点击菜单栏 */
     const handleMenuClick = useCallback(()=>{
         setProducItemDetailShow(false)
         setSelectedProductItem({})
     }, [])
 
     const renderProductDetail = useMemo(() => {
-
         if (producItemDetailShow) {
-        console.log('renderProductDetail', selectedProductItem);
             return (
                 <div className="col-lg-9">
                 <ProductItemInfo productItem={selectedProductItem} id={id}/>
