@@ -85,9 +85,9 @@ export const ProductInfos = (t: any) => {
   const product_name = t('product.product_labels.product_name')
   const product_no = t('product.product_labels.product_no')
   const product_material = t('product.product_labels.product_material')
-  const product_finish = t('product.product_labels.product_diameter')
-  const product_diameter = t('product.product_labels.product_brand_name')
-  const product_brand_name = t('product.product_labels.place_of_origin')
+  const product_finish = t('product.product_labels.product_finish')
+  const product_diameter = t('product.product_labels.product_diameter')
+  const product_brand_name = t('product.product_labels.product_brand_name')
   const place_of_origin = t('product.product_labels.place_of_origin')
   const product_size = t('product.product_labels.product_size')
   const product_glass_thinkness = t('product.product_labels.product_glass_thinkness')
@@ -280,7 +280,7 @@ export const ProductInfos = (t: any) => {
         [`${product_no}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_no'),
         [`${product_material}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_material'),
         [`${product_finish}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_finish'),
-        [`${product_size}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_glass_thinkness'),
+        [`${product_glass_thinkness}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_glass_thinkness'),
       },
       detail: {
         [`${product_brand_name}`]: t('product.product_categories.product_pipe_connectors.0.detail.brand_name'),
@@ -289,7 +289,7 @@ export const ProductInfos = (t: any) => {
         [`${product_no}`]: t('product.product_categories.product_pipe_connectors.0.detail.product_no'),
         [`${product_material}`]: t('product.product_categories.product_pipe_connectors.0.detail.product_material'),
         [`${product_finish}`]: t('product.product_categories.product_pipe_connectors.0.detail.product_finish'),
-        [`${product_size}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_glass_thinkness'),
+        [`${product_glass_thinkness}`]: t('product.product_categories.product_pipe_connectors.0.profile.product_glass_thinkness'),
       }
     },
   ]
