@@ -3,8 +3,8 @@ import dynamic from 'next/dynamic'
 import type { AppProps } from 'next/app'
 import '../styles/globals.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css';
-import 'hover.css';
+import '../styles/animate.min.css';
+import '../styles/hover-min.css';
 // dynamic(() =>
 //   import('../node_modules/hover.css').then((mod) => mod.Hello)
 // )
