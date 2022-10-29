@@ -64,8 +64,7 @@
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
                         "product_finish": "刷镍、哑光黑、铬等等",
-                        "product_diameter": "68mm",
-                        "product_size": "/"
+                        "product_diameter": "68mm"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -74,8 +73,7 @@
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
                         "product_finish": "刷镍、哑光黑、铬等等",
-                        "product_diameter": "68mm",
-                        "product_size": "/"
+                        "product_diameter": "68mm"
                     }
                 },
                 "1": {
@@ -85,7 +83,6 @@
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "350mm-1800mm，可定制"
                     },
                     "detail": {
@@ -95,7 +92,6 @@
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "350mm-1800mm，可定制"
                     }
                 },
@@ -106,7 +102,6 @@
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "25*300*500mm，可定制"
                     },
                     "detail": {
@@ -116,7 +111,6 @@
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "25*300*500mm，可定制"
                     }
                 },
@@ -127,7 +121,6 @@
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "350mm-1800mm，可定制"
                     },
                     "detail": {
@@ -137,7 +130,6 @@
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_size": "350mm-1800mm，可定制"
                     }
                 },
@@ -148,7 +140,6 @@
                         "product_no": "XY-D030H",
                         "product_material": "黄铜",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_glass_thinkness": "6-12mm"
                     },
                     "detail": {
@@ -158,37 +149,239 @@
                         "product_no": "XY-D030H",
                         "product_material": "黄铜",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_diameter": "/",
                         "product_glass_thinkness": "6-12mm"
                     }
                 }
             },
             "product_shower_hinge": {
-                "title": "浴室夹系列"
+                "title": "浴室夹系列",
+                "0": {
+                    "title": "浴室夹系列",
+                    "desc": "热销壁90度玻璃夹不锈钢合页玻璃门浴室夹",
+                    "profile": {
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S500H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "6-10mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S500H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "6-10mm"
+                    }
+                },
+                "1": {
+                    "desc": "90度淋浴房钢化玻璃固定夹玻璃门不锈钢门铰链",
+                    "profile": {
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S505H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S505H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "2": {
+                    "desc": "180度方形浴室门夹标准铰链玻璃门浴室夹",
+                    "profile": {
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S506H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S506H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "3": {
+                    "desc": "玻璃门配件135度淋浴铰链玻璃合页",
+                    "profile": {
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S551H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S551H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "4": {
+                    "desc": "180度玻璃夹淋浴门配件铰链玻璃门夹合页",
+                    "profile": {
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S553H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室夹",
+                        "product_no": "XY-S5531H",
+                        "product_material": "黄铜、SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                }
             },
             "product_pipe_connectors": {
-                "title": "管连接件系列"
+                "title": "管连接件系列",
+                "0": {
+                    "title": "管连接件系列",
+                    "desc": "不锈钢浴室五金配件管接头管连接件",
+                    "profile": {
+                        "product_name": "管连接件",
+                        "product_no": "XY-P101C",
+                        "product_material": "SUS304",
+                        "product_finish": "镜光",
+                        "product_glass_thinkness": "8-10mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "管连接件",
+                        "product_no": "XY-P101C",
+                        "product_material": "SUS304",
+                        "product_finish": "镜光",
+                        "product_glass_thinkness": "8-10mm"
+                    }
+                }
             },
             "product_hanging_wheel": {
-                "title": "吊轮系列"
+                "title": "吊轮系列",
+                "0": {
+                    "title": "吊轮系列",
+                    "desc": "不锈钢玻璃推拉门滚轮组配件玻璃门吊轮",
+                    "profile": {
+                        "product_name": "浴室移门吊轮",
+                        "product_no": "XY-H787W",
+                        "product_material": "不锈钢",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "6-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "管连接件",
+                        "product_no": "XY-H787W",
+                        "product_material": "不锈钢",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "6-12mm"
+                    }
+                }
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "浴室移门配件"
+                "title": "浴室移门配件",
+                "0": {
+                    "title": "浴室移门配件",
+                    "desc": "优质不锈钢无缝焊接管不锈钢方管圆管",
+                    "profile": {
+                        "product_name": "不锈钢管",
+                        "product_no": "XY-808P",
+                        "product_material": "201 304 316不锈钢管",
+                        "product_outer_diameter ": "6-10mm"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "不锈钢管",
+                        "product_no": "XY-808P",
+                        "product_material": "201 304 316不锈钢管",
+                        "product_outer_diameter ": "6-10mm"
+                    }
+                }
             },
             "product_glass_floor_spring": {
-                "title": "地弹簧"
+                "title": "地弹簧",
+                "0": {
+                    "title": "地弹簧",
+                    "desc": "G-220B地弹簧玻璃门木门有框门无框门自动关门配件地弹簧",
+                    "profile": {
+                        "product_name": "地弹簧",
+                        "product_no": "G-220B",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "地弹簧",
+                        "product_no": "G-220B",
+                        "product_material": "SUS304"
+                    }
+                },
+                "1": {
+                    "title": "地弹簧",
+                    "desc": "热销款G-220C地弹簧优质工艺玻璃门地弹簧",
+                    "profile": {
+                        "product_name": "地弹簧",
+                        "product_no": "G-220C",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "地弹簧",
+                        "product_no": "G-220C",
+                        "product_material": "SUS304"
+                    }
+                },
+                "2": {
+                    "title": "地弹簧",
+                    "desc": "厂家直供H-220C优质玻璃闭门器地板弹簧",
+                    "profile": {
+                        "product_name": "地弹簧",
+                        "product_no": "H-220C",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "地弹簧",
+                        "product_no": "H-220C",
+                        "product_material": "SUS304"
+                    }
+                }
             }
-        },
-        "product_labels": {
-            "product_name": "产品名称",
-            "product_no": "产品编号",
-            "product_material": "材质",
-            "product_finish": "表面处理",
-            "product_diameter": "直径",
-            "product_brand_name": "品牌名称",
-            "place_of_origin": "产地",
-            "product_size": "尺寸",
-            "product_glass_thinkness": "玻璃厚度"
         }
+    },
+    "product_labels": {
+        "product_name": "产品名称",
+        "product_no": "产品编号",
+        "product_material": "材质",
+        "product_finish": "表面处理",
+        "product_diameter": "直径",
+        "product_outer_diameter": "外径",
+        "product_brand_name": "品牌名称",
+        "place_of_origin": "产地",
+        "product_size": "尺寸",
+        "product_glass_thinkness": "玻璃厚度"
     }
 }

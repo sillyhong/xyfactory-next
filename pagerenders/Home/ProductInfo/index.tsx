@@ -52,7 +52,7 @@ function ProductInfo() {
           {
             hotProducts.map((item, index) => {
               return (
-                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper' key={item.desc + index}>
+                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper hvr-pulse' key={item.desc + index}>
                   <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
                     <Image className="card-img" src={item.src} alt={item.title} />
                     <div className=" d-flex align-items-center text-center">

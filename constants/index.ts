@@ -5,13 +5,6 @@ export const enum ProductCategoriesKey {
   PRODUCT_HANGING_WHEEL = 'product-hanging-wheel',
   PRODUCT_BATHROOM_SLIDING_DOOR_ACCESSORIES = 'product-bathroom-sliding-door-accessories',
   PRODUCT_GLASS_FLOOR_SPRING = 'product-glass-floor-spring',
-  // STANDOFF = 'standoff',
-  // HANDLE = 'handle',
-  // SPIGOT = 'spigot',
-  // GLASS_FLOOR_SPRING = 'glass-floor-spring',
-  // GLASS_PATCH_FITTING = 'glass-floor-fitting',
-  // GLASS_DOOR_LOCK = 'glass-door-lock',
-  // WATERPROOF_SEAL = 'waterproof-seal',
 }
 
 export const ProductCategoriesLabel = (t:any): any => {

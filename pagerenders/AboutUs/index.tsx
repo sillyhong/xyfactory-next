@@ -30,8 +30,8 @@ const AboutUs = () => {
             <SectionHeader title={t('about_us.text_company_profile')} showDesc={false} showSperator={false} titleClass="justify-content-start" />
             {renderDesc()}
           </div>
-          <div className='col-lg-6'>
-            <Image className='mt-3' src={factory} alt="aboutus" />
+          <div className='col-lg-6 hvr-grow'>
+            <Image className='mt-3 ' src={factory} alt="aboutus"/>
           </div>
         </div>
         {/* advantage */}

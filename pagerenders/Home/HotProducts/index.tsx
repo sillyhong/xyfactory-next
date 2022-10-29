@@ -58,7 +58,7 @@ function ProductInfo() {
           {
             hotProducts.map(item => {
               return (
-                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper' key={item.desc} onClick={()=>{handleItemClick(item)}}>
+                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper hvr-grow' key={item.desc} onClick={()=>{handleItemClick(item)}}>
                   <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
                     <Image className="card-img" src={item.src} alt={item.title} />
                     <div className="d-flex align-items-center text-center">

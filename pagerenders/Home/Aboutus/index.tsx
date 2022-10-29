@@ -25,7 +25,7 @@ function Aboutus() {
        <SectionHeader title={t('home_sub_header.about_us')}/>
         <div className="row">
           <div className="col-lg-6">
-              <Image src={factory} alt='factory'/>
+              <Image src={factory} alt='factory' className='hvr-grow'/>
           </div>
           <div className="col-lg-6 d-flex flex-column align-items-center">
             {renderDesc()}

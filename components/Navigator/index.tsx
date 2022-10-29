@@ -54,15 +54,15 @@ function Navigator() {
     <Navbar className={styles.fixed} bg="primary" variant="dark" expand="lg">
       <Container fluid>
         <Navbar.Brand href="/">
-          <div className={styles.logo}>
+          <div className={`${styles.logo} hvr-grow`}>
             <Image src={Logo} width={60} height={60} alt='logo' />
-            <div className={styles.logoDesc}>{t('factory_name')}</div>
+            <div className={`${styles.logoDesc}`}>{t('factory_name')}</div>
           </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="/" active={pathname === '/'}>{t('nav.nav_home')}</Nav.Link>
+            <Nav.Link href="/" className='hvr-underline-from-left' active={pathname === '/'}>{t('nav.nav_home')}</Nav.Link>
             <NavDropdown active={pathname === '/product'} title={t('nav.nav_products')} id="navbarScrollingDropdown" show={productNavShow}
               onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
               >
@@ -78,9 +78,9 @@ function Navigator() {
                 })
               }
             </NavDropdown>
-            <Nav.Link href="/portfolio" active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
-            <Nav.Link href="/about" active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
-            <Nav.Link href="/contact" active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
+            <Nav.Link href="/portfolio" className='hvr-underline-from-left' active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
+            <Nav.Link href="/about" className='hvr-underline-from-left' active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
+            <Nav.Link href="/contact" className='hvr-underline-from-left' active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control

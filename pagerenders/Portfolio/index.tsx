@@ -99,14 +99,9 @@ const Home = () => {
           {
             Portfolios.map(item => {
               return (
-                <div className='col-lg-4 d-flex justify-content-center hotProductWrapper default-margin-top' key={item.desc}>
+                <div className='col-lg-4 d-flex justify-content-center hotProductWrapper default-margin-top hvr-grow' key={item.desc}>
                   <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
                     <Image className="card-img" src={item.src} alt={item.title} />
-                    {/* <div className="d-flex align-items-center text-center">
-                      <div className="card-body">
-                        <h3 className="card-title">{item.title}</h3>
-                      </div>
-                    </div> */}
                   </div>
                 </div>
               )

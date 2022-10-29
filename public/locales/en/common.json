@@ -55,7 +55,7 @@
         "production_category": "Product Category",
         "product_categories": {
             "product_door_handle": {
-                "title": "Door Handles and Knobs",                
+                "title": "Door Handles and Knobs",
                 "0": {
                     "title": "Door Handles and Knobs",
                     "desc": "Stainless Steel 304 Shower Room Door Knobs Door Handle",
@@ -154,7 +154,6 @@
                         "product_finish": "Satin/Mirror/Black Matt/Golden",
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
-                        
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
@@ -167,23 +166,227 @@
                         "product_glass_thinkness": "6-12mm"
                     }
                 }
-
-              
             },
             "product_shower_hinge": {
-                "title": "Shower Hinges"
+                "title": "Shower Hinges",
+                "0": {
+                    "title": "Shower Hinges",
+                    "desc": "Hot Sale Wall Mounted 90 Degree Shower Hinges",
+                    "profile": {
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S500H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "6-10mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S500H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "6-10mm"
+                    }
+                },
+                "1": {
+                    "title": "Shower Hinges",
+                    "desc": "Wall to Glass Shower Glass Hinge  in Gold Color",
+                    "profile": {
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S505H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Gold or Customized",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S505H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Gold or Customized",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "2": {
+                    "title": "Shower Hinges",
+                    "desc": "180 Degree Glass to Glass Shower Door Solid Standard Hinge",
+                    "profile": {
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S506H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S506H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "3": {
+                    "title": "Shower Hinges",
+                    "desc": "Glass Door Fitting 135 Degree Shower Hinge",
+                    "profile": {
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S551H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S551H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                },
+                "4": {
+                    "title": "Shower Hinges",
+                    "desc": "180 degree Glass Clamp Shower Door Fitting Hinge Glass Hinge",
+                    "profile": {
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S553H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Shower Hinges",
+                        "product_no": "XY-S553H",
+                        "product_material": "Brass、SUS304",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "8-12mm"
+                    }
+                }
             },
             "product_pipe_connectors": {
-                "title": "Pipe Connectors"
+                "title": "Pipe Connectors",
+                "0": {
+                    "title": "Pipe Connectors",
+                    "desc": "Mirror Polishing Stainless Steel Bathroom Hardware Parts Pipe Fitting Tube Connectors",
+                    "profile": {
+                        "product_name": "Pipe Connectors",
+                        "product_no": "XY-P101C",
+                        "product_material": "SUS304",
+                        "product_finish": "Polish",
+                        "product_glass_thinkness": "8-10mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Pipe Connectors",
+                        "product_no": "XY-P101C",
+                        "product_material": "SUS304",
+                        "product_finish": "Polish",
+                        "product_glass_thinkness": "8-10mm"
+                    }
+                }
             },
             "product_hanging_wheel": {
-                "title": "Hanging Wheel"
+                "title": "Hanging Wheel",
+                "0": {
+                    "title": "Hanging Wheel",
+                    "desc": "Stainless Steel Glass Sliding Door Roller Set Accessories Glass Hanging Wheel",
+                    "profile": {
+                        "product_name": "Hanging Wheel",
+                        "product_no": "XY-H787W",
+                        "product_material": "Stainless Steel",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "6-12mm"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Hanging Wheel",
+                        "product_no": "XY-H787W",
+                        "product_material": "Stainless Steel",
+                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_glass_thinkness": "6-12mm"
+                    }
+                }
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "Pipe Connectors"
+                "title": "Bathroom Sliding Door Accessories",
+                "0": {
+                    "title": "Bathroom Sliding Door Accessories",
+                    "desc": "Prime Quality Stainless Steel Seamless Welded Pipe Tube",
+                    "profile": {
+                        "product_name": "Stainless Steel Pipe",
+                        "product_no": "XY-808P",
+                        "product_material": "201 304 316 Stainless Steel Pipes",
+                        "product_outer_diameter ": "100mm or customized"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Stainless Steel Pipe",
+                        "product_no": "XY-808P",
+                        "product_material": "201 304 316 Stainless Steel Pipes",
+                        "product_outer_diameter ": "100mm or customized"
+                    }
+                }
             },
             "product_glass_floor_spring": {
-                "title": "Glass Floor Spring"
+                "title": "Glass Floor Spring",
+                "0": {
+                    "title": "Glass Floor Spring",
+                    "desc": "G-220B Floor Spring for Glass Door Glass Door Closer",
+                    "profile": {
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "G-220B",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "G-220BG-220B",
+                        "product_material": "SUS304"
+                    }
+                },
+                "1": {
+                    "title": "Glass Floor Spring",
+                    "desc": "G-220C Hot Selling Door Accessories Floor Spring For Glass Door",
+                    "profile": {
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "G-220C",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "G-220C",
+                        "product_material": "SUS304"
+                    }
+                },
+                "2": {
+                    "title": "Glass Floor Spring",
+                    "desc": "H-220C High Quality Glass Door Closer Floor Spring/Floor Hinge",
+                    "profile": {
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "H-220C",
+                        "product_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Glass Floor Spring",
+                        "product_no": "H-220C",
+                        "product_material": "SUS304"
+                    }
+                }
             }
         },
         "product_labels": {
@@ -192,6 +395,7 @@
             "product_material": "Material",
             "product_finish": "Finish",
             "product_diameter": "Diameter",
+            "product_outer_diameter": "Outer Diameter",
             "product_brand_name": "Brand Name",
             "place_of_origin": "Place of Origin",
             "product_size": "Size",

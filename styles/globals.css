@@ -45,10 +45,10 @@ a {
   
 }
 
-.sectionWrapper .hotProductWrapper:hover {
+/* .sectionWrapper .hotProductWrapper:hover {
   transform: scale(1.05);
   transition: all 0.5s;
-}
+} */
 
 .sectionWrapper .hotProductWrapper .card-title {
   color: black;

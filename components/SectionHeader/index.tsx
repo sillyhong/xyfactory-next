@@ -19,8 +19,8 @@ function SectionHeader({
   const { t} = useTranslation('common')
 
   return (
-    <>
-    <h2 className={`h2 mb-4 d-flex  fw-bold ${titleClass}`}>{title}</h2>
+    <div className="animate__animated animate__rotateIn">
+    <h2 className={`h2 mb-4 d-flex  fw-bold ${titleClass} `}>{title}</h2>
     {
       showSperator && (
         <div className={styles.separator}>
@@ -32,7 +32,7 @@ function SectionHeader({
     {
       showDesc && (<h4 className="h4 mb-4 d-flex justify-content-center fw-normal">{t('home_about_us.sub_title')}</h4>)
     }
-    </>
+    </div>
   );
 }
 
