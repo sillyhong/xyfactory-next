@@ -370,18 +370,18 @@
                     }
                 }
             }
+        },
+        "product_labels": {
+            "product_name": "产品名称",
+            "product_no": "产品编号",
+            "product_material": "材质",
+            "product_finish": "表面处理",
+            "product_diameter": "直径",
+            "product_outer_diameter": "外径",
+            "product_brand_name": "品牌名称",
+            "place_of_origin": "产地",
+            "product_size": "尺寸",
+            "product_glass_thinkness": "玻璃厚度"
         }
-    },
-    "product_labels": {
-        "product_name": "产品名称",
-        "product_no": "产品编号",
-        "product_material": "材质",
-        "product_finish": "表面处理",
-        "product_diameter": "直径",
-        "product_outer_diameter": "外径",
-        "product_brand_name": "品牌名称",
-        "place_of_origin": "产地",
-        "product_size": "尺寸",
-        "product_glass_thinkness": "玻璃厚度"
     }
 }

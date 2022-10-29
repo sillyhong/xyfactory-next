@@ -91,6 +91,9 @@ export const ProductInfos = (t: any) => {
   const place_of_origin = t('product.product_labels.place_of_origin')
   const product_size = t('product.product_labels.product_size')
   const product_glass_thinkness = t('product.product_labels.product_glass_thinkness')
+  console.log('====================================');
+  console.log('product_brand_name123', product_brand_name);
+  console.log('====================================');
 
   const showHinges = [
     {

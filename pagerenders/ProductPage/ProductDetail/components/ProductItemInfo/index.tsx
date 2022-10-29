@@ -22,9 +22,10 @@ function ProductItemInfo({ productItem, id }: any) {
           </tr>
           {
             Object.keys(profile).map((item, index): any => {
+              console.log('values[index]', values[index]);
               return (
                 <tr key={'item' + index}>
-                  <td>{item}</td>
+                  <td>{t(`${item}`)}</td>
                   <td>{values[index]}</td>
                 </tr>
 
@@ -47,9 +48,12 @@ function ProductItemInfo({ productItem, id }: any) {
           </tr>
           {
             Object.keys(detail).map((item, index): any => {
+              console.log('====================================');
+              console.log('item111', item);
+              console.log('====================================');
               return (
                 <tr key={'item' + index}>
-                  <td>{item}</td>
+                  <td>{t(`${item}`)}</td>
                   <td>{values[index]}</td>
                 </tr>
 
