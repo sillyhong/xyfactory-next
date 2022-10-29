@@ -78,9 +78,6 @@ import doorhandlesH220C2 from '@assets/images/product/product_glass_floor_spring
 import doorhandlesH220C3 from '@assets/images/product/product_glass_floor_spring/product_glass_floor_spring_H-220C_3.jpg';
 
 
-
-
-
 export const ProductInfos = (t: any) => {
   const product_name = t('product.product_labels.product_name')
   const product_no = t('product.product_labels.product_no')
@@ -92,8 +89,190 @@ export const ProductInfos = (t: any) => {
   const product_size = t('product.product_labels.product_size')
   const product_glass_thinkness = t('product.product_labels.product_glass_thinkness')
 
+  const doorHandlers = [
+    {
+      path: '/product#product-door-handle',
+      homeNew: true,
+      src: doorhandlesD033H1,
+      desc: t('product.product_categories.product_door_handle.0.desc'),
+      srcArr: [
+        {
+          src: doorhandlesD033H1,
+        },
+        {
+          src: doorhandlesD033H2,
+        },
+        {
+          src: doorhandlesD033H3,
+        },
+        {
+          src: doorhandlesD033H4,
+        },
+      ],
+      profile: {
+        [`${product_name}`]: t('product.product_categories.product_door_handle.0.profile.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.0.profile.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.0.profile.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.0.profile.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.profile.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
+      },
+      detail: {
+        [`${product_brand_name}`]: t('product.product_categories.product_door_handle.0.detail.brand_name'),
+        [`${place_of_origin}`]: t('product.product_categories.product_door_handle.0.detail.place_of_origin'),
+        [`${product_name}`]: t('product.product_categories.product_door_handle.0.detail.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.0.detail.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.0.detail.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.0.detail.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.detail.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
+      }
+    },
+    {
+      path: '/product#product-door-handle',
+      homeHot: true,
+      src: doorhandlesD028H1,
+      desc: t('product.product_categories.product_door_handle.1.desc'),
+      srcArr: [
+        {
+          src: doorhandlesD028H1,
+        },
+        {
+          src: doorhandlesD028H2,
+        },
+        {
+          src: doorhandlesD028H3,
+        },
+      ],
+      profile: {
+        [`${product_name}`]: t('product.product_categories.product_door_handle.1.profile.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.1.profile.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.1.profile.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.1.profile.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.1.profile.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.1.profile.product_size'),
+      },
+      detail: {
+        [`${product_brand_name}`]: t('product.product_categories.product_door_handle.1.detail.brand_name'),
+        [`${place_of_origin}`]: t('product.product_categories.product_door_handle.1.detail.place_of_origin'),
+        [`${product_name}`]: t('product.product_categories.product_door_handle.1.detail.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.1.detail.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.1.detail.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.1.detail.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.1.detail.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.1.detail.product_size'),
+      }
+    },
+    {
+      path: '/product#product-door-handle',
+      src: doorhandlesD661H1,
+      desc: t('product.product_categories.product_door_handle.2.desc'),
+      srcArr: [
+        {
+          src: doorhandlesD661H1,
+        },
+        {
+          src: doorhandlesD661H2,
+        },
+        {
+          src: doorhandlesD661H3,
+        },
+        {
+          src: doorhandlesD661H4,
+        },
+      ],
+      profile: {
+        [`${product_name}`]: t('product.product_categories.product_door_handle.2.profile.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.2.profile.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.2.profile.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.2.profile.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.profile.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.2.profile.product_size'),
+      },
+      detail: {
+        [`${product_brand_name}`]: t('product.product_categories.product_door_handle.2.detail.brand_name'),
+        [`${place_of_origin}`]: t('product.product_categories.product_door_handle.2.detail.place_of_origin'),
+        [`${product_name}`]: t('product.product_categories.product_door_handle.2.detail.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.2.detail.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.2.detail.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.2.detail.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.detail.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.2.detail.product_size'),
+      }
+    },
+    {
+      path: '/product#product-door-handle',
+      src: doorhandlesD056H1,
+      desc: t('product.product_categories.product_door_handle.3.desc'),
+      srcArr: [
+        {
+          src: doorhandlesD056H1,
+        },
+        {
+          src: doorhandlesD056H2,
+        },
+        {
+          src: doorhandlesD056H3,
+        },
+      ],
+      profile: {
+        [`${product_name}`]: t('product.product_categories.product_door_handle.3.profile.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.3.profile.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.3.profile.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.3.profile.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.3.profile.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.3.profile.product_size'),
+      },
+      detail: {
+        [`${product_brand_name}`]: t('product.product_categories.product_door_handle.3.detail.brand_name'),
+        [`${place_of_origin}`]: t('product.product_categories.product_door_handle.3.detail.place_of_origin'),
+        [`${product_name}`]: t('product.product_categories.product_door_handle.3.detail.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.3.detail.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.3.detail.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.3.detail.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.3.detail.product_diameter'),
+        [`${product_size}`]: t('product.product_categories.product_door_handle.3.detail.product_size'),
+      }
+    },
+    {
+      path: '/product#product-door-handle',
+      src: doorhandlesD030H1,
+      desc: t('product.product_categories.product_door_handle.4.desc'),
+      srcArr: [
+        {
+          src: doorhandlesD030H1,
+        },
+        {
+          src: doorhandlesD030H2,
+        },
+        {
+          src: doorhandlesD030H3,
+        },
+      ],
+      profile: {
+        [`${product_name}`]: t('product.product_categories.product_door_handle.4.profile.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.4.profile.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.4.profile.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.4.profile.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.profile.product_diameter'),
+        [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.profile.product_glass_thinkness'),
+      },
+      detail: {
+        [`${product_brand_name}`]: t('product.product_categories.product_door_handle.4.detail.brand_name'),
+        [`${place_of_origin}`]: t('product.product_categories.product_door_handle.4.detail.place_of_origin'),
+        [`${product_name}`]: t('product.product_categories.product_door_handle.4.detail.product_name'),
+        [`${product_no}`]: t('product.product_categories.product_door_handle.4.detail.product_no'),
+        [`${product_material}`]: t('product.product_categories.product_door_handle.4.detail.product_material'),
+        [`${product_finish}`]: t('product.product_categories.product_door_handle.4.detail.product_finish'),
+        [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.detail.product_diameter'),
+        [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.detail.product_glass_thinkness'),
+      }
+    },
+  ]
+
   const showHinges = [
     {
+      path: '/product#product-shower-hinge',
       homeHot: true,
       src: doorhandlesS500H1,
       desc: t('product.product_categories.product_shower_hinge.0.desc'),
@@ -129,6 +308,7 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
+      path: '/product#product-shower-hinge',
       homeNew: true,
       src: doorhandlesS505H1,
       desc: t('product.product_categories.product_shower_hinge.1.desc'),
@@ -164,6 +344,7 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
+      path: '/product#product-shower-hinge',
       homeNew: true,
       src: doorhandlesS506H1,
       desc: t('product.product_categories.product_shower_hinge.2.desc'),
@@ -196,6 +377,7 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
+      path: '/product#product-shower-hinge',
       homeNew: true,
       src: doorhandlesS551H1,
       desc: t('product.product_categories.product_shower_hinge.3.desc'),
@@ -225,6 +407,7 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
+      path: '/product#product-shower-hinge',
       homeNew: true,
       src: doorhandlesS553H1,
       desc: t('product.product_categories.product_shower_hinge.4.desc'),
@@ -261,6 +444,7 @@ export const ProductInfos = (t: any) => {
 
   const pipeConnectors = [
     {
+      path: '/product#product-pipe-connectors',
       homeNew: true,
       src: doorhandlesG101C1,
       desc: t('product.product_categories.product_pipe_connectors.0.desc'),
@@ -296,6 +480,7 @@ export const ProductInfos = (t: any) => {
 
   const hangingWheel = [
     {
+      path: '/product#product-hanging-wheel',
       homeNew: true,
       src: doorhandlesH787W1,
       desc: t('product.product_categories.product_hanging_wheel.0.desc'),
@@ -333,292 +518,17 @@ export const ProductInfos = (t: any) => {
   ]
 
   return {
-    [ProductCategoriesKey.PRODUCT_DOOR_HANDLE]: [
-      {
-        homeNew: true,
-        src: doorhandlesD033H1,
-        desc: t('product.product_categories.product_door_handle.0.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD033H1,
-          },
-          {
-            src: doorhandlesD033H2,
-          },
-          {
-            src: doorhandlesD033H3,
-          },
-          {
-            src: doorhandlesD033H4,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.0.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.0.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.0.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.0.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.0.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.0.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.0.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.0.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.0.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.0.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
-        }
-      },
-      {
-        homeHot: true,
-        src: doorhandlesD028H1,
-        desc: t('product.product_categories.product_door_handle.1.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD028H1,
-          },
-          {
-            src: doorhandlesD028H2,
-          },
-          {
-            src: doorhandlesD028H3,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.1.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.1.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.1.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.1.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.1.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.1.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.1.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.1.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.1.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.1.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.1.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.1.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.1.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.1.detail.product_size'),
-        }
-      },
-      {
-        src: doorhandlesD661H1,
-        desc: t('product.product_categories.product_door_handle.2.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD661H1,
-          },
-          {
-            src: doorhandlesD661H2,
-          },
-          {
-            src: doorhandlesD661H3,
-          },
-          {
-            src: doorhandlesD661H4,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.2.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.2.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.2.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.2.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.2.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.2.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.2.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.2.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.2.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.2.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.2.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.2.detail.product_size'),
-        }
-      },
-      {
-        src: doorhandlesD056H1,
-        desc: t('product.product_categories.product_door_handle.3.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD056H1,
-          },
-          {
-            src: doorhandlesD056H2,
-          },
-          {
-            src: doorhandlesD056H3,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.3.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.3.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.3.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.3.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.3.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.3.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.3.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.3.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.3.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.3.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.3.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.3.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.3.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.3.detail.product_size'),
-        }
-      },
-      {
-        src: doorhandlesD030H1,
-        desc: t('product.product_categories.product_door_handle.4.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD030H1,
-          },
-          {
-            src: doorhandlesD030H2,
-          },
-          {
-            src: doorhandlesD030H3,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.4.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.4.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.4.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.4.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.profile.product_diameter'),
-          [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.profile.product_glass_thinkness'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.4.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.4.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.4.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.4.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.4.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.4.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.detail.product_diameter'),
-          [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.detail.product_glass_thinkness'),
-        }
-      },
-    ],
+    [ProductCategoriesKey.PRODUCT_DOOR_HANDLE]: doorHandlers,
     [ProductCategoriesKey.PRODUCT_SHOWER_HINGE]: showHinges,
     [ProductCategoriesKey.PRODUCT_PIPE_CONNECTORS]: pipeConnectors,
     [ProductCategoriesKey.PRODUCT_HANGING_WHEEL]: hangingWheel,
     [ProductCategoriesKey.PRODUCT_BATHROOM_SLIDING_DOOR_ACCESSORIES]: [
+      doorHandlers[0],
+      doorHandlers[2],
+      doorHandlers[4],
       {
-        homeNew: true,
-        src: doorhandlesD033H1,
-        desc: t('product.product_categories.product_door_handle.0.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD033H1,
-          },
-          {
-            src: doorhandlesD033H2,
-          },
-          {
-            src: doorhandlesD033H3,
-          },
-          {
-            src: doorhandlesD033H4,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.0.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.0.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.0.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.0.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.0.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.0.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.0.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.0.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.0.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.0.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.0.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.0.profile.product_size'),
-        }
-      },
-      {
-        src: doorhandlesD661H1,
-        desc: t('product.product_categories.product_door_handle.2.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD661H1,
-          },
-          {
-            src: doorhandlesD661H2,
-          },
-          {
-            src: doorhandlesD661H3,
-          },
-          {
-            src: doorhandlesD661H4,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.2.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.2.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.2.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.2.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.profile.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.2.profile.product_size'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.2.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.2.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.2.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.2.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.2.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.2.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.2.detail.product_diameter'),
-          [`${product_size}`]: t('product.product_categories.product_door_handle.2.detail.product_size'),
-        }
-      },
-      {
-        src: doorhandlesD030H1,
-        desc: t('product.product_categories.product_door_handle.4.desc'),
-        srcArr: [
-          {
-            src: doorhandlesD030H1,
-          },
-          {
-            src: doorhandlesD030H2,
-          },
-          {
-            src: doorhandlesD030H3,
-          },
-        ],
-        profile: {
-          [`${product_name}`]: t('product.product_categories.product_door_handle.4.profile.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.4.profile.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.4.profile.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.4.profile.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.profile.product_diameter'),
-          [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.profile.product_glass_thinkness'),
-        },
-        detail: {
-          [`${product_brand_name}`]: t('product.product_categories.product_door_handle.4.detail.brand_name'),
-          [`${place_of_origin}`]: t('product.product_categories.product_door_handle.4.detail.place_of_origin'),
-          [`${product_name}`]: t('product.product_categories.product_door_handle.4.detail.product_name'),
-          [`${product_no}`]: t('product.product_categories.product_door_handle.4.detail.product_no'),
-          [`${product_material}`]: t('product.product_categories.product_door_handle.4.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_door_handle.4.detail.product_finish'),
-          [`${product_diameter}`]: t('product.product_categories.product_door_handle.4.detail.product_diameter'),
-          [`${product_glass_thinkness}`]: t('product.product_categories.product_door_handle.4.detail.product_glass_thinkness'),
-        }
-      },
-      {
+        path: '/product-bathroom-sliding-door-accessories',
+        homeHot: true,
         src: doorhandles808P1,
         desc: t('product.product_categories.product_bathroom_sliding_door_accessories.0.desc'),
         srcArr: [
@@ -650,6 +560,8 @@ export const ProductInfos = (t: any) => {
     ],
     [ProductCategoriesKey.PRODUCT_GLASS_FLOOR_SPRING]: [
       {
+        path: '/product#product-glass-floor-spring',
+        homeHot: true,
         src: doorhandlesG220B1,
         desc: t('product.product_categories.product_glass_floor_spring.0.desc'),
         srcArr: [
@@ -677,6 +589,7 @@ export const ProductInfos = (t: any) => {
         }
       },
       {
+        path: '/product#product-glass-floor-spring',
         src: doorhandlesG220C1,
         desc: t('product.product_categories.product_glass_floor_spring.1.desc'),
         srcArr: [
@@ -707,6 +620,7 @@ export const ProductInfos = (t: any) => {
         }
       },
       {
+        path: '/product#product-glass-floor-spring',
         src: doorhandlesH220C1,
         desc: t('product.product_categories.product_glass_floor_spring.2.desc'),
         srcArr: [
