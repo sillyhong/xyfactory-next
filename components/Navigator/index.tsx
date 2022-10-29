@@ -1,4 +1,4 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
@@ -24,30 +24,52 @@ function Navigator() {
   const router: any = useRouter()
   const { pathname = '', asPath = '', locale = 'en', locales = [] } = router
 
-  
-  const handleProductMouseOver = useCallback(()=>{
-    setProductNavShow(true)
-
-  }, [])
-
-  const handleProductMouseOut = useCallback(()=>{
+  const handleWindowClick = useCallback((e: any)=>{
+    const target = e.target
+    const classList = target?.classList
+    if (!productNavShow) return
+    if(productNavShow && classList?.[0] === 'dropdown-toggle') {
+     setProductNavShow(false)
+      return
+    }
+    if (classList?.[0] === 'dropdown-toggle' || classList?.[0] === 'dropdown-item') {
+      return
+    }
     setProductNavShow(false)
-
-  }, [])
-  
-  const handleProductClick = useCallback((e: any)=>{
-    e.preventDefault();
-    const target  = e.target
-      const classList = target.classList
-      if(classList?.length) {
-        Router.push('/product')
-      }
-    setProductNavShow(!productNavShow)
-    return false
   }, [productNavShow])
 
-  const handleDropDownItemClick = useCallback((pathname: string)=>{
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener('click', handleWindowClick)
+      return () => {
+        window.removeEventListener('click', handleWindowClick)
+      }
+    }
+  }, [handleWindowClick])
+
+
+  // const handleProductMouseOver = useCallback(() => {
+  //   setProductNavShow(true)
+
+  // }, [])
+
+  // const handleProductMouseOut = useCallback(() => {
+  //   setProductNavShow(false)
+
+  // }, [])
+
+  const handleProductClick = useCallback((e: any) => {
+    e.stopPropagation()
+    setProductNavShow(!productNavShow)
+
+  }, [productNavShow])
+
+
+  const handleDropDownItemClick = useCallback((pathname: string) => {
+    console.log('handleDropDownItemClick123');
+    
     Router.push(pathname || "/")
+    setProductNavShow(false)
   }, [])
 
   return (
@@ -63,14 +85,15 @@ function Navigator() {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             <Nav.Link href="/" className='hvr-underline-from-left' active={pathname === '/'}>{t('nav.nav_home')}</Nav.Link>
-            <NavDropdown active={pathname === '/product'} title={t('nav.nav_products')} id="navbarScrollingDropdown" show={productNavShow}
-              onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
-              >
+            <NavDropdown active={pathname.includes('/product')} title={t('nav.nav_products')} id="navbarScrollingDropdown" show={productNavShow}
+              // onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
+              onClick={handleProductClick} 
+            >
               {
                 ProductCategories(t).map((item, index) => {
                   return (
-                    <NavDropdown.Item key={item.label + index} className={styles.NavDropdown} >
-                      <div onClick={() => {handleDropDownItemClick(item.path)}}>
+                    <NavDropdown.Item key={item.label + index} className='hvr-underline-from-left' onClick={() => { handleDropDownItemClick(item.path) }}>
+                      <div >
                         {item.label}
                       </div>
                     </NavDropdown.Item>
@@ -92,18 +115,18 @@ function Navigator() {
             <Button variant="primary" className="btn-round">{t('nav.nav_search')}</Button>
           </Form>
 
-        <DropdownButton id="dropdown-basic-button" title={t('nav.nav_language.language')}>
-          {
-            Languages(t).map((item: any, index: any)=>{
-              return  (
-                // <Dropdown.Item locale={item.value} onclick={()=>{handleLanguageClick(item.prefix)}} active={locale === item.value} key={item.value}>{item.label}</Dropdown.Item>
-                <Dropdown.Item className={styles.dropdownLink} active={locale === item.value} key={item.value + index}>
-                  <Link  locale={item.value} href={asPath}>{item.label}</Link>
-                 </Dropdown.Item>
-              )
-            })
-          }
-        </DropdownButton>
+          <DropdownButton id="dropdown-basic-button" title={t('nav.nav_language.language')}>
+            {
+              Languages(t).map((item: any, index: any) => {
+                return (
+                  // <Dropdown.Item locale={item.value} onclick={()=>{handleLanguageClick(item.prefix)}} active={locale === item.value} key={item.value}>{item.label}</Dropdown.Item>
+                  <Dropdown.Item className={styles.dropdownLink} active={locale === item.value} key={item.value + index}>
+                    <Link locale={item.value} href={asPath}>{item.label}</Link>
+                  </Dropdown.Item>
+                )
+              })
+            }
+          </DropdownButton>
         </Navbar.Collapse>
       </Container>
     </Navbar>

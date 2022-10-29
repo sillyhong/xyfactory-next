@@ -33,6 +33,20 @@ a {
 
 
 
+/* navigator */
+.me-auto .dropdown-menu {
+  margin: 0;
+  padding: 0;
+  
+}
+.me-auto .dropdown-menu a:first-child:hover {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.me-auto .dropdown-menu a:last-child:hover {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
 
 /* section wrapper */
 .sectionWrapper {

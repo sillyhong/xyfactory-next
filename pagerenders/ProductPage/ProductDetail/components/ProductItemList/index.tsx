@@ -35,13 +35,13 @@ function ProductItemList({ id, handleProductItemClick }: any) {
                 {
                     prodcutItem && prodcutItem.map((item: any, index: string) => {
                         return (
-                            <div className='col-lg-3 d-flex justify-content-center hotProductWrapper' key={'productItem' + index}>
+                            <div className='col-lg-3 d-flex justify-content-center hotProductWrapper hvr-grow' key={'productItem' + index} onClick={()=>{handleItemClick(item)}}>
                             <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
                               <Image className="card-img" src={item.src} alt={item.desc} />
                               <div className=" d-flex align-items-center text-center">
                                 <div className="card-body d-flex flex-column justify-content-center align-items-center">
                                   <h3 className={`card-title  ${styles.customCardTitle}`}>{item.desc}</h3>
-                                  <Button variant="primary" className="btn-round" onClick={()=>{handleItemClick(item)}}>{t('product.btn_detail')}</Button>
+                                  <Button variant="primary" className="btn-round">{t('product.btn_detail')}</Button>
                                 </div>
                               </div>
                             </div>

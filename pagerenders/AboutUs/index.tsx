@@ -27,7 +27,7 @@ const AboutUs = () => {
         {/* profile */}
         <div className='row'>
           <div className="description col-lg-6">
-            <SectionHeader title={t('about_us.text_company_profile')} showDesc={false} showSperator={false} titleClass="justify-content-start" />
+            <SectionHeader title={t('about_us.text_company_profile')} animateClass="animate__animated animate__pulse" showDesc={false} showSperator={false} titleClass="justify-content-start" />
             {renderDesc()}
           </div>
           <div className='col-lg-6 hvr-grow'>

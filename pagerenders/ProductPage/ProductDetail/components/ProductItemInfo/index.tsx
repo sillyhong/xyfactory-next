@@ -61,6 +61,7 @@ function ProductItemInfo({ productItem, id }: any) {
       </Table>
     )
   }, [detail])
+
   return (
     <section
       className='pt-4 pb-5 sectionWrapper'
@@ -85,7 +86,7 @@ function ProductItemInfo({ productItem, id }: any) {
       <hr />
       <div className="row">
         <div className='col-lg-12'>
-          <SectionHeader title={t('product.production_description')} titleClass='justify-content-start' showDesc={false} showSperator={false}/>
+          <SectionHeader title={t('product.production_description')} animateClass='animate__animated animate__pulse' titleClass='justify-content-start' showDesc={false} showSperator={false}/>
           {renderDetailTable}
         </div>
       </div>

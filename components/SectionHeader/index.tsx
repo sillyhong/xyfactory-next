@@ -7,19 +7,21 @@ interface IProps {
   title: string
   showDesc?: boolean,
   showSperator?: boolean,
-  titleClass?: string,
+  titleClass?: string
+  animateClass?: string,
 }
 function SectionHeader({
   title,
   showDesc = true,
   showSperator = true,
+  animateClass = 'animate__animated animate__rotateIn',
   titleClass = 'justify-content-center',
 
 }: IProps) {
   const { t} = useTranslation('common')
 
   return (
-    <div className="animate__animated animate__rotateIn">
+    <div className={animateClass}>
     <h2 className={`h2 mb-4 d-flex  fw-bold ${titleClass} `}>{title}</h2>
     {
       showSperator && (

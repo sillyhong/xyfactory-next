@@ -16,12 +16,12 @@ function ProductMenu({handleMenuClick}: any) {
 
     return (
         <div className='col-lg-12'>
-            <h5 className="h5 mb-4 d-flex justify-content-center fw-bold">{t('home_product_categories.sub_title')}</h5>
+            <h5 className="h5 mb-4 d-flex justify-content-center fw-bold">{t('product.production_category')}</h5>
             <ListGroup>
                 {
                     ProductCategories(t).map((item)=>{
                         return (
-                            <ListGroup.Item style={{transition: 'all 0.5s'}} variant="primary" key={item.path}  active={asPath.includes(item.key)} onClick={()=>{handleItemClick(item.path)}}>
+                            <ListGroup.Item className="hvr-underline-from-center" variant="primary" key={item.path}  active={asPath.includes(item.key)} onClick={()=>{handleItemClick(item.path)}}>
                             {item.label}
                         </ListGroup.Item>
                         )

@@ -527,7 +527,7 @@ export const ProductInfos = (t: any) => {
       doorHandlers[2],
       doorHandlers[4],
       {
-        path: '/product-bathroom-sliding-door-accessories',
+        path: '/product#product-bathroom-sliding-door-accessories',
         homeHot: true,
         src: doorhandles808P1,
         desc: t('product.product_categories.product_bathroom_sliding_door_accessories.0.desc'),

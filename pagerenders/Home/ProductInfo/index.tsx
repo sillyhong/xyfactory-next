@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import SectionHeader from '@components/SectionHeader';
@@ -8,6 +9,8 @@ import { ProductInfos } from '../../../constants/productInfo'
 
 function ProductInfo() {
   const { t } = useTranslation('common')
+  const router = useRouter();
+
 
   const newProducts = useMemo(() => {
     const productInfos = ProductInfos(t)
@@ -23,6 +26,11 @@ function ProductInfo() {
     return homeNewProducts;
   }, [t])
 
+  const handleItemClick = (item: any) => {
+    router.push(item.path)
+  }
+
+
   return (
     <>
       <section
@@ -34,7 +42,7 @@ function ProductInfo() {
           {
             newProducts.map((item, index) => {
               return (
-                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper hvr-pulse' key={item.desc + index}>
+                <div className='col-lg-3 d-flex justify-content-center hotProductWrapper hvr-grow' key={item.desc + index} onClick={()=>{handleItemClick(item)}}>
                   <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
                     <Image className="card-img" src={item.src} alt={item.title} />
                     <div className=" d-flex align-items-center text-center">

@@ -22,15 +22,11 @@ function ProductDetail({ id }: any) {
                     prodcutItem && prodcutItem.map((item: any, index: string) => {
 
                         return (
-                            <div className='col-lg-3 hotProductWrapper' key={ 'product-profile'+ index}>
+                            <div className='col-lg-3 hotProductWrapper hvr-grow' key={ 'product-profile'+ index}>
                                 <div className={`card overlay overlay-black  align-items-center text-white shadow-sm border-0`}>
                                     <Image className="card-img" src={item.src} alt={item.desc} />
                                     <div className="card-img-overlay d-flex align-items-center text-center">
                                         <div className="card-body">
-                                            {/* <h3 className="card-title">{item.title}</h3> */}
-                                            {/* <p className="card-text text-muted">
-                          {item.desc}
-                        </p> */}
                                         </div>
                                     </div>
                                 </div>
