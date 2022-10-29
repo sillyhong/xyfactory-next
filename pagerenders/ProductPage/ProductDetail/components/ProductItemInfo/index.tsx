@@ -35,7 +35,7 @@ function ProductItemInfo({ productItem, id }: any) {
         </tbody>
       </Table>
     )
-  }, [profile])
+  }, [profile, t])
 
   const renderDetailTable = useMemo(() => {
     const values: any = Object.values(detail)
