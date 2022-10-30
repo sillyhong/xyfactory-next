@@ -34,16 +34,16 @@ a {
 
 
 /* navigator */
-.me-auto .dropdown-menu {
+.navbar-collapse .dropdown-menu {
   margin: 0;
   padding: 0;
   
 }
-.me-auto .dropdown-menu a:first-child:hover {
+.navbar-collapse .dropdown-menu a:first-child:hover {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-.me-auto .dropdown-menu a:last-child:hover {
+.navbar-collapse .dropdown-menu a:last-child:hover {
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 }
@@ -226,5 +226,20 @@ a {
   .product-info-table tr td {
     width: 300px;
     word-break: break-all;
+  }
+}
+
+/* 极小屏 */
+@media (max-width: 320px) {
+  .container-fluid .navbar-brand  {
+    margin-right: 1px;
+  }
+  /* logo */
+  .container-fluid .navbar-brand span {
+    width: 40px !important;
+  }
+  /* factory name */
+  .container-fluid .navbar-brand div {
+    font-size: 14px;
   }
 }

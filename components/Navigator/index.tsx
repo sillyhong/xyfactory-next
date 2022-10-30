@@ -24,12 +24,12 @@ function Navigator() {
   const router: any = useRouter()
   const { pathname = '', asPath = '', locale = 'en', locales = [] } = router
 
-  const handleWindowClick = useCallback((e: any)=>{
+  const handleWindowClick = useCallback((e: any) => {
     const target = e.target
     const classList = target?.classList
     if (!productNavShow) return
-    if(productNavShow && classList?.[0] === 'dropdown-toggle') {
-     setProductNavShow(false)
+    if (productNavShow && classList?.[0] === 'dropdown-toggle') {
+      setProductNavShow(false)
       return
     }
     if (classList?.[0] === 'dropdown-toggle' || classList?.[0] === 'dropdown-item') {
@@ -47,17 +47,6 @@ function Navigator() {
     }
   }, [handleWindowClick])
 
-
-  // const handleProductMouseOver = useCallback(() => {
-  //   setProductNavShow(true)
-
-  // }, [])
-
-  // const handleProductMouseOut = useCallback(() => {
-  //   setProductNavShow(false)
-
-  // }, [])
-
   const handleProductClick = useCallback((e: any) => {
     e.stopPropagation()
     setProductNavShow(!productNavShow)
@@ -66,16 +55,14 @@ function Navigator() {
 
 
   const handleDropDownItemClick = useCallback((pathname: string) => {
-    console.log('handleDropDownItemClick123');
-    
-    Router.push(pathname || "/")
+    Router.push(pathname || "home")
     setProductNavShow(false)
   }, [])
 
   return (
     <Navbar className={styles.fixed} bg="primary" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="/">
+        <Navbar.Brand href="home">
           <div className={`${styles.logo} hvr-grow`}>
             <Image src={Logo} width={60} height={60} alt='logo' />
             <div className={`${styles.logoDesc}`}>{t('factory_name')}</div>
@@ -84,10 +71,10 @@ function Navigator() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href="/" className='hvr-underline-from-left' active={pathname === '/'}>{t('nav.nav_home')}</Nav.Link>
+            <Nav.Link href={'home'}  className='hvr-underline-from-left' active={pathname === '/' || pathname === '/home'}>{t('nav.nav_home')}</Nav.Link>
             <NavDropdown active={pathname.includes('/product')} title={t('nav.nav_products')} id="navbarScrollingDropdown" show={productNavShow}
               // onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
-              onClick={handleProductClick} 
+              onClick={handleProductClick}
             >
               {
                 ProductCategories(t).map((item, index) => {
@@ -101,26 +88,26 @@ function Navigator() {
                 })
               }
             </NavDropdown>
-            <Nav.Link href="/portfolio" className='hvr-underline-from-left' active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
-            <Nav.Link href="/about" className='hvr-underline-from-left' active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
-            <Nav.Link href="/contact" className='hvr-underline-from-left' active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
-          </Nav>
-          <Form className="d-flex">
-            <Form.Control
-              type="search"
-              placeholder={t('nav.nav_search')}
-              className="me-2"
-              aria-label="Search"
-            />
-            <Button variant="primary" className="btn-round">{t('nav.nav_search')}</Button>
-          </Form>
+            <Nav.Link href="portfolio" className='hvr-underline-from-left' active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
+            <Nav.Link href="about" className='hvr-underline-from-left' active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
+            <Nav.Link href="contact" className='hvr-underline-from-left' active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
 
-          <DropdownButton id="dropdown-basic-button" title={t('nav.nav_language.language')}>
+            {/* <Form className="d-flex">
+              <Form.Control
+                type="search"
+                placeholder={t('nav.nav_search')}
+                className="me-2"
+                aria-label="Search"
+              />
+              <Button variant="primary" className="btn-round">{t('nav.nav_search')}</Button>
+            </Form> */}
+          </Nav>
+
+          <DropdownButton id="dropdown-basic-button" style={{marginLeft: '-10px'}} title={t('nav.nav_language.language')}>
             {
               Languages(t).map((item: any, index: any) => {
                 return (
-                  // <Dropdown.Item locale={item.value} onclick={()=>{handleLanguageClick(item.prefix)}} active={locale === item.value} key={item.value}>{item.label}</Dropdown.Item>
-                  <Dropdown.Item className={styles.dropdownLink} active={locale === item.value} key={item.value + index}>
+                  <Dropdown.Item className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} key={item.value + index}>
                     <Link locale={item.value} href={asPath}>{item.label}</Link>
                   </Dropdown.Item>
                 )
