@@ -68,7 +68,7 @@ function Contactus() {
               <Accordion.Item eventKey={index + ''} key={item.label + index}>
                 <Accordion.Header>{label}</Accordion.Header>
                 <Accordion.Body>
-                  <div className='d-f justify-content-start'>
+                  <div className='justify-content-start'>
 
                     {
                       connects && connects.map((connect: any, connectIndex) => {

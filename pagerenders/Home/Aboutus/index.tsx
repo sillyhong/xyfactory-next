@@ -27,7 +27,7 @@ function Aboutus() {
           <div className="col-lg-6">
               <Image src={factory} alt='factory' className='hvr-grow'/>
           </div>
-          <div className="col-lg-6 d-flex flex-column align-items-center">
+          <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
             {renderDesc()}
             <Button variant='primary' className="btn-round mt-3" onClick={handleViewMoreClick}>{t('home_about_us.text_view_more')}</Button>
           </div>
