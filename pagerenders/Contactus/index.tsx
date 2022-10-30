@@ -4,10 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { ContactUs } from '@constants/contactus';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 
 
 function Contactus() {
+  const { t} = useTranslation('common')
+
   const handleFormSubmit = (e: any) => {
     const form = e.currentTarget
     const { formBasicName, formBasicEmail, formBasicTel, formBasicMessage} = form
@@ -67,22 +70,20 @@ function Contactus() {
             return (
               <Accordion.Item eventKey={index + ''} key={item.label + index}>
                 <Accordion.Header>{label}</Accordion.Header>
-                <Accordion.Body>
-                  <div className='justify-content-start'>
+                <Accordion.Body className='row'>
 
                     {
                       connects && connects.map((connect: any, connectIndex) => {
                         const { name, value, qrcode } = connect || {}
                         return (
-                          <div key={'code' + connectIndex} className="col-md-6">
-                            {name && <div className='fw-bold'>{name}</div>}
-                            {value && <div className='fw-bold '>{value}</div>}
-                            {qrcode && <Image src={qrcode} key={'code' + connectIndex} alt={label} />}
+                          <div key={'code' + connectIndex} className="col-lg-4 d-flex flex-column align-items-start">
+                            {name && <div className='fw-bold d-flex justify-content-start'>{t('contact.contact_name')}: {name}</div>}
+                            {value && <div className='fw-bold d-flex justify-content-start' style={{marginBottom: '10px'}}>{t('contact.contact_account')}: {value}</div>}
+                            {qrcode && <Image src={qrcode}  width={240} height={240} key={'code' + connectIndex} alt={label} />}
                           </div>
                         )
                       })
                     }
-                  </div>
                 </Accordion.Body>
               </Accordion.Item>
             )

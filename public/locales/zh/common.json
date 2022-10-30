@@ -383,5 +383,9 @@
             "product_size": "尺寸",
             "product_glass_thinkness": "玻璃厚度"
         }
+    },
+    "contact": {
+        "contact_name": "名字",
+        "contact_account": "账号"
     }
 }

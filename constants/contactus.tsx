@@ -1,8 +1,9 @@
-import react from 'react';
 import tiktok from '@assets/images/contactus/tiktok.png';
 import instagram_self from '@assets/images/contactus/instagram_self.png';
 import whatsapp_self from '@assets/images/contactus/whatsapp_self.png';
 import whatsapp_other from '@assets/images/contactus/whatsapp_other.png';
+import wechat_self from '@assets/images/contactus/wechat_self.png';
+import wechat_other from '@assets/images/contactus/wechat_other.png';
 
 export const faceBookIcon = () => {
     return (
@@ -177,7 +178,9 @@ export const ContactUs = [
         notShowInContactPage: true,
         connects: [
             {
-                value: '+8618925071790'
+                qrcode: tiktok,
+                value: '+8618925071790',
+                name: 'xyglasshardwarefactory'
             }
         ]
     },
@@ -186,7 +189,12 @@ export const ContactUs = [
         icon: WechatIcon,
         connects: [
             {
-                value: '+8613124932180'
+                qrcode: wechat_self,
+                value: '13124932180'
+            },
+            {
+                qrcode: wechat_other,
+                value: '13827533255'
             }
         ]
 

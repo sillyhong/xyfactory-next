@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { useTranslation } from 'next-i18next'
 import { ContactUs  } from '@constants/contactus';
+import { useRouter } from 'next/router'
 import { ProductCategories  } from '@constants/index';
 import styles from './index.module.css';
 
 function FooterComp() {
   const { t} = useTranslation('common')
+  const router: any = useRouter()
+
   
   const getCurrentYear = new Date().getFullYear();
+  
+  const handleContactClick = useCallback(()=>{
+    router.push('contact')
+  }, [router])
 
   return (
     <>
@@ -33,11 +40,10 @@ function FooterComp() {
               <i className="fas fa-copyright text-white"></i>
               <small className="d-block mt-3 text-muted">
                 ©{getCurrentYear}
-                Anchor Bootstrap UI Kit, by Sal{' '}
-                <a target="_blank" href="https://www.wowthemes.net" rel="noreferrer">
-                  @wowthemesnet
+                Anchor Bootstrap UI Kit,
+                <a target="_blank" href="https://www.xyglassaccessories.com/" rel="noreferrer">
+                  @xyglassaccessories
                 </a>
-                . License MIT.
               </small>
             </div>
             <div className="col-6 col-md">
@@ -45,7 +51,7 @@ function FooterComp() {
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
-                    <li key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
+                    <li onClick={handleContactClick} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
                       <span className='icon'>
                       {item.icon()}
                       </span>

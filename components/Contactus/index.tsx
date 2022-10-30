@@ -3,15 +3,17 @@ import { useTranslation } from 'next-i18next'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
 import { ContactUs } from '@constants/contactus'
+import { useRouter } from 'next/router'
 import styles from './index.module.css';
 
 function ContactusComp() {
   const { t} = useTranslation('common')
+  const router: any = useRouter()
 
   const handleContactClick = (contactInfo: any) => {
     const { value, label } = contactInfo
     console.log({ value, label });
-
+    router.push('contact')
   }
 
   return (
