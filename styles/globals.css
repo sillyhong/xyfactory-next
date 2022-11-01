@@ -34,7 +34,8 @@ a {
 
 
 /* navigator */
-.navbar-collapse .dropdown-menu {
+.navbar-collapse .dropdown-menu, 
+.navbar-collapse .dropdown-basic-button {
   margin: 0;
   padding: 0;
   
@@ -153,10 +154,10 @@ a {
 
 /* contact page */
 .iconbox {
-  display: block;
-  width: 60px;
-  height: 60px;
-  margin-left: 3px;
+  /* display: block; */
+  /* width: 60px; */
+  /* height: 60px; */
+  /* margin-left: 3px; */
   
 }
 
@@ -168,8 +169,8 @@ a {
 
 .contactus-iconbox {
   margin-top: 4px;
-  width: 30px;
-  height: 30px;
+  /* width: 30px; */
+  /* height: 30px; */
 }
 
 .contactus-iconbox .icon  {

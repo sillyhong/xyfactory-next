@@ -14,7 +14,6 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
 const HomeComp = ({ isMobile }:any) => {
- 
   const { t} = useTranslation('common')
   const carouselList = useMemo(()=>{
     return [

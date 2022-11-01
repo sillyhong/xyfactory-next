@@ -1,18 +1,18 @@
 import React, { useCallback } from 'react';
 import { useTranslation } from 'next-i18next'
-import { ContactUs  } from '@constants/contactus';
+import { ContactUs } from '@constants/contactus';
 import { useRouter } from 'next/router'
-import { ProductCategories  } from '@constants/index';
+import { ProductCategories } from '@constants/index';
 import styles from './index.module.css';
 
 function FooterComp() {
-  const { t} = useTranslation('common')
+  const { t } = useTranslation('common')
   const router: any = useRouter()
 
-  
+
   const getCurrentYear = new Date().getFullYear();
-  
-  const handleContactClick = useCallback(()=>{
+
+  const handleContactClick = useCallback(() => {
     router.push('contact')
   }, [router])
 
@@ -36,34 +36,27 @@ function FooterComp() {
       <footer className="bg-black pb-5">
         <div className="container">
           <div className="row">
-            <div className="col-12 col-md mr-4">
-              <i className="fas fa-copyright text-white"></i>
-              <small className="d-block mt-3 text-muted">
-                ©{getCurrentYear}
-                Anchor Bootstrap UI Kit,
-                <a target="_blank" href="https://www.xyglassaccessories.com/" rel="noreferrer">
-                  @xyglassaccessories
-                </a>
-              </small>
-            </div>
-            <div className="col-6 col-md">
+            <div className="d-flex flex-column text-center justify-content-start col-md-4 mt-2">
               <h5 className="mb-4 text-white">{t('nav.nav_contact_us')}</h5>
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
                     <li onClick={handleContactClick} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
-                      <span className='icon'>
-                      {item.icon()}
-                      </span>
-                      <a className="text-muted" href="#">
-                        {item.label}
-                      </a>
+                      <div className='w-100 text-center'>
+                        <span className='icon'>
+                          {item.icon()}
+                        </span>
+                        <a className="text-muted" href="#">
+                          {item.label}
+                        </a>
+                      </div>
+
                     </li>
                   );
                 })}
               </ul>
             </div>
-            <div className="col-6 col-md">
+            <div className="d-flex flex-column text-center justify-content-start col-md-4">
               <h5 className="mb-4 text-white">{t('home_footer.product_categories')}</h5>
               <ul className="list-unstyled text-small">
                 {ProductCategories(t).map((item, index) => {
@@ -76,6 +69,16 @@ function FooterComp() {
                   );
                 })}
               </ul>
+            </div>
+            <div className="col-md-4 d-flex">
+              <i className="fas fa-copyright text-white"></i>
+              <small className="d-block mt-3 text-muted">
+                ©{getCurrentYear}
+                Anchor Bootstrap UI Kit,
+                <a target="_blank" href="https://www.xyglassaccessories.com/" rel="noreferrer">
+                  @xyglassaccessories
+                </a>
+              </small>
             </div>
           </div>
         </div>
