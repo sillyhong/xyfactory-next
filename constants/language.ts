@@ -31,7 +31,6 @@ import { i18n, } from 'next-i18next'
 // const t = i18n?.getFixedT(null, null, 'nav')
 // console.log('i18n12312312', t);
 
-console.log('i18n12312312 language123');
 
 export const Languages = (t: any): any => {
 
@@ -45,6 +44,11 @@ export const Languages = (t: any): any => {
             value: 'zh',
             label:  t('nav.nav_language.zh'),
             prefix: '/zh'
+        },
+        {
+            value: 'spanish',
+            label:  t('nav.nav_language.spanish'),
+            prefix: '/spanish'
         },
         {
             value: 'arabic',

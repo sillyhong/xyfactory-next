@@ -1,28 +1,29 @@
 {
     "factory_name": "XYHardWareFactory",
     "nav": {
-        "nav_home": "Home",
-        "nav_products": "Products",
-        "nav_about_us": "About US",
-        "nav_contact_us": "Contact Us",
-        "nav_portfolio": "Portfolio",
-        "nav_search": "search",
+        "nav_home": "الصفحة الرئيسية",
+        "nav_products": "المنتجات",
+        "nav_about_us": "نبذة عنا",
+        "nav_contact_us": "اتصل بنا",
+        "nav_portfolio": "عرض حالة العميل",
+        "nav_search": "بحث",
         "nav_language": {
-            "language": "language",
-            "zh": "Chinese",
-            "en": "English",
-            "arabic": "Arabic"
+            "language": "اللغة",
+            "zh": "الصينية",
+            "en": "إنجليزي",
+            "spanish": "إسباني",
+            "arabic": "عربي"
         }
     },
     "carousel": {
-        "title1": "High Quality",
-        "desc1": "Quality is the leading princeple in every area at Xianying.",
-        "title2": "Brilliant Team",
-        "desc2": "We have advanced production equipment and a number of skillfull technical workers.",
-        "title3": "Competitive Price",
-        "desc3": "As a manufacturer, we can provide you with the most affordable price.",
-        "title4": "Fast Delivery",
-        "desc4": "Our factory has many automation equipment and skilled workers to meet your needs."
+        "title1": "جودة عالية",
+        "desc1": "الجودة هي الرائد الرئيسي في كل منطقة في Xianying",
+        "title2": "فريق رائع",
+        "desc2": "لدينا معدات إنتاج متطورة وعدد من العمال الفنيين المهرة",
+        "title3": "سعر تنافسي",
+        "desc3": "بصفتنا شركة مصنعة ، يمكننا أن نوفر لك أفضل الأسعار المعقولة",
+        "title4": "توصيل سريع",
+        "desc4": "يحتوي مصنعنا على العديد من معدات التشغيل الآلي والعمال المهرة لتلبية احتياجاتك."
     },
     "home_sub_header": {
         "about_us": "About US"

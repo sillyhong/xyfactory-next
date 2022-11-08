@@ -1,0 +1,392 @@
+{
+    "factory_name": "XiangYing Hardware",
+    "nav": {
+        "nav_home": "Inicio",
+        "nav_products": "Categoría de producto",
+        "nav_about_us": "Introducción de la empresa",
+        "nav_contact_us": "Contáctenos",
+        "nav_portfolio": "Presentación del caso del cliente",
+        "nav_search": "Buscar",
+        "nav_language": {
+            "language": "idioma",
+            "zh": "Chino",
+            "es": "inglés",
+            "español": "español",
+            "árabe": "Arábica"
+        }
+    },
+    "carrusel": {
+        "title1": "Buscar alta calidad",
+        "desc1": "La calidad del producto siempre ha sido la eterna búsqueda de Xiangying",
+        "title2": "Excelente equipo",
+        "desc2": "Contamos con equipos de producción avanzados y un grupo de trabajadores calificados",
+        "title3": "Precio competitivo",
+        "desc3": "Como fábrica, podemos ofrecerle los precios de productos más asequibles",
+        "title4": "Envío conveniente del producto",
+        "desc4": "Nuestra fábrica cuenta con muchos empleados calificados que pueden satisfacer mejor las necesidades de su pedido"
+    },
+    "home_sub_header": {
+        "about_us": "Introducción de la empresa"
+    },
+    "home_hot_product": {
+        "sub_title": "Gran Venta"
+    },
+    "home_product_categories": {
+        "sub_title": "Últimos productos"
+    },
+    "home_about_us": {
+        "text_homepage_about_us": "<div class='home-aboutus'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con producción avanzada equipo y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad.<br/><br/> Tenemos mucha experiencia exportando a todo el mundo, especialmente en Canadá, Holanda y Australia.< /br></br>Agradecemos todas las consultas sobre productos domésticos, arquitectónicos, comerciales de vidrio y aluminio.<br/><br/>Si está interesado en nuestros productos, no dude en comunicarse con nosotros.</div> ",
+        "text_view_more": "Ver más",
+        "sub_title": "Hardware Xiangying"
+    },
+    "home_contact_us": {
+        "text_connect": "Contáctenos"
+    },
+    "home_footer": {
+        "product_categories": "Categorías de productos"
+    },
+    "about_us": {
+        "text_company_profile": "Perfil de la empresa",
+        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con equipos de producción avanzados y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad. <br/><br/> Tenemos mucha experiencia exportando a todo el mundo, especialmente a Canadá, Holanda y Australia. </br></br>Agradecemos todas las consultas sobre productos de vidrio y aluminio para uso doméstico, arquitectónico y comercial. <br/><br/>Si está interesado en nuestros productos, no dude en contactarnos. </div>"
+    },
+    "product": {
+        "btn_detail": "Detalles",
+        "production_Information": "Información del producto",
+        "production_description": "Descripción del producto",
+        "production_category": "Categoría de producto",
+        "product_categories": {
+            "product_door_handle": {
+                "title": "Serie de manijas",
+                "0": {
+                    "title": "Serie de manijas",
+                    "desc": "Manija de la puerta del baño de acero inoxidable 304 manija de la puerta",
+                    "profile": {
+                        "product_name": "Pomo de la puerta",
+                        "product_no": "XY-D033H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Níquel cepillado, negro mate, cromo, etc.",
+                        "producto_diámetro": "68 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Pomo de la puerta",
+                        "product_no": "XY-D033H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Níquel cepillado, negro mate, cromo, etc.",
+                        "producto_diámetro": "68 mm"
+                    }
+                },
+                "1": {
+                    "desc": "Venta caliente manija de puerta tipo H manija de puerta de acero inoxidable",
+                    "profile": {
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D028H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D028H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    }
+                },
+                "2": {
+                    "desc": "Manija de puerta de vidrio de ducha de alta calidad",
+                    "profile": {
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D661H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "25*300*500mm, se puede personalizar"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D661H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "25*300*500mm, se puede personalizar"
+                    }
+                },
+                "3": {
+                    "desc": "Manija de puerta nueva de alta calidad manija de puerta de vidrio fijo sólido para baño",
+                    "profile": {
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D056H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Manija de la puerta",
+                        "product_no": "XY-D056H",
+                        "producto_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    }
+                },
+                "4": {
+                    "desc": "Tubo redondo de acero inoxidable soldado sin costura de acero inoxidable de alta calidad, tubo cuadrado",
+                    "profile": {
+                        "product_name": "Pomo de la puerta",
+                        "product_no": "XY-D030H",
+                        "product_material": "Latón",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Pomo de la puerta",
+                        "product_no": "XY-D030H",
+                        "product_material": "Latón",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-12 mm"
+                    }
+                }
+            },
+            "product_shower_hinge": {
+                "title": "Serie de clips de baño",
+                "0": {
+                    "title": "Serie de clips de baño",
+                    "desc": "Venta caliente pared clip de vidrio de 90 grados bisagra de acero inoxidable puerta de vidrio clip de baño",
+                    "profile": {
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S500H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-10 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S500H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-10 mm"
+                    }
+                },
+                "1": {
+                    "desc": "bisagra de puerta de acero inoxidable con clip fijo de vidrio templado para cuarto de ducha de 90 grados",
+                    "profile": {
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S505H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S505H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    }
+                },
+                "2": {
+                    "desc": "clip de puerta de baño cuadrado de 180 grados clip de baño de puerta de vidrio con bisagras estándar",
+                    "profile": {
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S506H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S506H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    }
+                },
+                "3": {
+                    "desc": "Accesorios para puertas de vidrio Bisagra para ducha de 135 grados Bisagra para vidrio",
+                    "profile": {
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S551H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S551H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    }
+                },
+                "4": {
+                    "desc": "clip de vidrio de 180 grados, accesorios para puerta de ducha, bisagra de clip para puerta de vidrio",
+                    "profile": {
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S553H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Clip de baño",
+                        "product_no": "XY-S5531H",
+                        "product_material": "Latón, SUS304",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "8-12 mm"
+                    }
+                }
+            },
+            "product_pipe_connectors": {
+                "title": "Serie de conectores de tubería",
+                "0": {
+                    "title": "Serie de conectores de tubería",
+                    "desc": "Accesorios de baño de acero inoxidable Accesorios de tubería Accesorios de tubería Conectores de tubería",
+                    "profile": {
+                        "product_name": "Conector de tubería",
+                        "product_no": "XY-P101C",
+                        "producto_material": "SUS304",
+                        "product_finish": "Luz de espejo",
+                        "product_glass_thinkness": "8-10 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Conector de tubería",
+                        "product_no": "XY-P101C",
+                        "producto_material": "SUS304",
+                        "product_finish": "Luz de espejo",
+                        "product_glass_thinkness": "8-10 mm"
+                    }
+                }
+            },
+            "product_hanging_wheel": {
+                "title": "Serie de ruedas colgantes",
+                "0": {
+                    "title": "Serie de ruedas colgantes",
+                    "desc": "Juego de rodillos para puertas corredizas de vidrio y acero inoxidable, accesorios, rueda para colgar puertas de vidrio",
+                    "profile": {
+                        "product_name": "Rodillo para puerta corrediza de baño",
+                        "product_no": "XY-H787W",
+                        "product_material": "Acero inoxidable",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-12 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Conector de tubería",
+                        "product_no": "XY-H787W",
+                        "product_material": "Acero inoxidable",
+                        "product_finish": "Arena, Espejo, Negro mate, Dorado",
+                        "product_glass_thinkness": "6-12 mm"
+                    }
+                }
+            },
+            "product_bathroom_sliding_door_accessories": {
+                "title": "Accesorios para puertas correderas de baño",
+                "0": {
+                    "title": "Accesorios para puertas correderas de baño",
+                    "desc": "Tubo redondo de acero inoxidable soldado sin costura de acero inoxidable de alta calidad, tubo cuadrado",
+                    "profile": {
+                        "product_name": "Tubo de acero inoxidable",
+                        "product_no": "XY-808P",
+                        "product_material": "Tubería de acero inoxidable 201 304 316",
+                        "product_outer_diameter": "6-10 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Tubo de acero inoxidable",
+                        "product_no": "XY-808P",
+                        "product_material": "Tubería de acero inoxidable 201 304 316",
+                        "product_outer_diameter": "6-10 mm"
+                    }
+                }
+            },
+            "product_glass_floor_spring": {
+                "title": "primavera de piso",
+                "0": {
+                    "title": "primavera de piso",
+                    "desc": "G-220B resorte de piso puerta de vidrio puerta de madera puerta enmarcada puerta sin marco accesorios de cierre automático de puertas resorte de piso",
+                    "profile": {
+                        "product_name": "muelle de piso",
+                        "product_no": "G-220B",
+                        "producto_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "muelle de piso",
+                        "product_no": "G-220B",
+                        "producto_material": "SUS304"
+                    }
+                },
+                "1": {
+                    "title": "primavera de piso",
+                    "desc": "Resorte para piso G-220C de gran venta, resorte para piso para puerta de vidrio artesanal de alta calidad",
+                    "profile": {
+                        "product_name": "muelle de suelo",
+                        "product_no": "G-220C",
+                        "producto_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "muelle de piso",
+                        "product_no": "G-220C",
+                        "producto_material": "SUS304"
+                    }
+                },
+                "2": {
+                    "title": "primavera de piso",
+                    "desc": "Suministro directo de fábrica H-220C resorte de piso para cierrapuertas de vidrio de alta calidad",
+                    "profile": {
+                        "product_name": "muelle de piso",
+                        "product_no": "H-220C",
+                        "producto_material": "SUS304"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "muelle de piso",
+                        "product_no": "H-220C",
+                        "producto_material": "SUS304"
+                    }
+                }
+            }
+        },
+        "product_labels": {
+            "product_name": "Nombre del producto",
+            "product_no": "Número de producto",
+            "producto_material": "Material",
+            "product_finish": "Acabado de superficie",
+            "product_diameter": "Diámetro",
+            "product_outer_diameter": "Diámetro exterior",
+            "product_brand_name": "Nombre de la marca",
+            "place_of_origin": "Origen",
+            "product_size": "Tamaño",
+            "product_glass_thinkness": "Grosor del vidrio"
+        }
+    },
+    "contact": {
+        "contact_name": "Nombre",
+        "contact_account": "Cuenta"
+    }
+}
