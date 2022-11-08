@@ -26,364 +26,364 @@
         "desc4": "يحتوي مصنعنا على العديد من معدات التشغيل الآلي والعمال المهرة لتلبية احتياجاتك."
     },
     "home_sub_header": {
-        "about_us": "About US"
+        "about_us": "معلومات عنا"
     },
     "home_hot_product": {
-        "sub_title": "Hot Products"
+        "sub_title": "منتوجات جديدة"
     },
     "home_product_categories": {
-        "sub_title": "Product Categories"
+        "sub_title": "فئات المنتجات"
     },
     "home_about_us": {
-        "text_homepage_about_us": "<div class='home-aboutus'><strong >Xiangying Glass Hardware Factory </strong>is 15 years factory with a focus on customer service, satisfaction and impeccable workmanship. We have advanced production equipment and a number of skillfull technical workers and we can offer you with the high quality products with competitive price. <br /><br />We have a lot experience to export all over the world, especially in Canada, Netherlands and Australia.<br /><br />We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications.If you are insterested in our product, pls feel free to contact us.</div>",
-        "text_view_more": "View More",
+        "text_homepage_about_us": "<div class = 'home-aboutus'> <strong> Xiangying Glass Hardware Factory </strong> هو مصنع لمدة 15 عامًا مع التركيز على خدمة العملاء والرضا والاتقان الذي لا تشوبه شائبة. لدينا معدات إنتاج متطورة وعدد من العمال الفنيين المهرة ويمكننا أن نقدم لك منتجات عالية الجودة وبأسعار تنافسية. <br /> <br /> لدينا الكثير من الخبرة للتصدير إلى جميع أنحاء العالم ، وخاصة في كندا وهولندا وأستراليا. <br /> <br /> نرحب بجميع الاستفسارات المتعلقة بالزجاج والألمنيوم للأغراض المنزلية والمعمارية والتجارية إذا كنت مهتمًا بمنتجنا ، فلا تتردد في الاتصال بنا. </ div>",
+        "text_view_more": "عرض المزيد",
         "sub_title": "Xiangying Hardware"
     },
     "home_contact_us": {
-        "text_connect": "Connect with us"
+        "text_connect": "اتصل بنا"
     },
     "home_footer": {
-        "product_categories": "Product Categories"
+        "product_categories": "فئات المنتجات"
     },
     "about_us": {
-        "text_company_profile": "Company Profile",
-        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>is 15 years factory with a focus on customer service, satisfaction and impeccable workmanship. We have advanced production equipment and a number of skillfull technical workers and we can offer you with the high quality products with competitive price. <br /><br />We have a lot experience to export all over the world, especially in Canada, Netherlands and Australia.<br /><br />We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications.If you are insterested in our product, pls feel free to contact us.</div>"
+        "text_company_profile": "ملف الشركة",
+        "text_homepage_about_us": "<div class = 'home-aboutus aboutus-custom'> <strong> Xiangying Glass Hardware Factory </strong> هو مصنع لمدة 15 عامًا مع التركيز على خدمة العملاء والرضا والاتقان الذي لا تشوبه شائبة. لدينا معدات إنتاج متطورة وعدد من العمال الفنيين المهرة ويمكننا أن نقدم لك منتجات عالية الجودة وبأسعار تنافسية. <br /> <br /> لدينا الكثير من الخبرة للتصدير إلى جميع أنحاء العالم ، وخاصة في كندا وهولندا وأستراليا. <br /> <br /> نرحب بجميع الاستفسارات المتعلقة بالزجاج والألمنيوم للأغراض المنزلية والمعمارية والتجارية إذا كنت مهتمًا بمنتجنا ، فلا تتردد في الاتصال بنا. </ div>"
     },
     "product": {
-        "btn_detail": "Details",
-        "production_Information": "Product Information",
-        "production_description": "Description",
-        "production_category": "Product Category",
+        "btn_detail": "تفاصيل",
+        "production_Information": "معلومات المنتج",
+        "production_description": "معلومات المنتج",
+        "production_category": "معلومات المنتج",
         "product_categories": {
             "product_door_handle": {
-                "title": "Door Handles and Knobs",
+                "title": "مقابض الأبواب والمقابض",
                 "0": {
-                    "title": "Door Handles and Knobs",
-                    "desc": "Stainless Steel 304 Shower Room Door Knobs Door Handle",
+                    "title": "مقابض الأبواب والمقابض",
+                    "desc": "الفولاذ المقاوم للصدأ 304 غرفة الاستحمام مقابض الباب مقبض الباب",
                     "profile": {
-                        "product_name": "Door Knob",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
-                        "product_finish": "Brush Nickel, Black, Chrome, etc",
+                        "product_finish": "نحى نيكل ، أسود ، كروم ، إلخ",
                         "product_diameter": "68mm",
                         "product_size": "/"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Door Knob",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
-                        "product_finish": "Brush Nickel, Black, Chrome, etc",
+                        "product_finish": "نحى نيكل ، أسود ، كروم ، إلخ",
                         "product_diameter": "68mm",
                         "product_size": "/"
                     }
                 },
                 "1": {
-                    "title": "Door Handles and Knobs",
-                    "desc": "Stainless Steel 304 H style Pull Handle",
+                    "title": "مقابض الأبواب والمقابض",
+                    "desc": "مقبض سحب طراز 304 من الفولاذ المقاوم للصدأ",
                     "profile": {
-                        "product_name": "Door Handle",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "350mm-1800mm or customized"
+                        "product_size": "350mm-1800mm أو حسب الطلب"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Door Handle",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "350mm-1800mm or customized"
+                        "product_size": "350mm-1800mm أو حسب الطلب"
                     }
                 },
                 "2": {
-                    "title": "Door Handles and Knobs",
-                    "desc": "High Quality Shower Glass Door Pull Handle",
+                    "title": "مقابض الأبواب والمقابض",
+                    "desc": "مقبض سحب باب زجاجي عالي الجودة",
                     "profile": {
-                        "product_name": "Door Handle",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "25*300*500mm or customized"
+                        "product_size": "25*300*500mm أو حسب الطلب"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Door Handle",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "25*300*500mm or customized"
+                        "product_size": "25*300*500mm أو حسب الطلب"
                     }
                 },
                 "3": {
-                    "title": "Door Handles and Knobs",
-                    "desc": "High Quality New Door Knob Bathroom Solid Fixed Glass Door Pull Handle",
+                    "title": "مقابض الأبواب والمقابض",
+                    "desc": "مقبض باب جديد عالي الجودة للحمام مقبض سحب باب زجاجي ثابت ثابت",
                     "profile": {
-                        "product_name": "Door Handle",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "350mm-1800mm or customized"
+                        "product_size": "350mm-1800mm أو حسب الطلب"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Door Handle",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مقبض الباب",
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "/",
-                        "product_size": "350mm-1800mm or customized"
+                        "product_size": "350mm-1800mm أو حسب الطلب"
                     }
                 },
                 "4": {
-                    "title": "Door Handles and Knobs",
-                    "desc": "Prime Quality Stainless Steel Seamless Welded Pipe Tube",
+                    "title": "مقابض الأبواب والمقابض",
+                    "desc": "أنبوب أنابيب ملحوم غير ملحوم من الفولاذ المقاوم للصدأ عالي الجودة",
                     "profile": {
-                        "product_name": "Door Knob",
+                        "product_name": "مقبض الباب",
                         "product_no": "Brass",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Door Knob",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مقبض الباب",
                         "product_no": "Brass",
                         "product_material": "SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
                     }
                 }
             },
             "product_shower_hinge": {
-                "title": "Shower Hinges",
+                "title": "مفصلات الدش",
                 "0": {
-                    "title": "Shower Hinges",
-                    "desc": "Hot Sale Wall Mounted 90 Degree Shower Hinges",
+                    "title": "مفصلات الدش",
+                    "desc": "مفصلات دش مثبتة على الحائط بزاوية 90 درجة",
                     "profile": {
-                        "product_name": "Shower Hinges",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S500H",
                         "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "6-10mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Shower Hinges",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S500H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "6-10mm"
                     }
                 },
                 "1": {
-                    "title": "Shower Hinges",
-                    "desc": "Wall to Glass Shower Glass Hinge  in Gold Color",
+                    "title": "مفصلات الدش",
+                    "desc": "مفصلة دش زجاجية من الحائط إلى الزجاج باللون الذهبي",
                     "profile": {
-                        "product_name": "Shower Hinges",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S505H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Gold or Customized",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "الذهب أو حسب الطلب",
                         "product_glass_thinkness": "8-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Shower Hinges",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S505H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Gold or Customized",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "الذهب أو حسب الطلب",
                         "product_glass_thinkness": "8-12mm"
                     }
                 },
                 "2": {
-                    "title": "Shower Hinges",
-                    "desc": "180 Degree Glass to Glass Shower Door Solid Standard Hinge",
+                    "title": "مفصلات الدش",
+                    "desc": "180 درجة من الزجاج إلى زجاج باب الحمام المفصلي القياسي الصلب",
                     "profile": {
-                        "product_name": "Shower Hinges",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S506H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Shower Hinges",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S506H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     }
                 },
                 "3": {
-                    "title": "Shower Hinges",
-                    "desc": "Glass Door Fitting 135 Degree Shower Hinge",
+                    "title": "مفصلات الدش",
+                    "desc": "مفصلة دش الباب الزجاجي 135 درجة",
                     "profile": {
-                        "product_name": "Shower Hinges",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S551H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Shower Hinges",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S551H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     }
                 },
                 "4": {
-                    "title": "Shower Hinges",
-                    "desc": "180 degree Glass Clamp Shower Door Fitting Hinge Glass Hinge",
+                    "title": "مفصلات الدش",
+                    "desc": "180 درجة الزجاج المشبك دش الباب تركيب المفصلي الزجاج المفصلي",
                     "profile": {
-                        "product_name": "Shower Hinges",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S553H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Shower Hinges",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "مفصلات الدش",
                         "product_no": "XY-S553H",
-                        "product_material": "Brass、SUS304",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "نحاس、SUS304",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "8-12mm"
                     }
                 }
             },
             "product_pipe_connectors": {
-                "title": "Pipe Connectors",
+                "title": "موصلات الأنابيب",
                 "0": {
-                    "title": "Pipe Connectors",
-                    "desc": "Mirror Polishing Stainless Steel Bathroom Hardware Parts Pipe Fitting Tube Connectors",
+                    "title": "موصلات الأنابيب",
+                    "desc": "مرآة تلميع الفولاذ المقاوم للصدأ أجزاء أجهزة الحمام الأنابيب تركيب موصلات الأنبوب",
                     "profile": {
-                        "product_name": "Pipe Connectors",
+                        "product_name": "موصلات الأنابيب",
                         "product_no": "XY-P101C",
                         "product_material": "SUS304",
-                        "product_finish": "Polish",
+                        "product_finish": "تلميع",
                         "product_glass_thinkness": "8-10mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Pipe Connectors",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "موصلات الأنابيب",
                         "product_no": "XY-P101C",
                         "product_material": "SUS304",
-                        "product_finish": "Polish",
+                        "product_finish": "تلميع",
                         "product_glass_thinkness": "8-10mm"
                     }
                 }
             },
             "product_hanging_wheel": {
-                "title": "Hanging Wheel",
+                "title": "عجلة معلقة",
                 "0": {
-                    "title": "Hanging Wheel",
-                    "desc": "Stainless Steel Glass Sliding Door Roller Set Accessories Glass Hanging Wheel",
+                    "title": "عجلة معلقة",
+                    "desc": "الفولاذ المقاوم للصدأ الزجاج انزلاق الباب الأسطوانة مجموعة الملحقات الزجاج المعلقة عجلة",
                     "profile": {
-                        "product_name": "Hanging Wheel",
+                        "product_name": "عجلة معلقة",
                         "product_no": "XY-H787W",
-                        "product_material": "Stainless Steel",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "ستانلس ستيل",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "6-12mm"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Hanging Wheel",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "عجلة معلقة",
                         "product_no": "XY-H787W",
-                        "product_material": "Stainless Steel",
-                        "product_finish": "Satin/Mirror/Black Matt/Golden",
+                        "product_material": "ستانلس ستيل",
+                        "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "6-12mm"
                     }
                 }
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "Bathroom Sliding Door Accessories",
+                "title": "اكسسوارات أبواب انزلاقية للحمام",
                 "0": {
-                    "title": "Bathroom Sliding Door Accessories",
-                    "desc": "Prime Quality Stainless Steel Seamless Welded Pipe Tube",
+                    "title": "اكسسوارات أبواب انزلاقية للحمام",
+                    "desc": "أنبوب أنابيب ملحوم غير ملحوم من الفولاذ المقاوم للصدأ عالي الجودة",
                     "profile": {
-                        "product_name": "Stainless Steel Pipe",
+                        "product_name": "انبوب مقاوم للصدأ",
                         "product_no": "XY-808P",
-                        "product_material": "201 304 316 Stainless Steel Pipes",
-                        "product_outer_diameter ": "100mm or customized"
+                        "product_material": "201 304 316 أنابيب الفولاذ المقاوم للصدأ",
+                        "product_outer_diameter ": "100mm أو حسب الطلب"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Stainless Steel Pipe",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "انبوب مقاوم للصدأ",
                         "product_no": "XY-808P",
-                        "product_material": "201 304 316 Stainless Steel Pipes",
-                        "product_outer_diameter ": "100mm or customized"
+                        "product_material": "201 304 316 أنابيب الفولاذ المقاوم للصدأ",
+                        "product_outer_diameter ": "100mm أو حسب الطلب"
                     }
                 }
             },
             "product_glass_floor_spring": {
-                "title": "Glass Floor Spring",
+                "title": "نوابض أرضية زجاجية",
                 "0": {
-                    "title": "Glass Floor Spring",
-                    "desc": "G-220B Floor Spring for Glass Door Glass Door Closer",
+                    "title": "نوابض أرضية زجاجية",
+                    "desc": "G-220B زنبرك أرضي لباب زجاجي باب زجاجي أقرب",
                     "profile": {
-                        "product_name": "Glass Floor Spring",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "G-220B",
                         "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Glass Floor Spring",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "G-220BG-220B",
                         "product_material": "SUS304"
                     }
                 },
                 "1": {
-                    "title": "Glass Floor Spring",
-                    "desc": "G-220C Hot Selling Door Accessories Floor Spring For Glass Door",
+                    "title": "نوابض أرضية زجاجية",
+                    "desc": "G-220C حار بيع اكسسوارات الباب الكلمة الربيع لباب زجاجي",
                     "profile": {
-                        "product_name": "Glass Floor Spring",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "G-220C",
                         "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Glass Floor Spring",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "G-220C",
                         "product_material": "SUS304"
                     }
                 },
                 "2": {
-                    "title": "Glass Floor Spring",
-                    "desc": "H-220C High Quality Glass Door Closer Floor Spring/Floor Hinge",
+                    "title": "نوابض أرضية زجاجية",
+                    "desc": "H-220C باب زجاجي عالي الجودة أقرب إلى الربيع / مفصلة أرضية",
                     "profile": {
-                        "product_name": "Glass Floor Spring",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "H-220C",
                         "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "XIANGYING",
-                        "place_of_origin": "Guangdong, China",
-                        "product_name": "Glass Floor Spring",
+                        "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
+                        "product_name": "نوابض أرضية زجاجية",
                         "product_no": "H-220C",
                         "product_material": "SUS304"
                     }
