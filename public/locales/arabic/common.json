@@ -391,21 +391,21 @@
             }
         },
         "product_labels": {
-            "product_name": "Product Name",
-            "product_no": "Product No.",
-            "product_material": "Material",
-            "product_finish": "Finish",
-            "product_diameter": "Diameter",
-            "product_outer_diameter": "Outer Diameter",
-            "product_brand_name": "Brand Name",
-            "place_of_origin": "Place of Origin",
-            "product_size": "Size",
-            "product_glass_thinkness": "Glass Thinkness"
+            "product_name": "اسم المنتج",
+            "product_no": "رقم المنتج.",
+            "product_material": "مواد",
+            "product_finish": "إنهاء",
+            "product_diameter": "قطر الدائرة",
+            "product_outer_diameter": "القطر الخارجي",
+            "product_brand_name": "اسم العلامة التجارية",
+            "place_of_origin": "مكان المنشأ",
+            "product_size": "بحجم",
+            "product_glass_thinkness": "سماكة الزجاج"
         }
     },
     "contact": {
-        "contact_name": "Name",
-        "contact_account": "Account"
+        "contact_name": "اسم",
+        "contact_account": "الحساب"
 
     }
 }
