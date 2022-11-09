@@ -47,7 +47,17 @@
     },
     "about_us": {
         "text_company_profile": "Company Profile",
-        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>is 15 years factory with a focus on customer service, satisfaction and impeccable workmanship. We have advanced production equipment and a number of skillfull technical workers and we can offer you with the high quality products with competitive price. <br /><br />We have a lot experience to export all over the world, especially in Canada, Netherlands and Australia.<br /><br />We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications.If you are insterested in our product, pls feel free to contact us.</div>"
+        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>is 15 years factory with a focus on customer service, satisfaction and impeccable workmanship. We have advanced production equipment and a number of skillfull technical workers and we can offer you with the high quality products with competitive price. <br /><br />We have a lot experience to export all over the world, especially in Canada, Netherlands and Australia.<br /><br />We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications.If you are insterested in our product, pls feel free to contact us.</div>",
+        "about_us_advantages": {
+            "title1": "High Quality",
+            "desc1": "Xiangying's mission is to always adhere to making good products that are 'perfect and affordable'.",
+            "title2": "Professional Team",
+            "desc2": "We have many skilled technicians who have worked for us for many years. It has always been our philosophy to provide customers with products of consistent quality and high quality",
+            "title3": "Fast Delivery",
+            "desc3": "We have many years of export experience. No matter which city you are, we can transport the goods to your place as scheduled",
+            "title4": "OEM/ODM Service",
+            "desc4": "We have many years OEM experience for clients mainly from North America and Europe."  
+        }
     },
     "product": {
         "btn_detail": "Details",

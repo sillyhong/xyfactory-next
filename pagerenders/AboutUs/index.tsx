@@ -38,7 +38,7 @@ const AboutUs = () => {
         <div className="row mt-5">
           {/* <div className="col-md-8"> */}
          {
-           advantages.map((item: any)=>{
+           advantages(t).map((item: any)=>{
             const { title, desc, IconComp} = item
               return (
                 <div className='col-ms-3 d-flex flex-column justify-content-start align-items-center col-lg-3 mt-5'key={title}> 
