@@ -160,8 +160,8 @@
                     "desc": "أنبوب أنابيب ملحوم غير ملحوم من الفولاذ المقاوم للصدأ عالي الجودة",
                     "profile": {
                         "product_name": "مقبض الباب",
-                        "product_no": "Brass",
-                        "product_material": "SUS304",
+                        "product_no": "XY-D030H",
+                        "product_material": "نحاس",
                         "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
@@ -170,8 +170,8 @@
                         "brand_name": "XIANGYING",
                         "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
                         "product_name": "مقبض الباب",
-                        "product_no": "Brass",
-                        "product_material": "SUS304",
+                        "product_no": "XY-D030H",
+                        "product_material": "نحاس",
                         "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
@@ -186,7 +186,7 @@
                     "profile": {
                         "product_name": "مفصلات الدش",
                         "product_no": "XY-S500H",
-                        "product_material": "Brass、SUS304",
+                        "product_material": "نحاس、SUS304",
                         "product_finish": "ساتان / مرآة / أسود مات / ذهبي",
                         "product_glass_thinkness": "6-10mm"
                     },
@@ -362,7 +362,7 @@
                         "brand_name": "XIANGYING",
                         "place_of_origin": "مقاطعة قوانغدونغ ، الصين",
                         "product_name": "نوابض أرضية زجاجية",
-                        "product_no": "G-220BG-220B",
+                        "product_no": "G-220B",
                         "product_material": "SUS304"
                     }
                 },

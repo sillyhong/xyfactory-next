@@ -7,8 +7,8 @@ import doorhandlesD033H3 from '@assets/images/product/product_door_handle/produc
 import doorhandlesD033H4 from '@assets/images/product/product_door_handle/product_door_handle_D033H_4.jpg';
 
 import doorhandlesD028H1 from '@assets/images/product/product_door_handle/product_door_handle_D028H_1.jpg';
-import doorhandlesD028H2 from '@assets/images/product/product_door_handle/product_door_handle_D033H_2.jpg';
-import doorhandlesD028H3 from '@assets/images/product/product_door_handle/product_door_handle_D033H_3.jpg';
+import doorhandlesD028H2 from '@assets/images/product/product_door_handle/product_door_handle_D028H_2.jpg';
+import doorhandlesD028H3 from '@assets/images/product/product_door_handle/product_door_handle_D028H_3.jpg';
 
 import doorhandlesD661H1 from '@assets/images/product/product_door_handle/product_door_handle_D661H_1.jpg';
 import doorhandlesD661H2 from '@assets/images/product/product_door_handle/product_door_handle_D661H_2.jpg';
@@ -88,6 +88,7 @@ export const ProductInfos = (t: any) => {
   const place_of_origin = t('product.product_labels.place_of_origin')
   const product_size = t('product.product_labels.product_size')
   const product_glass_thinkness = t('product.product_labels.product_glass_thinkness')
+  const product_outer_diameter = t('product.product_labels.product_outer_diameter')
 
   const doorHandlers = [
     {
@@ -494,9 +495,7 @@ export const ProductInfos = (t: any) => {
         {
           src: doorhandlesH787W3,
         },
-        {
-          src: doorhandlesD033H4,
-        },
+       
       ],
       profile: {
         [`${product_name}`]: t('product.product_categories.product_hanging_wheel.0.profile.product_name'),
@@ -551,7 +550,7 @@ export const ProductInfos = (t: any) => {
           [`${product_name}`]: t('product.product_categories.product_bathroom_sliding_door_accessories.0.detail.product_name'),
           [`${product_no}`]: t('product.product_categories.product_bathroom_sliding_door_accessories.0.detail.product_no'),
           [`${product_material}`]: t('product.product_categories.product_bathroom_sliding_door_accessories.0.detail.product_material'),
-          [`${product_finish}`]: t('product.product_categories.product_bathroom_sliding_door_accessories.0.detail.product_outer_diameter'),
+          [`${product_outer_diameter}`]: t('product.product_categories.product_bathroom_sliding_door_accessories.0.detail.product_outer_diameter'),
         }
       },
       ...showHinges,
