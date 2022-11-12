@@ -1,7 +1,7 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image'
 import { useEffect, useState } from 'react';
-import { checkIsMobile } from '@/pagerenders/utils/mobile';
+import { checkIsMobile } from '@/utils/mobile';
 
 
 function CarouselComp({carouselList}:any) {

@@ -9,20 +9,40 @@ const nextConfig = {
     staticFolder: ['/assets','placeimg'],
   },
   i18n,
-  async headers() {
-    return [
-      {
-        source: '/',
-        locale: false,
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, no-cache, must-revalidate',
-          }
-        ],
-      },
-    ]
-  },
+  // async headers() {
+  //   return [
+  //     {
+  //       source: '/:slug*',
+  //       locale: false,
+  //       headers: [
+  //         {
+  //           key: 'Cache-Control',
+  //           // value: 'public, no-store, must-revalidate',
+  //           value: 'public, no-cache, s-maxage=10, stale-while-revalidate=59',
+  //         },
+  //         {
+  //           key: 'X-Test',
+  //           value: 'true',
+  //         },
+  //       ],
+  //     },
+  //     {
+  //       source: '/zh',
+  //       locale: false,
+  //       headers: [
+  //         {
+  //           key: 'Cache-Control',
+  //           // value: 'public, no-store, must-revalidate',
+  //           value: 'public, no-cache, s-maxage=10, stale-while-revalidate=59',
+  //         },
+  //         {
+  //           key: 'X-Test',
+  //           value: 'true',
+  //         },
+  //       ],
+  //     },
+  //   ]
+  // },
 }
 
 module.exports = nextConfig

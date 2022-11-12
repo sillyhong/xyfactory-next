@@ -60,7 +60,7 @@ function ProductItemInfo({ productItem, id }: any) {
         </tbody>
       </Table>
     )
-  }, [detail])
+  }, [detail, t])
 
   return (
     <section

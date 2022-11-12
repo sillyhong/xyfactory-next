@@ -17,7 +17,7 @@ function ProductInfo() {
     const homeNewProducts: any[] = []
     Object.values(productInfos).forEach((item: any) => {
       return item.forEach((subItem: any) => {
-        if (subItem?.homeNew === true && !homeNewProducts.includes(subItem)) {
+        if (subItem?.homeProductCategory === true && !homeNewProducts.includes(subItem)) {
           homeNewProducts.push(subItem)
         }
       })
