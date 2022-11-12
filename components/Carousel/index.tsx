@@ -1,8 +1,15 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image'
+import { useEffect, useState } from 'react';
+import { checkIsMobile } from '@/pagerenders/utils/mobile';
 
 
-function CarouselComp({carouselList, isMobile}:any) {
+function CarouselComp({carouselList}:any) {
+  const [isMobile, setIsMobile] = useState(false)
+  useEffect(()=>{
+    const checkResult = checkIsMobile()
+    setIsMobile(checkResult)
+  },[])
 
   return (
     <Carousel>
@@ -10,7 +17,7 @@ function CarouselComp({carouselList, isMobile}:any) {
         carouselList.map((item: any, index: string )=> {
           return (
             <Carousel.Item key={item.title ? item.title + index: index}>
-            <Image src={item.src} alt={item.title || ''}/>
+              <Image  src={item.src} alt={item.title || ''}/>
             <Carousel.Caption>
               {item.title && !isMobile && <h3>{item.title}</h3>}
               {item.desc && !isMobile && <p>{item.desc}</p>}

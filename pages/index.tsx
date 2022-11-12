@@ -13,7 +13,7 @@ import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 
 
-const HomeComp = ({ isMobile }:any) => {
+const HomeComp = () => {
   const { t} = useTranslation('common')
   const carouselList = useMemo(()=>{
     return [
@@ -41,7 +41,7 @@ const HomeComp = ({ isMobile }:any) => {
    }, [t])
   return (
     <>
-      <CarouselComp carouselList={carouselList} isMobile={isMobile}/>
+      <CarouselComp carouselList={carouselList} />
       <HotProducts />
       <ProductInfo />
       <Aboutus />
@@ -55,7 +55,8 @@ const HomePage = PageContainer(HomeComp);
 
 const Home: NextPage = (props) => {
   return (
-     <HomePage {...props}/>
+    //  <HomePage {...props}/>
+    <Aboutus />
   )
 }
 
