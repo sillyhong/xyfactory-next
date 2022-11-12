@@ -17,7 +17,7 @@ const nextConfig = {
         headers: [
           {
             key: 'Cache-Control',
-            value: 'public, no-cache',
+            value: 'public, no-cache, must-revalidate',
           }
         ],
       },
