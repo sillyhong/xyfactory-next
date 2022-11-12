@@ -8,7 +8,21 @@ const nextConfig = {
     // Will be available on both server and client
     staticFolder: ['/assets','placeimg'],
   },
-  i18n
+  i18n,
+  async headers() {
+    return [
+      {
+        source: '/index',
+        locale: false,
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, no-cache',
+          }
+        ],
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
