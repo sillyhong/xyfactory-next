@@ -12,7 +12,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: '/index',
+        source: '/',
         locale: false,
         headers: [
           {
