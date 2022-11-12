@@ -92,7 +92,8 @@ export const ProductInfos = (t: any) => {
 
   const doorHandlers = [
     {
-      path: '/product#product-door-handle',
+      id: 'D033H1',
+      path: `/product#doorhandle?id=D033H1`,
       src: doorhandlesD033H1,
       desc: t('product.product_categories.product_door_handle.0.desc'),
       srcArr: [
@@ -129,7 +130,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-door-handle',
+      id: 'D028H',
+      path: `/product#doorhandle?id=D028H`,
       homeHot: true,
       src: doorhandlesD028H1,
       desc: t('product.product_categories.product_door_handle.1.desc'),
@@ -164,7 +166,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-door-handle',
+      id: 'D033H3',
+      path: `/product#doorhandle?id=D033H3`,
       homeProductCategory: true,
       src: doorhandlesD661H1,
       desc: t('product.product_categories.product_door_handle.2.desc'),
@@ -202,7 +205,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-door-handle',
+      id: 'D056H1',
+      path: `/product#doorhandle?id=D056H1`,
       src: doorhandlesD056H1,
       desc: t('product.product_categories.product_door_handle.3.desc'),
       srcArr: [
@@ -236,7 +240,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-door-handle',
+      id: "D030H1",
+      path: '/product#doorhandle?id=D030H1',
       homeProductCategory: true,
       src: doorhandlesD030H1,
       desc: t('product.product_categories.product_door_handle.4.desc'),
@@ -274,7 +279,8 @@ export const ProductInfos = (t: any) => {
 
   const showHinges = [
     {
-      path: '/product#product-shower-hinge',
+      id: 'S500H1',
+      path: '/product#showerhinge?id=S500H1',
       homeHot: true,
       src: doorhandlesS500H1,
       desc: t('product.product_categories.product_shower_hinge.0.desc'),
@@ -310,7 +316,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-shower-hinge',
+      id: 'S505H1',
+      path: '/product#showerhinge?id=S505H1',
       src: doorhandlesS505H1,
       desc: t('product.product_categories.product_shower_hinge.1.desc'),
       srcArr: [
@@ -345,7 +352,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-shower-hinge',
+      id: 'S506H1',
+      path: '/product#showerhinge?id=S506H1',
       src: doorhandlesS506H1,
       desc: t('product.product_categories.product_shower_hinge.2.desc'),
       srcArr: [
@@ -377,7 +385,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-shower-hinge',
+      id: 'S551H1',
+      path: '/product#showerhinge?id=S551H1',
       homeProductCategory: true,
       src: doorhandlesS551H1,
       desc: t('product.product_categories.product_shower_hinge.3.desc'),
@@ -407,7 +416,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      path: '/product#product-shower-hinge',
+      id: 'S553H1',
+      path: '/product#showerhinge?id=S553H1',
       src: doorhandlesS553H1,
       desc: t('product.product_categories.product_shower_hinge.4.desc'),
       srcArr: [
@@ -443,7 +453,8 @@ export const ProductInfos = (t: any) => {
 
   const pipeConnectors = [
     {
-      path: '/product#product-pipe-connectors',
+      id: 'G101C1',
+      path: '/product#pipeconnectors?id=G101C1',
       homeProductCategory: true,
       src: doorhandlesG101C1,
       desc: t('product.product_categories.product_pipe_connectors.0.desc'),
@@ -479,7 +490,8 @@ export const ProductInfos = (t: any) => {
 
   const hangingWheel = [
     {
-      path: '/product#product-hanging-wheel',
+      id: 'H787W1',
+      path: '/product#hangingwheel?id=H787W1',
       homeProductCategory: true,
       src: doorhandlesH787W1,
       desc: t('product.product_categories.product_hanging_wheel.0.desc'),
@@ -524,7 +536,8 @@ export const ProductInfos = (t: any) => {
       doorHandlers[2],
       doorHandlers[4],
       {
-        path: '/product#product-bathroom-sliding-door-accessories',
+        id: '808P1',
+        path: '/product#bathroomslidingdoor?id=808P1',
         homeHot: true,
         src: doorhandles808P1,
         desc: t('product.product_categories.product_bathroom_sliding_door_accessories.0.desc'),
@@ -557,7 +570,8 @@ export const ProductInfos = (t: any) => {
     ],
     [ProductCategoriesKey.PRODUCT_GLASS_FLOOR_SPRING]: [
       {
-        path: '/product#product-glass-floor-spring',
+        id: 'G220B1',
+        path: '/product#glassfloorspring?id=G220B1',
         homeHot: true,
         src: doorhandlesG220B1,
         desc: t('product.product_categories.product_glass_floor_spring.0.desc'),
@@ -586,7 +600,8 @@ export const ProductInfos = (t: any) => {
         }
       },
       {
-        path: '/product#product-glass-floor-spring',
+        id: 'G220C1',
+        path: '/product#glassfloorspring?id=G220C1',
         src: doorhandlesG220C1,
         desc: t('product.product_categories.product_glass_floor_spring.1.desc'),
         srcArr: [
@@ -617,7 +632,8 @@ export const ProductInfos = (t: any) => {
         }
       },
       {
-        path: '/product#product-glass-floor-spring',
+        id: 'H220C1',
+        path: '/product#glassfloorspring?id=H220C1',
         homeProductCategory: true,
         src: doorhandlesH220C1,
         desc: t('product.product_categories.product_glass_floor_spring.2.desc'),

@@ -7,16 +7,16 @@ import styles from './index.module.css'
 import { useTranslation } from 'next-i18next'
 
 
-function ProductItemList({ id, handleProductItemClick }: any) {
+function ProductItemList({ productCateGory, handleProductItemClick }: any) {
   const { t } = useTranslation('common')
 
   //ProductInfos(t) 会更新，但是通过 props 传参， 子组件不会更新
   //  子组件监听i8n变化？
    // @ts-ignore
     const prodcutItem: any = useMemo(()=>{
-      console.log('ProductInfos(t)', ProductInfos(t)[id as ProductCategoriesKey])
-      return ProductInfos(t)[id as ProductCategoriesKey]
-    }, [id, t])
+      console.log('ProductInfos(t)', ProductInfos(t)[productCateGory as ProductCategoriesKey])
+      return ProductInfos(t)[productCateGory as ProductCategoriesKey]
+    }, [productCateGory, t])
 
     const handleItemClick = useCallback(
       (productItem: any) => {

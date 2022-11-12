@@ -8,7 +8,7 @@ import { ProductCategoriesLabel } from '../../../../../constants';
 
 
 
-function ProductItemInfo({ productItem, id }: any) {
+function ProductItemInfo({ productItem, productCateGory }: any) {
   const { t} = useTranslation('common')
   const { srcArr, profile, detail = {}, desc } = productItem
 
@@ -77,7 +77,7 @@ function ProductItemInfo({ productItem, id }: any) {
           <div className="product-category">
             {/* @ts-ignore */}
             {t('product.production_category')}:
-             {ProductCategoriesLabel(t)[`${id}`] || 'something go wrong'}
+             {ProductCategoriesLabel(t)[`${productCateGory}`] || 'something go wrong'}
           </div>
           {renderProdileTable}
         </div>

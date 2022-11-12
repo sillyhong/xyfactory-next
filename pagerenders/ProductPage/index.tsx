@@ -17,12 +17,19 @@ const Product = () => {
     }
   },[asPath, router])
 
-  
-  // product?page=2
-  // product?id=xxx
+  // product#doorhandle?id=D033H1
   if(hasHash){
-    const id = asPath.substring(9)
-    return <ProductDetail id={id}/>
+    const productPath = asPath.substring(9)
+    const [productCateGory = '', idParams = ''] = productPath.split('?')
+    let id = ''
+    if(idParams) {
+     id = idParams.split('=')?.[1]
+    }
+    console.log('====================================');
+    console.log('id', id);
+    console.log('====================================');
+
+    return <ProductDetail productCateGory={productCateGory} id={id}/>
   } else {
     return <ProductList/>;
   }

@@ -9,10 +9,6 @@ import { ProductInfos } from '../../../constants/productInfo'
 function ProductList() {
   const { t } = useTranslation('common')
 
-    // const currentProductInfos  = useMemo(()=>{
-    //     return ProductInfos(t)
-    // }, [t])
-
     const showFirstFromAll = useMemo(()=>{
         /* 只展示每个系列的第一项 */
         const showProducts: any = []
