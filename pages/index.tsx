@@ -55,8 +55,7 @@ const HomePage = PageContainer(HomeComp);
 
 const Home: NextPage = (props) => {
   return (
-    //  <HomePage {...props}/>
-    <Aboutus />
+     <HomePage {...props}/>
   )
 }
 
