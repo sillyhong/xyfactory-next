@@ -162,12 +162,31 @@
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "6-12mm"
                     }
+                },
+                "5": {
+                    "desc": "玻璃门拉手 淋浴房 滑动玻璃门拉手门把手",
+                    "profile": {
+                        "product_name": "门把手",
+                        "product_no": "XY-D027H",
+                        "product_material": "SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_size": "350mm-1800mm，可定制"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "门把手",
+                        "product_no": "XY-D027H",
+                        "product_material": "SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_size": "350mm-1800mm，可定制"
+
+                    }
                 }
             },
             "product_shower_hinge": {
                 "title": "浴室夹系列",
                 "0": {
-                    "title": "浴室夹系列",
                     "desc": "热销壁90度玻璃夹不锈钢合页玻璃门浴室夹",
                     "profile": {
                         "product_name": "浴室夹",
@@ -261,6 +280,25 @@
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-12mm"
                     }
+                },
+                "5": {
+                    "desc": "用于无框玻璃淋浴房玻璃夹 0º 90º 135º 180º 玻璃对玻璃",
+                    "profile": {
+                        "product_name": "玻璃夹",
+                        "product_no": "XY-S330H",
+                        "product_material": "黄铜",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-10mm钢化玻璃"
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "玻璃夹",
+                        "product_no": "XY-S330H",
+                        "product_material": "黄铜",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-10mm钢化玻璃"
+                    }
                 }
             },
             "product_pipe_connectors": {
@@ -327,6 +365,26 @@
                         "product_no": "XY-808P",
                         "product_material": "201 304 316不锈钢管",
                         "product_outer_diameter ": "6-10mm"
+                    }
+                },
+                "1": {
+                    "desc": "优质不锈钢无缝焊接管不锈钢方管圆管",
+                    "profile": {
+                        "product_name": "浴室推拉门配件",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-10mm钢化玻璃"
+
+                    },
+                    "detail": {
+                        "brand_name": "祥盈五金厂",
+                        "place_of_origin": "广东省肇庆市",
+                        "product_name": "浴室推拉门配件",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "砂光、镜光、哑光黑、镀金",
+                        "product_glass_thinkness": "8-10mm钢化玻璃"
                     }
                 }
             },

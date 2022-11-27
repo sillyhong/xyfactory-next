@@ -176,6 +176,26 @@
                         "product_diameter": "30mm",
                         "product_glass_thinkness": "6-12mm"
                     }
+                },
+                "5": {
+                    "desc": "Glass Door Handle Shower Sliding Glassdoor Pull Handles",
+                    "profile": {
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D030H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_size": "350mm-1800mm or customized"
+                        
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Door Handle",
+                        "product_no": "XY-D030H",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_size": "350mm-1800mm or customized"
+                    }
                 }
             },
             "product_shower_hinge": {
@@ -279,6 +299,25 @@
                         "product_finish": "Satin/Mirror/Matte Black/Golden",
                         "product_glass_thinkness": "8-12mm"
                     }
+                },
+                "5": {
+                    "desc": "For Frameless Glass Shower  Glass Clip 0º 90º 135º 180º Glass to Glass",
+                    "profile": {
+                        "product_name": "Glass Clip",
+                        "product_no": "XY-S330H",
+                        "product_material": "Brass",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_glass_thinkness": "8-10mm Tempered Glass"
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Glass Clip",
+                        "product_no": "XY-S330H",
+                        "product_material": "Brass",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_glass_thinkness": "8-10mm Tempered Glass"
+                    }
                 }
             },
             "product_pipe_connectors": {
@@ -345,6 +384,26 @@
                         "product_no": "XY-808P",
                         "product_material": "201 304 316 Stainless Steel Pipe",
                         "product_outer_diameter ": "100mm or customized"
+                    }
+                },
+                "1": {
+                    "desc": "Frameless Shower Room Sliding Door System Bathroom Sliding Door Kits for Tempered Glass",
+                    "profile": {
+                        "product_name": "Bathroom Sliding Door Accessories",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_glass_thinkness": "8-10mm Tempered Glass"
+
+                    },
+                    "detail": {
+                        "brand_name": "XIANGYING",
+                        "place_of_origin": "Guangdong, China",
+                        "product_name": "Bathroom Sliding Door Accessories",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "Satin/Mirror/Matte Black/Golden",
+                        "product_glass_thinkness": "8-10mm Tempered Glass"
                     }
                 }
             },

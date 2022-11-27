@@ -162,6 +162,25 @@
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "6-12 mm"
                     }
+                },
+                "5": {
+                    "desc": "manija de la puerta de vidrio cuarto de ducha manija de la puerta de vidrio corredera manija de la puerta",
+                    "profile": {
+                        "product_name": "manija de la puerta",
+                        "product_no": "XY-D027H",
+                        "product_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    },
+                    "detail": {
+                        "brand_name": "Xiangying hardware",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "manija de la puerta",
+                        "product_no": "XY-D027H",
+                        "product_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                    }
                 }
             },
             "product_shower_hinge": {
@@ -261,6 +280,25 @@
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "8-12 mm"
                     }
+                },
+                "5": {
+                    "desc": "Abrazaderas de vidrio para cabinas de ducha de vidrio sin marco 0º 90º 135º 180º Vidrio a vidrio",
+                    "profile": {
+                        "product_name": "clip de vidrio",
+                        "product_no": "XY-S330H",
+                        "product_material": "Latón",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_glass_thinkness": "vidrio templado de 8-10 mm"
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "clip de vidrio",
+                        "product_no": "XY-S330H",
+                        "product_material": "Latón",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_glass_thinkness": "vidrio templado de 8-10 mm"
+                    }
                 }
             },
             "product_pipe_connectors": {
@@ -327,6 +365,26 @@
                         "product_no": "XY-808P",
                         "product_material": "Tubería de acero inoxidable 201 304 316",
                         "product_outer_diameter": "6-10 mm"
+                    }
+                },
+                "1": {
+                    "desc": "Tubo soldado sin costura de acero inoxidable de alta calidad, tubo cuadrado de acero inoxidable, tubo redondo",
+                    "profile": {
+                        "product_name": "Accesorios para puertas correderas de baño",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_glass_thinkness": "vidrio templado de 8-10 mm"
+
+                    },
+                    "detail": {
+                        "brand_name": "Fábrica de hardware Xiangying",
+                        "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
+                        "product_name": "Accesorios para puertas correderas de baño",
+                        "product_no": "XY-E001",
+                        "product_material": "SUS304",
+                        "product_finish": "Arena, Espejo, Negro Mate, Oro",
+                        "product_glass_thinkness": "vidrio templado de 8-10 mm"
                     }
                 }
             },
