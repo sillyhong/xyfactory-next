@@ -11,11 +11,15 @@ import carousel3 from '@assets/images/carousel-3.jpg';
 import carousel4 from '@assets/images/carousel-4.jpg';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useRouter } from 'next/router';
+import { useChangeLanguage } from '@/utils/languge';
 
 
 const HomeComp = () => {
  
   const { t} = useTranslation('common')
+  const router = useRouter()
+  useChangeLanguage(router)
   const carouselList = useMemo(()=>{
     return [
       {

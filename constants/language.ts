@@ -37,24 +37,34 @@ export const Languages = (t: any): any => {
     return [
         {
             value: 'en',
-            label:  t('nav.nav_language.en'),
+            label: t('nav.nav_language.en'),
             prefix: ''
         },
         {
             value: 'zh',
-            label:  t('nav.nav_language.zh'),
+            label: t('nav.nav_language.zh'),
             prefix: '/zh'
         },
         {
             value: 'spanish',
-            label:  t('nav.nav_language.spanish'),
+            label: t('nav.nav_language.spanish'),
             prefix: '/spanish'
         },
         {
             value: 'arabic',
-            label:  t('nav.nav_language.arabic'),
+            label: t('nav.nav_language.arabic'),
             prefix: '/arabic'
         },
-    
+
     ]
 }
+
+
+
+
+export const LanugaeMap = new Map([
+    ['en', 'en'],
+    ['zh', 'zh'],
+    ['es', 'spanish'],
+    ['ar', 'arabic'],
+])

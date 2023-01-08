@@ -1,5 +1,5 @@
 import type { NextPage } from 'next'
-import { useMemo } from 'react';
+import { useEffect, useMemo } from 'react';
 import PageContainer from '@components/PageContainer';
 import CarouselComp from '@components/Carousel';
 import HotProducts from '@pagerenders/Home/HotProducts';
@@ -11,10 +11,14 @@ import carousel3 from '@assets/images/carousel-3.jpg';
 import carousel4 from '@assets/images/carousel-4.jpg';
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import { useChangeLanguage } from '@/utils/languge';
+import { useRouter } from 'next/router';
 
 
 const HomeComp = () => {
-  const { t} = useTranslation('common')
+  const { t } = useTranslation('common')
+  const router = useRouter()
+   useChangeLanguage(router)
   const carouselList = useMemo(()=>{
     return [
       {
@@ -39,6 +43,19 @@ const HomeComp = () => {
       },
     ]
    }, [t])
+
+   // 获取语种地址
+  //  useEffect(()=>{
+  //    const lang: string = getLanuage()
+  //    const currentLocale = LanugaeMap.get(lang || 'en')
+  //    const { asPath, locale, pathname } = router
+  //    console.log('router123', router,'123', {pathname, asPath, lang, locale,'当前获取的语言':currentLocale, '是否更新':!(locale === currentLocale)} );
+  //    if(locale === currentLocale) return
+  //  ;
+  //   router.push(`/${locale}/${asPath}`,asPath, {locale: currentLocale })
+
+  //  },[router])
+   
   return (
     <>
       <CarouselComp carouselList={carouselList} />
