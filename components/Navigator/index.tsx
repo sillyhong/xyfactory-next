@@ -61,7 +61,12 @@ function Navigator() {
 
   const handleLocaleChange = useCallback((currentLocal: string) => {
     localStorage.setItem('language',currentLocal)
-  }, [])
+
+    const { asPath, locale, pathname } = router
+    console.log('====================================');
+    console.log('====================================');
+    router.push(`/${locale}/${asPath}`, asPath, { locale: currentLocal })
+  }, [router])
 
   return (
     <Navbar className={styles.fixed} bg="primary" variant="dark" expand="lg">
@@ -112,7 +117,8 @@ function Navigator() {
               Languages(t).map((item: any, index: any) => {
                 return (
                   <Dropdown.Item onClick={()=>{handleLocaleChange(item.value)}} className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} key={item.value + index}>
-                    <Link locale={item.value} href={asPath}>{item.label}</Link>
+                    {item.label}
+                    {/* <Link  onClick={(e)=>{e.stopPropagation()}} locale={item.value} href={asPath}>{item.label}</Link> */}
                   </Dropdown.Item>
                 )
               })
