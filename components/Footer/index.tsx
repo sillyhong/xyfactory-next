@@ -70,7 +70,7 @@ function FooterComp() {
                 })}
               </ul>
             </div>
-            <div className="col-md-4 d-flex text-center">
+            <div className="col-md-4 d-flex text-center justify-content-center">
               <i className="fas fa-copyright text-white"></i>
               <small className="d-block mt-3 text-muted">
                 ©{getCurrentYear}

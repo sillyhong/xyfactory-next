@@ -8,7 +8,8 @@
     "start": "next start -p 3000",
     "ssrdev": "node server.js",
     "ssrstart": "npm run build && NODE_ENV=production node server.js",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "cd ssh & node deploy.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
