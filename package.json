@@ -9,7 +9,7 @@
     "ssrdev": "node server.js",
     "ssrstart": "npm run build && NODE_ENV=production node server.js",
     "lint": "next lint",
-    "deploy": "cd ssh & node deploy.js"
+    "deploy": "node ssh/deploy.js"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
