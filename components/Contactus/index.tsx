@@ -2,7 +2,7 @@ import React from 'react';
 import { useTranslation } from 'next-i18next'
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import Popover from 'react-bootstrap/Popover';
-import { ContactUs } from '@constants/contactus'
+import { ContactUs, ContacusEnum } from '@constants/contactus'
 import { useRouter } from 'next/router'
 import styles from './index.module.css';
 
@@ -12,6 +12,25 @@ function ContactusComp() {
 
   const handleContactClick = (contactInfo: any) => {
     const { value, label } = contactInfo
+
+    if(label === ContacusEnum.WHATSAPP) {
+      window.open('https://wa.me/8613124932180', '_bank')
+      return
+    }
+    if(label === ContacusEnum.FACEBOOK) {
+      window.open('https://www.facebook.com/profile.php?id=100035082511602', '_bank')
+      return
+    }
+
+    if(label === ContacusEnum.INSTAGRAM) {
+      window.open('https://www.instagram.com/xyhardware_manufactory', '_bank')
+      return
+    }
+
+    if(label === ContacusEnum.TIKTOK) {
+      window.open('https://www.tiktok.com/@xyglasshardwarefactory', '_bank')
+      return
+    }
     console.log({ value, label });
     router.push('contact')
   }
@@ -40,7 +59,7 @@ function ContactusComp() {
                 >
                   <div
                     className="iconbox iconmedium rounded-circle  text-white mr-1"
-                    onClick={() => { handleContactClick(item.label) }}
+                    onClick={() => { handleContactClick(item) }}
                   >
                     {item.icon()}
                   </div>

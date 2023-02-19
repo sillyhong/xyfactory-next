@@ -133,6 +133,14 @@ export const WhatsappIcon = () => {
     )
 }
 
+export enum ContacusEnum {
+    WHATSAPP = 'WhatsApp',
+    FACEBOOK = 'FaceBook',
+    INSTAGRAM = 'Instagram',
+    TIKTOK = 'TikTok',
+    WECHAT = 'Wechat',
+}
+
 
 export const ContactUs = [
     {

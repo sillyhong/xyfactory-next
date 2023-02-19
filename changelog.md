@@ -1,3 +1,8 @@
+### 2023.2.19
+1. [Update]替换网站favicon
+2. [update]压缩logo.png
+2. [Add]contact us 跳转外部连接逻辑
+
 ### 2023.1.17
 1. 修复 footer 文字居中
 2. 修复语种切换按钮热区问题
