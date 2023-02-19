@@ -1,6 +1,6 @@
 import React, { useCallback } from 'react';
 import { useTranslation } from 'next-i18next'
-import { ContactUs } from '@constants/contactus';
+import { ContactUs, ContacusEnum } from '@constants/contactus';
 import { useRouter } from 'next/router'
 import { ProductCategories } from '@constants/index';
 import styles from './index.module.css';
@@ -12,7 +12,28 @@ function FooterComp() {
 
   const getCurrentYear = new Date().getFullYear();
 
-  const handleContactClick = useCallback(() => {
+  const handleContactClick = useCallback((contactInfo: any) => {
+    const { value, label } = contactInfo
+
+    if(label === ContacusEnum.WHATSAPP) {
+      window.open('https://wa.me/8613124932180', '_bank')
+      return
+    }
+    if(label === ContacusEnum.FACEBOOK) {
+      window.open('https://www.facebook.com/profile.php?id=100035082511602', '_bank')
+      return
+    }
+
+    if(label === ContacusEnum.INSTAGRAM) {
+      window.open('https://www.instagram.com/xyhardware_manufactory', '_bank')
+      return
+    }
+
+    if(label === ContacusEnum.TIKTOK) {
+      window.open('https://www.tiktok.com/@xyglasshardwarefactory', '_bank')
+      return
+    }
+    console.log({ value, label });
     router.push('contact')
   }, [router])
 
@@ -41,7 +62,7 @@ function FooterComp() {
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
-                    <li onClick={handleContactClick} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
+                    <li onClick={() => { handleContactClick(item) }} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
                       <div className='w-100 text-center'>
                         <span className='icon'>
                           {item.icon()}
