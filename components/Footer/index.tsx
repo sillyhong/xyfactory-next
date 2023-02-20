@@ -14,22 +14,21 @@ function FooterComp() {
 
   const handleContactClick = useCallback((contactInfo: any) => {
     const { value, label } = contactInfo
-
-    if(label === ContacusEnum.WHATSAPP) {
+    if(label == ContacusEnum.WHATSAPP) {
       window.open('https://wa.me/8613124932180', '_bank')
       return
     }
-    if(label === ContacusEnum.FACEBOOK) {
+    if(label == ContacusEnum.FACEBOOK) {
       window.open('https://www.facebook.com/profile.php?id=100035082511602', '_bank')
       return
     }
 
-    if(label === ContacusEnum.INSTAGRAM) {
+    if(label == ContacusEnum.INSTAGRAM) {
       window.open('https://www.instagram.com/xyhardware_manufactory', '_bank')
       return
     }
 
-    if(label === ContacusEnum.TIKTOK) {
+    if(label == ContacusEnum.TIKTOK) {
       window.open('https://www.tiktok.com/@xyglasshardwarefactory', '_bank')
       return
     }
