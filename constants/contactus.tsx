@@ -38,7 +38,7 @@ export const TikTokIcon = () => {
             p-id="2613"
             width="200"
             height="200"
-            fill="#000"
+            fill="#161823"
             style={{ transform: 'scale(1.15)' }}
         >
             <path

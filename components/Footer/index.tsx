@@ -12,7 +12,8 @@ function FooterComp() {
 
   const getCurrentYear = new Date().getFullYear();
 
-  const handleContactClick = useCallback((contactInfo: any) => {
+  const handleContactClick = useCallback((contactInfo: any, e: any) => {
+    e.stopPropagation()
     const { value, label } = contactInfo
     if(label == ContacusEnum.WHATSAPP) {
       window.open('https://wa.me/8613124932180', '_bank')
@@ -61,14 +62,14 @@ function FooterComp() {
               <ul className="list-unstyled text-small">
                 {ContactUs.map((item, index) => {
                   return (
-                    <li onClick={() => { handleContactClick(item) }} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
+                    <li onClick={(e) => { handleContactClick(item, e) }} key={item.label + index} className="contactus-iconbox iconbox d-flex align-items-center">
                       <div className='w-100 text-center'>
                         <span className='icon'>
                           {item.icon()}
                         </span>
-                        <a className="text-muted" href="#">
+                        <span className={styles.contactLabel} >
                           {item.label}
-                        </a>
+                        </span>
                       </div>
 
                     </li>
