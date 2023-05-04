@@ -11,7 +11,7 @@ import Image from 'next/image'
 import Router, { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
 import { ProductCategories } from '@constants/index';
-import Logo from '@assets/images/logo.svg';
+import Logo from '@assets/images/logo.png';
 import styles from './index.module.css';
 import { Languages } from '@/constants/language';
 import Link from 'next/link';
@@ -63,8 +63,6 @@ function Navigator() {
     localStorage.setItem('language',currentLocal)
 
     const { asPath, locale, pathname } = router
-    console.log('====================================');
-    console.log('====================================');
     router.push(`/${locale}/${asPath}`, asPath, { locale: currentLocal })
   }, [router])
 
@@ -73,7 +71,7 @@ function Navigator() {
       <Container fluid>
         <Navbar.Brand href="home">
           <div className={`${styles.logo} hvr-grow`}>
-            <Image src={Logo} width={60} height={60} alt='logo' />
+            <Image src={Logo} width={80} height={80} alt='logo' />
             <div className={`${styles.logoDesc}`}>{t('factory_name')}</div>
           </div>
         </Navbar.Brand>

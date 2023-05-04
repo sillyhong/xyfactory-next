@@ -1,3 +1,7 @@
+### 2023.5.4
+1.[Update]网站图片在访问的时候会自动转换为webp，如果浏览器支持webp，会优先展示webp, 所以无需压缩图片
+2.[Update]logo.png 回退为logo.svg
+
 ### 2023.2.19
 1. [Update]替换网站favicon
 2. [update]压缩logo.png

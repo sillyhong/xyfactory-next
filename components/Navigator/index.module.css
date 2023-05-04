@@ -5,16 +5,18 @@
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    animation: animate 3s linear infinite;
+  display: flex;
+  align-items: center;
+  animation: animate 3s linear infinite;
 }
+
 .logo img {
   border-radius: 50%;
 }
 
 .logoDesc {
-  margin-left: 8px;
+  margin-left: -8px;
+  margin-top: 2px;
 }
 
 .dropdownLink a {
@@ -23,7 +25,7 @@
   background-color: inherit;
 }
 
-.dropdownLink a:hover, 
+.dropdownLink a:hover,
 .dropdownLink a:active {
   background-color: inherit;
 
@@ -31,18 +33,21 @@
 
 
 @keyframes animate {
-    0%, 100% {
-      text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
-    }
-    25% {
-      text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
-    }
-    50% {
-      text-shadow: 1.5px -1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
-    }
-    75% {
-      text-shadow: -1.5px 1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
-    }
+
+  0%,
+  100% {
+    text-shadow: -1.5px -1.5px 0 #0ff, 1.5px 1.5px 0 #f00;
   }
 
+  25% {
+    text-shadow: 1.5px 1.5px 0 #0ff, -1.5px -1.5px 0 #f00;
+  }
 
+  50% {
+    text-shadow: 1.5px -1.5px 0 #0ff, 1.5px -1.5px 0 #f00;
+  }
+
+  75% {
+    text-shadow: -1.5px 1.5px 0 #0ff, -1.5px 1.5px 0 #f00;
+  }
+}
