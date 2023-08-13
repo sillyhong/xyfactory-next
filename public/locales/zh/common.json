@@ -1,5 +1,8 @@
 {
     "factory_name": "祥盈五金",
+    "header": {
+        "description": "祥盈五金 | 生产大门拉手、淋浴铰链和推拉门配件等五金产品"
+    },
     "nav": {
         "nav_home": "首页",
         "nav_products": "产品分类",

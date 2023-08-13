@@ -1,5 +1,8 @@
 {
     "factory_name": "XYHardWareFactory",
+    "header": {
+        "description": "XYHardWareFactory | produce door handles, shower hinges and sliding door accessories"
+    },
     "nav": {
         "nav_home": "Home",
         "nav_products": "Products",

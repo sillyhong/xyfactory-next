@@ -1,5 +1,8 @@
 {
     "factory_name": "XiangYing Hardware",
+    "header": {
+        "description": "Hardware Xiangying | Producción de productos de hardware como manijas de puertas, bisagras de ducha y accesorios para puertas corredizas"
+    },
     "nav": {
         "nav_home": "Inicio",
         "nav_products": "Categoría de producto",

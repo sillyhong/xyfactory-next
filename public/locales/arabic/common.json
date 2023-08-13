@@ -1,5 +1,8 @@
 {
     "factory_name": "XYHardWareFactory",
+    "header": {
+        "description": "Xiangying Hardware | إنتاج منتجات الأجهزة مثل مقابض الأبواب ومفصلات الدش وإكسسوارات الأبواب المنزلقة"
+    },
     "nav": {
         "nav_home": "الصفحة الرئيسية",
         "nav_products": "المنتجات",
