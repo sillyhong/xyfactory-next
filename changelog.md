@@ -1,3 +1,7 @@
+### 2023.8.13
+1. 新增 `title` `meta`等 seo 优化
+2. 新增 sitemap.xml 和 robots.txt 文件增加 seo
+
 ### 2023.5.4
 1.[Update]网站图片在访问的时候会自动转换为webp，如果浏览器支持webp，会优先展示webp, 所以无需压缩图片
 2.[Update]logo.png 回退为logo.svg
