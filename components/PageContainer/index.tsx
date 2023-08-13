@@ -23,6 +23,7 @@ function PageContainer(Component: any) {
           <Head>
             <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             <meta name="description" content={t('header.description')} />
+            <meta name="google-site-verification" content="3uEVtewNqo-I_YE7y_y3r-3ZmqIITWAIBo8W2Qe8KYw" />
             <link rel="icon" href="/favicon.ico" />
             <script
               key="structured-1"
