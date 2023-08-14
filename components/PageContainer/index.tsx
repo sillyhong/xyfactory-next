@@ -5,6 +5,7 @@ import Navigator from '../Navigator';
 import { useTranslation } from 'next-i18next'
 import Contactus from '../Contactus';
 import Footer from '../Footer';
+import { UrlPrefix } from '@/constants';
 
 function PageContainer(Component: any) {
   return class Hoc extends React.Component {
@@ -25,7 +26,7 @@ function PageContainer(Component: any) {
             <meta name="description" content={t('header.description')} />
             <meta name="google-site-verification" content="3uEVtewNqo-I_YE7y_y3r-3ZmqIITWAIBo8W2Qe8KYw" />
             <meta name="baidu-site-verification" content="codeva-9kwOLGocee" />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href={`${UrlPrefix ? UrlPrefix : "/"}favicon.ico`} />
             <script
               key="structured-1"
               type="application/ld+json"

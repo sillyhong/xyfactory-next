@@ -91,15 +91,12 @@ function FooterComp() {
                 })}
               </ul>
             </div>
-            <div className="col-md-4 d-flex text-center justify-content-center">
+            <div className="col-md-4 d-flex text-center justify-content-center align-center text-muted">
               <i className="fas fa-copyright text-white"></i>
-              <small className="d-block mt-3 text-muted">
-                ©{getCurrentYear}
-                Anchor Bootstrap UI Kit,
-                <a target="_blank" href="https://www.xyglassaccessories.com/" rel="noreferrer">
-                  @xyglassaccessories
-                </a>
-              </small>
+              Copyright &nbsp;
+                  xyglassaccessories
+                ©{getCurrentYear} &nbsp;
+                All rights reserved
             </div>
           </div>
         </div>

@@ -1,3 +1,5 @@
+### 2023.8.14
+1. 新增 `hrelang`等 seo 优化
 ### 2023.8.13
 1. 新增 `title` `meta`等 seo 优化
 2. 新增 sitemap.xml 和 robots.txt 文件增加 seo, 刷新sitemap: https://google.com/ping?sitemap=https://www.xyglassaccessories.com/sitemap.xml

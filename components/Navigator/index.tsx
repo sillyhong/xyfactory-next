@@ -10,7 +10,7 @@ import DropdownButton from 'react-bootstrap/DropdownButton';
 import Image from 'next/image'
 import Router, { useRouter } from 'next/router'
 import { useTranslation } from 'next-i18next'
-import { ProductCategories } from '@constants/index';
+import { ProductCategories, UrlPrefix } from '@constants/index';
 import Logo from '@assets/images/logo.png';
 import styles from './index.module.css';
 import { Languages } from '@/constants/language';
@@ -69,7 +69,7 @@ function Navigator() {
   return (
     <Navbar className={styles.fixed} bg="primary" variant="dark" expand="lg">
       <Container fluid>
-        <Navbar.Brand href="home">
+        <Navbar.Brand href={`${UrlPrefix}home`}>
           <div className={`${styles.logo} hvr-grow`}>
             <Image src={Logo} width={80} height={80} alt='logo' />
             <div className={`${styles.logoDesc}`}>{t('factory_name')}</div>
@@ -78,7 +78,7 @@ function Navigator() {
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
-            <Nav.Link href={'home'}  className='hvr-underline-from-left' active={pathname === '/' || pathname === '/home'}>{t('nav.nav_home')}</Nav.Link>
+            <Nav.Link href={`${UrlPrefix}home`} className='hvr-underline-from-left' active={pathname === '/' || pathname === '/home'}>{t('nav.nav_home')}</Nav.Link>
             <NavDropdown active={pathname.includes('/product')} title={t('nav.nav_products')} id="navbarScrollingDropdown" show={productNavShow}
               // onMouseOver={handleProductMouseOver} onMouseOut={handleProductMouseOut} onClick={handleProductClick}
               onClick={handleProductClick}
@@ -95,9 +95,9 @@ function Navigator() {
                 })
               }
             </NavDropdown>
-            <Nav.Link href="portfolio" className='hvr-underline-from-left' active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
-            <Nav.Link href="about" className='hvr-underline-from-left' active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
-            <Nav.Link href="contact" className='hvr-underline-from-left' active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
+            <Nav.Link href={`${UrlPrefix}portfolio`} className='hvr-underline-from-left' active={pathname === '/portfolio'}>{t('nav.nav_portfolio')}</Nav.Link>
+            <Nav.Link href={`${UrlPrefix}about`} className='hvr-underline-from-left' active={pathname === '/about'}>{t('nav.nav_about_us')}</Nav.Link>
+            <Nav.Link href={`${UrlPrefix}contact`} className='hvr-underline-from-left' active={pathname === '/contact'}>{t('nav.nav_contact_us')}</Nav.Link>
 
             {/* <Form className="d-flex">
               <Form.Control
@@ -114,7 +114,7 @@ function Navigator() {
             {
               Languages(t).map((item: any, index: any) => {
                 return (
-                  <Dropdown.Item onClick={()=>{handleLocaleChange(item.value)}} className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} key={item.value + index}>
+                  <Dropdown.Item onClick={()=>{handleLocaleChange(item.value)}} href={`${UrlPrefix}${item.value}`} className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} hreflang={item.hreflang} key={item.value + index}>
                     {item.label}
                     {/* <Link  onClick={(e)=>{e.stopPropagation()}} locale={item.value} href={asPath}>{item.label}</Link> */}
                   </Dropdown.Item>

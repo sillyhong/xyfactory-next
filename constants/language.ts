@@ -38,22 +38,28 @@ export const Languages = (t: any): any => {
         {
             value: 'en',
             label: t('nav.nav_language.en'),
-            prefix: ''
+            prefix: '',
+            //参考https://play.google.com/store/apps/details?id=com.google.earth&hl=en
+            // 打开控制台搜索hreflang
+            hreflang: 'en-US',
         },
         {
             value: 'zh',
             label: t('nav.nav_language.zh'),
-            prefix: '/zh'
+            prefix: '/zh',
+            hreflang: 'zh'
         },
         {
             value: 'spanish',
             label: t('nav.nav_language.spanish'),
-            prefix: '/spanish'
+            prefix: '/spanish',
+            hreflang: 'es',
         },
         {
             value: 'arabic',
             label: t('nav.nav_language.arabic'),
-            prefix: '/arabic'
+            prefix: '/arabic',
+            hreflang: 'ar',
         },
 
     ]

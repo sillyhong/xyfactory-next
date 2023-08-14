@@ -54,5 +54,8 @@ export const ProductCategories = (t: any) => {
   ];
 }
 
+export const isProduction = process.env.NODE_ENV !== 'development'
+export const UrlPrefix = isProduction ? 'https://www.xyglassaccessories.com/' : ''
+
 
 
