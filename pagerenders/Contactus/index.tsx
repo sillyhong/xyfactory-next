@@ -63,6 +63,7 @@ function Contactus() {
   return (
     <>
       <div className="row m-3">
+      <h1 className='my-3'>{t('nav.nav_contact_us')}</h1>
         <Accordion defaultActiveKey={['0']} alwaysOpen>
           {ContactUs.map((item, index) => {
             const { label, connects, notShowInContactPage } = item || {}
@@ -92,8 +93,8 @@ function Contactus() {
 
       </div>
       <div className="row m-3">
-        <h3 className='my-3'>Post your feedback
-          <hr /></h3>
+        <h1 className='my-3'>Post your feedback
+          </h1>
 
         {renderForm()}
       </div>
