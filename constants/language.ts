@@ -66,11 +66,20 @@ export const Languages = (t: any): any => {
 }
 
 
-
-
 export const LanugaeMap = new Map([
     ['en', 'en'],
     ['zh', 'zh'],
     ['es', 'spanish'],
     ['ar', 'arabic'],
 ])
+
+export const TitleMap = (t: any): any => {
+    return {
+        'home': t('nav.nav_home'),
+        'product': t('nav.nav_products'),
+        'about': t('nav.nav_about_us'),
+        'contact': t('nav.nav_contact_us'),
+        'portfolio': t('nav.nav_portfolio'),
+        'search': t('nav.nav_search'),
+    }
+}

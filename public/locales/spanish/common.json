@@ -1,7 +1,7 @@
 {
-    "factory_name": "XiangYing Hardware",
+    "factory_name": "XYHardWareFactory",
     "header": {
-        "description": "Hardware Xiangying | Producción de productos de hardware como manijas de puertas, bisagras de ducha y accesorios para puertas corredizas"
+        "description": "XYHardWareFactory | Producción de productos de hardware como manijas de puertas, bisagras de ducha y accesorios para puertas corredizas"
     },
     "nav": {
         "nav_home": "Inicio",
@@ -59,7 +59,7 @@
             "title3": "entrega rápida",
             "desc3": "Tenemos muchos años de experiencia exportadora. No importa en qué ciudad se encuentre, podemos entregar los productos en su lugar a tiempo.",
             "title4": "Servicio OEM/ODM",
-            "desc4": "Tenemos muchos años de experiencia en OEM para clientes principalmente de América del Norte y Europa."  
+            "desc4": "Tenemos muchos años de experiencia en OEM para clientes principalmente de América del Norte y Europa."
         }
     },
     "product": {
@@ -378,7 +378,6 @@
                         "product_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro Mate, Oro",
                         "product_glass_thinkness": "vidrio templado de 8-10 mm"
-
                     },
                     "detail": {
                         "brand_name": "Fábrica de hardware Xiangying",

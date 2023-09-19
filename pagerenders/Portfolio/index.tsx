@@ -17,7 +17,6 @@ import portfolio12 from '@assets/images/portfolio/portfolio-12.jpg';
 
 const Home = () => {
   const Portfolios = useMemo(() => {
-    
     return [
       {
         src: portfolio1,
@@ -95,19 +94,19 @@ const Home = () => {
   }, [])
   return (
     <section className='sectionWrapper'>
-        <div className="row">
-          {
-            Portfolios.map(item => {
-              return (
-                <div className='col-lg-4 d-flex justify-content-center hotProductWrapper default-margin-top hvr-grow' key={item.desc}>
-                  <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
-                    <Image className="card-img" src={item.src} alt={item.title} />
-                  </div>
+      <div className="row">
+        {
+          Portfolios.map(item => {
+            return (
+              <div className='col-lg-4 d-flex justify-content-center hotProductWrapper default-margin-top hvr-grow' key={item.desc}>
+                <div className='card overlay overlay-black  align-items-center text-white shadow-sm border-0'>
+                  <Image className="card-img" src={item.src} alt={item.title || item.desc} />
                 </div>
-              )
-            })
-          }
-        </div>
+              </div>
+            )
+          })
+        }
+      </div>
     </section>
   )
 };

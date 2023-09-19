@@ -16,11 +16,11 @@ import { useChangeLanguage } from '@/utils/languge';
 
 
 const HomeComp = () => {
- 
-  const { t} = useTranslation('common')
+
+  const { t } = useTranslation('common')
   const router = useRouter()
   useChangeLanguage(router)
-  const carouselList = useMemo(()=>{
+  const carouselList = useMemo(() => {
     return [
       {
         src: carousel1,
@@ -43,10 +43,10 @@ const HomeComp = () => {
         desc: t('carousel.desc4'),
       },
     ]
-   }, [t])
+  }, [t])
   return (
     <>
-      <CarouselComp carouselList={carouselList}/>
+      <CarouselComp carouselList={carouselList} />
       <HotProducts />
       <ProductInfo />
       <Aboutus />
@@ -60,7 +60,7 @@ const HomePage = PageContainer(HomeComp);
 
 const Home: NextPage = (props) => {
   return (
-     <HomePage {...props}/>
+    <HomePage {...props} />
   )
 }
 

@@ -9,7 +9,7 @@ import { ProductCategoriesLabel } from '../../../../../constants';
 
 
 function ProductItemInfo({ productItem, productCateGory }: any) {
-  const { t} = useTranslation('common')
+  const { t } = useTranslation('common')
   const { srcArr, profile, detail = {}, desc } = productItem
 
   const renderProdileTable = useMemo(() => {
@@ -69,7 +69,7 @@ function ProductItemInfo({ productItem, productCateGory }: any) {
     >
       <div className="row">
         <div className='col-lg-6 '>
-          <Carousel carouselList={srcArr || []} />
+          <Carousel carouselList={srcArr || []} desc={desc} />
         </div>
         <div className='col-lg-6 d-flex flex-column'>
           <div>{desc}</div>
@@ -77,7 +77,7 @@ function ProductItemInfo({ productItem, productCateGory }: any) {
           <div className="product-category">
             {/* @ts-ignore */}
             {t('product.production_category')}:
-             {ProductCategoriesLabel(t)[`${productCateGory}`] || 'something go wrong'}
+            {ProductCategoriesLabel(t)[`${productCateGory}`] || 'something go wrong'}
           </div>
           {renderProdileTable}
         </div>
@@ -86,7 +86,7 @@ function ProductItemInfo({ productItem, productCateGory }: any) {
       <hr />
       <div className="row">
         <div className='col-lg-12'>
-          <SectionHeader title={t('product.production_description')} animateClass='animate__animated animate__pulse' titleClass='justify-content-start' showDesc={false} showSperator={false}/>
+          <SectionHeader title={t('product.production_description')} animateClass='animate__animated animate__pulse' titleClass='justify-content-start' showDesc={false} showSperator={false} />
           {renderDetailTable}
         </div>
       </div>

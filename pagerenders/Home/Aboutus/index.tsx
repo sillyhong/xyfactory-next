@@ -5,15 +5,15 @@ import Button from 'react-bootstrap/Button';
 import SectionHeader from '@components/SectionHeader';
 import factory from '@assets/images/aboutus/factory.jpg'
 function Aboutus() {
-  const { t} = useTranslation('common')
+  const { t } = useTranslation('common')
 
-  const router  = useRouter()
-  const handleViewMoreClick  = () => {
+  const router = useRouter()
+  const handleViewMoreClick = () => {
     router.push('/about')
   }
   const renderDesc = () => {
     return (
-       <div dangerouslySetInnerHTML={{__html: t('home_about_us.text_homepage_about_us')}}></div>
+      <div dangerouslySetInnerHTML={{ __html: t('home_about_us.text_homepage_about_us') }}></div>
     )
   }
   return (
@@ -22,10 +22,10 @@ function Aboutus() {
         className='pt-4 pb-5 sectionWrapper'
         data-aos="fade-up"
       >
-       <SectionHeader title={t('home_sub_header.about_us')}/>
+        <SectionHeader title={t('home_sub_header.about_us')} />
         <div className="row">
           <div className="col-lg-6">
-              <Image src={factory} alt='factory' className='hvr-grow'/>
+            <Image src={factory} alt='factory' className='hvr-grow' />
           </div>
           <div className="col-lg-6 d-flex flex-column align-items-center justify-content-center">
             {renderDesc()}
@@ -33,7 +33,7 @@ function Aboutus() {
           </div>
         </div>
       </section>
-      
+
     </>
   );
 }

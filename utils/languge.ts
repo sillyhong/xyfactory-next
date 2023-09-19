@@ -7,7 +7,7 @@ export const getLanuage = (): string => {
   // @ts-ignore
   let lang = navigator.language || navigator.userLanguage //常规浏览器和 ie 浏览器
   lang = lang.substr(0, 2)
-  console.log('lang123', lang);
+  // console.log('lang123', lang);
   localStorage.setItem('language', lang)
   return lang || 'en'
 }
@@ -25,7 +25,7 @@ export const useChangeLanguage = (router: any) => {
     if (locale === currentLocale) return
 
     // 缓存进入localstorage
-    localStorage.setItem('language',currentLocale)
+    localStorage.setItem('language', currentLocale)
     console.log('====================================');
     console.log('push123');
     console.log('====================================');
