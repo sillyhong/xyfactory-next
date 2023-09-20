@@ -13,13 +13,12 @@ import { TitleMap } from '@/constants/language';
 function PageContainer(Component: any) {
   return class Hoc extends React.Component {
     render() {
-
       const Header = () => {
         const { t } = useTranslation('common')
         const { pathname } = useRouter()
 
         const getTitle = useMemo(() => {
-          return TitleMap(t)[pathname.replace('/', "")]
+          return TitleMap(t)[pathname.replace('/', "")] || 'Home'
         }, [pathname, t])
 
         const structData = {
