@@ -60,9 +60,10 @@ function Navigator() {
   }, [])
 
   const handleLocaleChange = useCallback((currentLocal: string) => {
-    localStorage.setItem('language',currentLocal)
+    localStorage.setItem('language', currentLocal)
 
-    const { asPath, locale, pathname } = router
+    let { asPath, locale } = router
+    asPath = asPath.replace('/', '')
     router.push(`/${locale}/${asPath}`, asPath, { locale: currentLocal })
   }, [router])
 
@@ -110,11 +111,11 @@ function Navigator() {
             </Form> */}
           </Nav>
 
-          <DropdownButton id="dropdown-basic-button" style={{marginLeft: '-10px'}} title={t('nav.nav_language.language')}>
+          <DropdownButton id="dropdown-basic-button" style={{ marginLeft: '-10px' }} title={t('nav.nav_language.language')}>
             {
               Languages(t).map((item: any, index: any) => {
                 return (
-                  <Dropdown.Item onClick={()=>{handleLocaleChange(item.value)}} href={`${UrlPrefix}${item.value}`} className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} hreflang={item.hreflang} key={item.value + index}>
+                  <Dropdown.Item onClick={() => { handleLocaleChange(item.value) }} className={`${styles.dropdownLink} hvr-underline-from-left`} active={locale === item.value} hreflang={item.hreflang} key={item.value + index}>
                     {item.label}
                     {/* <Link  onClick={(e)=>{e.stopPropagation()}} locale={item.value} href={asPath}>{item.label}</Link> */}
                   </Dropdown.Item>

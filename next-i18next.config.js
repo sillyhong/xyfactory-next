@@ -3,13 +3,14 @@
 // const localePath = path.resolve('./public/locales')
 
 module.exports = {
-    // https://www.i18next.com/overview/configuration-options#logging
-    debug: process.env.NODE_ENV === 'development',
-    i18n: {
-      defaultLocale: 'en',
-      locales: ['en','zh', 'spanish','arabic'],
-    },
-    // localePath,
-    reloadOnPrerender: process.env.NODE_ENV === 'development',
-    // serializeConfig: false,
-  }
+  // https://www.i18next.com/overview/configuration-options#logging
+  debug: process.env.NODE_ENV === 'development',
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'zh', 'spanish', 'arabic'],
+    debug: false,
+  },
+  // localePath,
+  reloadOnPrerender: process.env.NODE_ENV === 'development',
+  // serializeConfig: false,
+}
