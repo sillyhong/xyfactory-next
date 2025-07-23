@@ -8,7 +8,7 @@ module.exports = {
   i18n: {
     defaultLocale: 'en',
     locales: ['en', 'zh', 'spanish', 'arabic'],
-    debug: false,
+    debug: true, //false: 禁止控制台输出日志
   },
   // localePath,
   reloadOnPrerender: process.env.NODE_ENV === 'development',

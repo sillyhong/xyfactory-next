@@ -6,6 +6,7 @@
     "nav": {
         "nav_home": "Home",
         "nav_products": "Products",
+        "nav_product_categories": "Product Categories",
         "nav_about_us": "About US",
         "nav_contact_us": "Contact Us",
         "nav_portfolio": "Portfolio",
@@ -42,8 +43,111 @@
         "text_view_more": "View More",
         "sub_title": "Xiangying Hardware"
     },
+    "portfolio": {
+        "title": "Product Portfolio",
+        "description": "Explore our complete range of premium hardware products, expertly crafted for lasting durability",
+        "stats": {
+            "categories": "Product Categories",
+            "products": "Product Types",
+            "years": "Years Experience"
+        },
+        "items": {
+            "item_1": {
+                "title": "Premium Door Handle Series",
+                "desc": "High-quality stainless steel, precision crafted"
+            },
+            "item_2": {
+                "title": "Modern Shower Hinges",
+                "desc": "Waterproof and rust-resistant, built to last"
+            },
+            "item_3": {
+                "title": "Glass Door Accessories",
+                "desc": "Transparent beauty, easy installation"
+            },
+            "item_4": {
+                "title": "Custom Sliding Systems",
+                "desc": "Silent and smooth, strong load capacity"
+            },
+            "item_5": {
+                "title": "Architectural Hardware",
+                "desc": "Building-grade quality standards"
+            },
+            "item_6": {
+                "title": "Furniture Connectors",
+                "desc": "Precision manufactured, stable and reliable"
+            },
+            "item_7": {
+                "title": "Pipe Connectors",
+                "desc": "Good sealing, safe and reliable"
+            },
+            "item_8": {
+                "title": "Industrial Grade Hinges",
+                "desc": "Heavy-duty applications, long-lasting"
+            },
+            "item_9": {
+                "title": "Decorative Accessories",
+                "desc": "Beautiful and practical, excellent quality"
+            },
+            "item_10": {
+                "title": "Security Lock Series",
+                "desc": "Safety protection, quality assurance"
+            },
+            "item_11": {
+                "title": "Precision Small Parts",
+                "desc": "Fine craftsmanship, precise dimensions"
+            },
+            "item_12": {
+                "title": "Custom Solutions",
+                "desc": "Made to order, professional service"
+            }
+        },
+        "categories": {
+            "door_hardware": "Door Hardware",
+            "bathroom_accessories": "Bathroom Accessories",
+            "glass_hardware": "Glass Hardware",
+            "sliding_accessories": "Sliding Accessories",
+            "architectural_hardware": "Architectural Hardware",
+            "furniture_hardware": "Furniture Hardware",
+            "pipe_accessories": "Pipe Accessories",
+            "industrial_hardware": "Industrial Hardware",
+            "decorative_hardware": "Decorative Hardware",
+            "security_hardware": "Security Hardware",
+            "precision_parts": "Precision Parts",
+            "custom_products": "Custom Products"
+        },
+        "view_details": "View Details",
+        "learn_more": "Learn More",
+        "tags": {
+            "premium": "Premium",
+            "durable": "Durable"
+        },
+        "cta": {
+            "title": "Interested in Our Products?",
+            "description": "Contact us for more information and custom solutions. We provide professional services",
+            "contact": "Contact Now",
+            "catalog": "Download Catalog"
+        }
+    },
     "home_contact_us": {
-        "text_connect": "Contact with us"
+        "text_connect": "Contact with us",
+        "subtitle": "Get in touch for professional hardware solutions",
+        "platform_whatsapp": "Instant messaging",
+        "platform_facebook": "Social media",
+        "platform_instagram": "Photo sharing",
+        "platform_tiktok": "Video sharing",
+        "platform_wechat": "WeChat contact",
+        "platform_email": "Email consultation",
+        "connect_now": "Connect Now",
+        "support_text": "🌍 Global Service Support • 📞 24/7 Online Consultation • ⚡ Quick Response"
+    },
+    "footer": {
+        "company_tagline": "Professional Hardware Manufacturing Excellence",
+        "company_description": "With 15+ years of expertise, we deliver premium glass hardware solutions to global markets, serving renowned brands like KFC and Pizza Hut.",
+        "quality_certified": "ISO Quality Certified",
+        "global_service": "Global Service Network",
+        "quick_links": "Quick Links",
+        "all_rights_reserved": "All Rights Reserved",
+        "made_with_love": "Made with"
     },
     "home_footer": {
         "product_categories": "Product Categories"
@@ -67,6 +171,10 @@
         "production_Information": "Product Information",
         "production_description": "Description",
         "production_category": "Product Category",
+        "section_description": "Discover our complete range of premium hardware products, crafted with precision and designed for durability.",
+        "category_label": "Product Category",
+        "quality_guarantee": "Professional grade products with superior craftsmanship and reliable quality",
+        "explore_more_text": "Explore our complete product range and find the perfect hardware solution for your needs",
         "product_categories": {
             "product_door_handle": {
                 "title": "Door Handles and Knobs",
@@ -475,6 +583,34 @@
     },
     "contact": {
         "contact_name": "Name",
-        "contact_account": "Account"
+        "contact_account": "Account",
+        "hero_description": "Connect with our expert team for professional hardware solutions. We're here to help you find the perfect products for your projects.",
+        "hours_support": "Hours Support",
+        "countries_served": "Countries Served",
+        "happy_clients": "Happy Clients",
+        "contact_methods": "Contact Methods",
+        "choose_preferred_method": "Choose your preferred communication method to get in touch with our team",
+        "connect": "Connect",
+        "scan_qr_code": "Scan QR Code",
+        "send_message": "Send Message",
+        "form_description": "Fill out the form below and we'll get back to you as soon as possible",
+        "name": "Name",
+        "email": "Email",
+        "tel": "Phone",
+        "message": "Message",
+        "name_placeholder": "Enter your full name",
+        "email_placeholder": "Enter your email address",
+        "tel_placeholder": "Enter your phone number",
+        "message_placeholder": "Tell us about your project or inquiry",
+        "sending": "Sending...",
+        "success_message": "Thank you! Your message has been sent successfully. We'll get back to you soon.",
+        "error_message": "Sorry, there was an error sending your message. Please try again.",
+        "error_name_required": "Name is required",
+        "error_email_required": "Email is required",
+        "error_email_invalid": "Please enter a valid email address",
+        "error_tel_required": "Phone number is required",
+        "contact": "Contact",
+        "click_to_call_or_message": "Click to call or send message",
+        "wechat_scan_instruction": "Please scan the QR code above to add WeChat contact"
     }
 }

@@ -6,6 +6,7 @@
     "nav": {
         "nav_home": "首页",
         "nav_products": "产品分类",
+        "nav_product_categories": "产品分类",
         "nav_about_us": "公司介绍",
         "nav_contact_us": "联系我们",
         "nav_portfolio": "客户案例展示",
@@ -42,8 +43,111 @@
         "text_view_more": "查看更多",
         "sub_title": "祥盈五金"
     },
+    "portfolio": {
+        "title": "产品作品集",
+        "description": "探索我们完整的优质五金产品系列，精工制作，经久耐用",
+        "stats": {
+            "categories": "产品类别",
+            "products": "产品种类",
+            "years": "年经验"
+        },
+        "items": {
+            "item_1": {
+                "title": "高端门把手系列",
+                "desc": "优质不锈钢材质，精工细作"
+            },
+            "item_2": {
+                "title": "现代淋浴铰链",
+                "desc": "防水防锈，经久耐用"
+            },
+            "item_3": {
+                "title": "玻璃门配件",
+                "desc": "透明美观，安装便捷"
+            },
+            "item_4": {
+                "title": "定制滑轮系统",
+                "desc": "静音顺滑，承重力强"
+            },
+            "item_5": {
+                "title": "建筑装饰五金",
+                "desc": "建筑级品质标准"
+            },
+            "item_6": {
+                "title": "家具连接件",
+                "desc": "精密制造，稳固可靠"
+            },
+            "item_7": {
+                "title": "管道连接器",
+                "desc": "密封性好，安全可靠"
+            },
+            "item_8": {
+                "title": "工业级铰链",
+                "desc": "重型应用，持久耐用"
+            },
+            "item_9": {
+                "title": "装饰性配件",
+                "desc": "美观实用，品质优良"
+            },
+            "item_10": {
+                "title": "安全锁具系列",
+                "desc": "安全防护，质量保证"
+            },
+            "item_11": {
+                "title": "精密小件",
+                "desc": "工艺精细，尺寸精准"
+            },
+            "item_12": {
+                "title": "定制解决方案",
+                "desc": "按需定制，专业服务"
+            }
+        },
+        "categories": {
+            "door_hardware": "门具五金",
+            "bathroom_accessories": "浴室配件",
+            "glass_hardware": "玻璃五金",
+            "sliding_accessories": "滑动配件",
+            "architectural_hardware": "建筑五金",
+            "furniture_hardware": "家具五金",
+            "pipe_accessories": "管道配件",
+            "industrial_hardware": "工业五金",
+            "decorative_hardware": "装饰五金",
+            "security_hardware": "安全五金",
+            "precision_parts": "精密配件",
+            "custom_products": "定制产品"
+        },
+        "view_details": "查看详情",
+        "learn_more": "了解更多",
+        "tags": {
+            "premium": "高品质",
+            "durable": "耐用"
+        },
+        "cta": {
+            "title": "对我们的产品感兴趣？",
+            "description": "联系我们获取更多信息和定制解决方案，我们将为您提供专业的服务",
+            "contact": "立即联系",
+            "catalog": "下载目录"
+        }
+    },
     "home_contact_us": {
-        "text_connect": "联系我们"
+        "text_connect": "联系我们",
+        "subtitle": "与我们联系，获取专业的五金产品解决方案",
+        "platform_whatsapp": "即时通讯",
+        "platform_facebook": "社交媒体",
+        "platform_instagram": "图片分享",
+        "platform_tiktok": "视频分享",
+        "platform_wechat": "微信联系",
+        "platform_email": "邮件咨询",
+        "connect_now": "立即连接",
+        "support_text": "🌍 全球服务支持 • 📞 24/7 在线咨询 • ⚡ 快速响应"
+    },
+    "footer": {
+        "company_tagline": "专业五金制造卓越品质",
+        "company_description": "拥有15年以上专业经验，为全球市场提供优质玻璃五金解决方案，服务肯德基、必胜客等知名品牌。",
+        "quality_certified": "ISO质量认证",
+        "global_service": "全球服务网络",
+        "quick_links": "快速链接",
+        "all_rights_reserved": "版权所有",
+        "made_with_love": "用心制作"
     },
     "home_footer": {
         "product_categories": "产品分类"
@@ -67,6 +171,10 @@
         "production_Information": "产品信息",
         "production_description": "产品描述",
         "production_category": "产品分类",
+        "section_description": "探索我们完整的优质五金产品系列，精工制作，经久耐用。",
+        "category_label": "产品分类",
+        "quality_guarantee": "专业级产品，工艺精湛，品质可靠",
+        "explore_more_text": "探索我们完整的产品系列，为您的需求找到完美的五金解决方案",
         "product_categories": {
             "product_door_handle": {
                 "title": "拉手系列",
@@ -456,6 +564,34 @@
     },
     "contact": {
         "contact_name": "名字",
-        "contact_account": "账号"
+        "contact_account": "账号",
+        "hero_description": "与我们的专家团队联系，获得专业的五金解决方案。我们在这里帮助您为项目找到完美的产品。",
+        "hours_support": "小时服务",
+        "countries_served": "服务国家",
+        "happy_clients": "满意客户",
+        "contact_methods": "联系方式",
+        "choose_preferred_method": "选择您偏好的沟通方式与我们的团队取得联系",
+        "connect": "联系",
+        "scan_qr_code": "扫描二维码",
+        "send_message": "发送消息",
+        "form_description": "请填写下面的表单，我们会尽快回复您",
+        "name": "姓名",
+        "email": "邮箱",
+        "tel": "电话",
+        "message": "留言",
+        "name_placeholder": "请输入您的姓名",
+        "email_placeholder": "请输入您的邮箱地址",
+        "tel_placeholder": "请输入您的电话号码",
+        "message_placeholder": "请告诉我们您的项目需求或咨询内容",
+        "sending": "发送中...",
+        "success_message": "谢谢！您的消息已成功发送。我们会尽快回复您。",
+        "error_message": "抱歉，发送消息时出现错误。请重试。",
+        "error_name_required": "姓名为必填项",
+        "error_email_required": "邮箱为必填项",
+        "error_email_invalid": "请输入有效的邮箱地址",
+        "error_tel_required": "电话号码为必填项",
+        "contact": "联系",
+        "click_to_call_or_message": "点击拨打电话或发送消息",
+        "wechat_scan_instruction": "请扫描上方二维码添加微信联系人"
     }
 }

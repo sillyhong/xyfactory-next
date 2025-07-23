@@ -1,95 +1,44 @@
-// import React, { useMemo, lazy } from 'react';
-// import { HashRouter, Router, Switch, Route, Link } from 'react-router-dom';
-// import Container from 'react-bootstrap/Container';
-// import Button from 'react-bootstrap/Button';
-// import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
-// import { LinkContainer } from 'react-router-bootstrap';
-// import Home from './Home';
-
-// import 'bootstrap/dist/css/bootstrap.min.css';
-// import { routerConfig } from './constants';
-
-// const Contactus = () => <span>Contactus</span>;
-// const About = () => <span>about</span>;
-
-// const routerConfigList = [
-//   { Component: lazy(() => import('./Home')), path: '/' },
-//   { Component: lazy(() => import('./AboutUs')), path: '/about-us' },
-// ];
-
-// const App = () => {
-//   // const Routes = useMemo(() => {
-//   //   return routerConfigList.map(({ Component, path }, index) => {
-//   //     // console.log('path', path, 'Component', Component);
-//   //     // console.log('path', path);
-//   //     return (
-//   //       <Route key={path + index} path={path}>
-//   //         <Component />
-//   //       </Route>
-//   //     );
-//   //   });
-//   // }, []);
-
-//   return (
-//     <HashRouter>
-//       <Switch>
-//         {/* {Routes} */}
-//         {/* <Route path="/about-us">
-//           <About />
-//         </Route>
-//         <Route path="/contactus">
-//           <Contactus />
-//         </Route> */}
-//         <Route path="/">
-//           <Home />
-//         </Route>
-//       </Switch>
-//       <Container className="p-3">
-//         <Container className="p-5 mb-4 bg-light rounded-3">
-//           <h1 className="header">Welcome To React-Bootstrap2</h1>
-//           <h2>
-//             <Switch>
-//               <Route path="/about-us">
-//                 <About />
-//               </Route>
-//               <Route path="/">
-//                 <Home />
-//               </Route>
-//             </Switch>
-//           </h2>
-//           <h2>
-//             Navigate to{' '}
-//             <ButtonToolbar className="custom-btn-toolbar">
-//               <LinkContainer to="/">
-//                 <Button>Home</Button>
-//               </LinkContainer>
-//               <LinkContainer to="/about-us">
-//                 <Button>About</Button>
-//               </LinkContainer>
-//               <LinkContainer to="/users">
-//                 <Button>Users</Button>
-//               </LinkContainer>
-//             </ButtonToolbar>
-//           </h2>
-//         </Container>
-//       </Container>
-//     </HashRouter>
-//   );
-// };
-
-// export default App;
-
 import React from 'react';
 import PageContainer from '../../components/PageContainer';
 import CarouselComp from '../../components/Carousel';
 import ProductInfo from './ProductInfo';
 
+// 导入轮播图片
+import carousel1 from '../../assets/images/carousel-1.jpg';
+import carousel2 from '../../assets/images/carousel-2.jpg';
+import carousel3 from '../../assets/images/carousel-3.jpg';
+import carousel4 from '../../assets/images/carousel-4.jpg';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+// 轮播图配置
+const carouselData = [
+  {
+    src: carousel1,
+    title: '专业五金制造商',
+    desc: '20年专业经验，为您提供高品质的门窗五金配件'
+  },
+  {
+    src: carousel2,
+    title: '品质保证',
+    desc: '严格的质量控制体系，每一个产品都经过精心检验'
+  },
+  {
+    src: carousel3,
+    title: '创新设计',
+    desc: '持续的技术创新，引领行业发展趋势'
+  },
+  {
+    src: carousel4,
+    title: '全球服务',
+    desc: '覆盖全球的销售网络，为客户提供及时专业的服务'
+  }
+];
 
 const HomeComp = () => {
   return (
     <>
-      <CarouselComp />
+      <CarouselComp carouselList={carouselData} />
       <ProductInfo />
     </>
   );

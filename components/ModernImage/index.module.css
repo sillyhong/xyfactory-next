@@ -1,0 +1,279 @@
+/* 现代化图片组件样式 */
+.imageContainer {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  transition: transform var(--transition-slow);
+}
+
+/* 状态样式 */
+.rounded {
+  border-radius: var(--radius-lg);
+}
+
+.shadow {
+  box-shadow: var(--shadow-lg);
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.clickable:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* 悬浮效果 */
+.hoverEffect:hover .image {
+  transform: scale(1.02);
+}
+
+.zoomOnHover:hover .image {
+  transform: scale(1.1);
+}
+
+/* 加载状态 */
+.loadingOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-100);
+  z-index: 2;
+}
+
+.spinner {
+  width: 32px;
+  height: 32px;
+  border: 3px solid var(--neutral-200);
+  border-top: 3px solid var(--primary-600);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* 错误状态 */
+.errorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--neutral-100);
+  color: var(--neutral-500);
+  z-index: 2;
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.errorIcon {
+  margin-bottom: var(--spacing-md);
+  opacity: 0.6;
+}
+
+.errorText {
+  font-size: 0.875rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* 覆盖层 */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+/* 光晕效果 */
+.glow {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: var(--gradient-primary);
+  border-radius: inherit;
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+}
+
+/* 特殊效果 */
+.imageContainer.hoverEffect {
+  transition: all var(--transition-normal);
+}
+
+.imageContainer.hoverEffect:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-2xl);
+}
+
+.imageContainer.zoomOnHover {
+  overflow: hidden;
+}
+
+/* 响应式图片容器 */
+.aspectRatio16x9 {
+  aspect-ratio: 16 / 9;
+}
+
+.aspectRatio4x3 {
+  aspect-ratio: 4 / 3;
+}
+
+.aspectRatio1x1 {
+  aspect-ratio: 1 / 1;
+}
+
+.aspectRatio3x4 {
+  aspect-ratio: 3 / 4;
+}
+
+/* 图片画廊样式 */
+.galleryItem {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  cursor: pointer;
+}
+
+.galleryItem:hover {
+  transform: scale(1.03);
+  box-shadow: var(--shadow-2xl);
+}
+
+.galleryItem .image {
+  transition: transform var(--transition-slow);
+}
+
+.galleryItem:hover .image {
+  transform: scale(1.1);
+}
+
+/* 产品图片样式 */
+.productImage {
+  background: white;
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-sm);
+  transition: all var(--transition-normal);
+}
+
+.productImage:hover {
+  border-color: var(--primary-300);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+/* 头像样式 */
+.avatar {
+  border-radius: 50%;
+  border: 3px solid white;
+  box-shadow: var(--shadow-md);
+}
+
+.avatar.small {
+  width: 40px;
+  height: 40px;
+}
+
+.avatar.medium {
+  width: 64px;
+  height: 64px;
+}
+
+.avatar.large {
+  width: 96px;
+  height: 96px;
+}
+
+/* 图标图片样式 */
+.iconImage {
+  border-radius: var(--radius-md);
+  background: var(--neutral-50);
+  padding: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 缩略图样式 */
+.thumbnail {
+  border: 2px solid transparent;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.thumbnail:hover {
+  border-color: var(--primary-400);
+}
+
+.thumbnail.active {
+  border-color: var(--primary-600);
+  box-shadow: 0 0 0 2px rgba(83, 101, 175, 0.2);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .hoverEffect:hover {
+    transform: none;
+  }
+  
+  .zoomOnHover:hover .image {
+    transform: none;
+  }
+  
+  .galleryItem:hover {
+    transform: none;
+  }
+  
+  .galleryItem:hover .image {
+    transform: none;
+  }
+}
+
+/* 深色主题支持 */
+@media (prefers-color-scheme: dark) {
+  .loadingOverlay,
+  .errorOverlay {
+    background: var(--neutral-200);
+  }
+  
+  .productImage {
+    background: var(--neutral-100);
+    border-color: var(--neutral-300);
+  }
+  
+  .iconImage {
+    background: var(--neutral-200);
+  }
+} 

@@ -1,0 +1,377 @@
+/* ProductMenu 现代化样式 */
+.productMenu {
+  width: 100%;
+  height: 100%;
+}
+
+/* 菜单头部 */
+.menuHeader {
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  padding-bottom: var(--spacing-lg);
+  border-bottom: 2px solid var(--neutral-100);
+  position: relative;
+}
+
+.menuHeader::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 2px;
+  background: var(--gradient-primary);
+  border-radius: 1px;
+}
+
+.menuTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--neutral-800);
+  margin: 0 0 var(--spacing-xs) 0;
+  line-height: 1.3;
+}
+
+.menuSubtitle {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* 菜单列表 */
+.menuList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-xl);
+}
+
+/* 菜单项 */
+.menuItem {
+  position: relative;
+  cursor: pointer;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-normal);
+  overflow: hidden;
+}
+
+.menuItemContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  position: relative;
+  z-index: 1;
+}
+
+.menuItem:hover .menuItemContent {
+  background: var(--neutral-50);
+}
+
+.menuItemActive .menuItemContent {
+  background: var(--primary-50);
+}
+
+/* 菜单项图标 */
+.menuItemIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  background: var(--neutral-100);
+  color: var(--neutral-600);
+  transition: all var(--transition-normal);
+  flex-shrink: 0;
+}
+
+.menuItem:hover .menuItemIcon {
+  background: var(--primary-100);
+  color: var(--primary-600);
+  transform: scale(1.1);
+}
+
+.menuItemActive .menuItemIcon {
+  background: var(--primary-600);
+  color: white;
+}
+
+/* 菜单项文本 */
+.menuItemText {
+  flex: 1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--neutral-700);
+  transition: color var(--transition-normal);
+  line-height: 1.4;
+}
+
+.menuItem:hover .menuItemText {
+  color: var(--primary-600);
+}
+
+.menuItemActive .menuItemText {
+  color: var(--primary-700);
+  font-weight: 600;
+}
+
+/* 菜单项箭头 */
+.menuItemArrow {
+  color: var(--neutral-400);
+  transition: all var(--transition-normal);
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+.menuItem:hover .menuItemArrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--primary-600);
+}
+
+.menuItemActive .menuItemArrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--primary-600);
+}
+
+/* 活跃指示器 */
+.activeIndicator {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: var(--gradient-primary);
+  border-radius: 0 2px 2px 0;
+}
+
+/* 菜单底部 */
+.menuFooter {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--neutral-100);
+}
+
+.menuStats {
+  display: flex;
+  justify-content: center;
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-md);
+  background: var(--neutral-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--neutral-100);
+  transition: all var(--transition-normal);
+}
+
+.statItem:hover {
+  background: var(--primary-50);
+  border-color: var(--primary-200);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.statNumber {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-600);
+  line-height: 1;
+}
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--neutral-600);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+
+/* 响应式设计 */
+@media (max-width: 992px) {
+  .menuTitle {
+    font-size: 1.125rem;
+  }
+  
+  .menuItemContent {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  .menuItemIcon {
+    width: 32px;
+    height: 32px;
+  }
+  
+  .menuItemText {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .menuHeader {
+    margin-bottom: var(--spacing-lg);
+    padding-bottom: var(--spacing-md);
+  }
+  
+  .menuTitle {
+    font-size: 1rem;
+  }
+  
+  .menuSubtitle {
+    font-size: 0.8rem;
+  }
+  
+  .menuList {
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .menuItemContent {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    gap: var(--spacing-sm);
+  }
+  
+  .menuItemIcon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .menuItemText {
+    font-size: 0.8rem;
+  }
+  
+  .statItem {
+    padding: var(--spacing-sm);
+  }
+  
+  .statNumber {
+    font-size: 1.25rem;
+  }
+  
+  .statLabel {
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .menuHeader {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .menuList {
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .menuFooter {
+    padding-top: var(--spacing-md);
+  }
+}
+
+/* 性能优化 */
+.menuItem,
+.menuItemIcon,
+.menuItemArrow,
+.statItem {
+  will-change: transform;
+}
+
+/* 无障碍设计 */
+@media (prefers-reduced-motion: reduce) {
+  .menuItem,
+  .menuItemIcon,
+  .menuItemArrow,
+  .statItem {
+    transition: none;
+  }
+}
+
+/* 深色模式支持 */
+@media (prefers-color-scheme: dark) {
+  .menuTitle {
+    color: var(--neutral-200);
+  }
+  
+  .menuSubtitle {
+    color: var(--neutral-400);
+  }
+  
+  .menuHeader {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .menuItem:hover .menuItemContent {
+    background: rgba(255, 255, 255, 0.05);
+  }
+  
+  .menuItemActive .menuItemContent {
+    background: rgba(103, 125, 214, 0.1);
+  }
+  
+  .menuItemIcon {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--neutral-400);
+  }
+  
+  .menuItem:hover .menuItemIcon {
+    background: rgba(103, 125, 214, 0.2);
+    color: var(--primary-400);
+  }
+  
+  .menuItemActive .menuItemIcon {
+    background: var(--primary-600);
+    color: white;
+  }
+  
+  .menuItemText {
+    color: var(--neutral-300);
+  }
+  
+  .menuItem:hover .menuItemText {
+    color: var(--primary-400);
+  }
+  
+  .menuItemActive .menuItemText {
+    color: var(--primary-400);
+  }
+  
+  .menuItemArrow {
+    color: var(--neutral-500);
+  }
+  
+  .menuItem:hover .menuItemArrow,
+  .menuItemActive .menuItemArrow {
+    color: var(--primary-400);
+  }
+  
+  .menuFooter {
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .statItem {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  .statItem:hover {
+    background: rgba(103, 125, 214, 0.1);
+    border-color: rgba(103, 125, 214, 0.3);
+  }
+  
+  .statNumber {
+    color: var(--primary-400);
+  }
+  
+  .statLabel {
+    color: var(--neutral-400);
+  }
+} 

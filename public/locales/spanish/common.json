@@ -43,7 +43,25 @@
         "sub_title": "Hardware Xiangying"
     },
     "home_contact_us": {
-        "text_connect": "Contacta con nosotras"
+        "text_connect": "Contacta con nosotras",
+        "subtitle": "Póngase en contacto para soluciones profesionales de hardware",
+        "platform_whatsapp": "Mensajería instantánea",
+        "platform_facebook": "Redes sociales",
+        "platform_instagram": "Compartir fotos",
+        "platform_tiktok": "Compartir videos",
+        "platform_wechat": "Contacto WeChat",
+        "platform_email": "Consulta por email",
+        "connect_now": "Conectar Ahora",
+        "support_text": "🌍 Soporte Global • 📞 Consulta 24/7 • ⚡ Respuesta Rápida"
+    },
+    "footer": {
+        "company_tagline": "Excelencia en Fabricación de Hardware Profesional",
+        "company_description": "Con más de 15 años de experiencia, ofrecemos soluciones premium de hardware de vidrio a mercados globales, sirviendo a marcas reconocidas como KFC y Pizza Hut.",
+        "quality_certified": "Certificado de Calidad ISO",
+        "global_service": "Red de Servicio Global",
+        "quick_links": "Enlaces Rápidos",
+        "all_rights_reserved": "Todos los Derechos Reservados",
+        "made_with_love": "Hecho con"
     },
     "home_footer": {
         "product_categories": "Categorías de productos"
@@ -67,6 +85,10 @@
         "production_Information": "Información del producto",
         "production_description": "Descripción del producto",
         "production_category": "Categoría de producto",
+        "section_description": "Descubra nuestra gama completa de productos de hardware premium, elaborados con precisión y diseñados para la durabilidad.",
+        "category_label": "Categoría de Producto",
+        "quality_guarantee": "Productos de grado profesional con artesanía superior y calidad confiable",
+        "explore_more_text": "Explore nuestra gama completa de productos y encuentre la solución de hardware perfecta para sus necesidades",
         "product_categories": {
             "product_door_handle": {
                 "title": "Serie de manijas",
@@ -457,6 +479,34 @@
     },
     "contact": {
         "contact_name": "Nombre",
-        "contact_account": "Cuenta"
+        "contact_account": "Cuenta",
+        "hero_description": "Conéctese con nuestro equipo de expertos para soluciones profesionales de hardware. Estamos aquí para ayudarle a encontrar los productos perfectos para sus proyectos.",
+        "hours_support": "Horas de Soporte",
+        "countries_served": "Países Atendidos",
+        "happy_clients": "Clientes Satisfechos",
+        "contact_methods": "Métodos de Contacto",
+        "choose_preferred_method": "Elija su método de comunicación preferido para ponerse en contacto con nuestro equipo",
+        "connect": "Conectar",
+        "scan_qr_code": "Escanear Código QR",
+        "send_message": "Enviar Mensaje",
+        "form_description": "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "tel": "Teléfono",
+        "message": "Mensaje",
+        "name_placeholder": "Ingrese su nombre completo",
+        "email_placeholder": "Ingrese su dirección de correo electrónico",
+        "tel_placeholder": "Ingrese su número de teléfono",
+        "message_placeholder": "Cuéntenos sobre su proyecto o consulta",
+        "sending": "Enviando...",
+        "success_message": "¡Gracias! Su mensaje ha sido enviado con éxito. Nos pondremos en contacto con usted pronto.",
+        "error_message": "Lo sentimos, hubo un error al enviar su mensaje. Por favor, inténtelo de nuevo.",
+        "error_name_required": "El nombre es obligatorio",
+        "error_email_required": "El correo electrónico es obligatorio",
+        "error_email_invalid": "Por favor, ingrese una dirección de correo electrónico válida",
+        "error_tel_required": "El número de teléfono es obligatorio",
+        "contact": "Contacto",
+        "click_to_call_or_message": "Haga clic para llamar o enviar mensaje",
+        "wechat_scan_instruction": "Por favor escanee el código QR de arriba para agregar contacto de WeChat"
     }
 }

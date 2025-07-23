@@ -43,7 +43,25 @@
         "sub_title": "Xiangying Hardware"
     },
     "home_contact_us": {
-        "text_connect": "اتصل بنا"
+        "text_connect": "اتصل بنا",
+        "subtitle": "تواصل معنا للحصول على حلول الأجهزة المهنية",
+        "platform_whatsapp": "رسائل فورية",
+        "platform_facebook": "وسائل التواصل الاجتماعي",
+        "platform_instagram": "مشاركة الصور",
+        "platform_tiktok": "مشاركة الفيديو",
+        "platform_wechat": "تواصل ويتشات",
+        "platform_email": "استشارة بالبريد الإلكتروني",
+        "connect_now": "اتصل الآن",
+        "support_text": "🌍 دعم عالمي • 📞 استشارة 24/7 • ⚡ استجابة سريعة"
+    },
+    "footer": {
+        "company_tagline": "التميز في تصنيع الأجهزة المهنية",
+        "company_description": "مع أكثر من 15 عاماً من الخبرة، نقدم حلول أجهزة زجاجية متميزة للأسواق العالمية، نخدم علامات تجارية مشهورة مثل كنتاكي وبيتزا هت.",
+        "quality_certified": "معتمد من آيزو للجودة",
+        "global_service": "شبكة خدمة عالمية",
+        "quick_links": "روابط سريعة",
+        "all_rights_reserved": "جميع الحقوق محفوظة",
+        "made_with_love": "صُنع بـ"
     },
     "home_footer": {
         "product_categories": "فئات المنتجات"
@@ -66,7 +84,11 @@
         "btn_detail": "تفاصيل",
         "production_Information": "معلومات المنتج",
         "production_description": "معلومات المنتج",
-        "production_category": "معلومات المنتج",
+        "section_description": "اكتشف مجموعتنا الكاملة من منتجات الأجهزة المتميزة، المصنوعة بدقة والمصممة للمتانة.",
+        "category_label": "فئة المنتج",
+        "quality_guarantee": "منتجات احترافية بحرفية متفوقة وجودة موثوقة",
+        "explore_more_text": "استكشف مجموعة منتجاتنا الكاملة واعثر على حل الأجهزة المثالي لاحتياجاتك",
+        "production_category": "فئة المنتج",
         "product_categories": {
             "product_door_handle": {
                 "title": "مقابض الأبواب والمقابض",
@@ -460,6 +482,34 @@
     },
     "contact": {
         "contact_name": "اسم",
-        "contact_account": "الحساب"
+        "contact_account": "الحساب",
+        "hero_description": "تواصل مع فريق الخبراء لدينا للحصول على حلول أجهزة احترافية. نحن هنا لمساعدتك في العثور على المنتجات المثالية لمشاريعك.",
+        "hours_support": "ساعة دعم",
+        "countries_served": "البلدان المخدومة",
+        "happy_clients": "العملاء السعداء",
+        "contact_methods": "طرق التواصل",
+        "choose_preferred_method": "اختر طريقة التواصل المفضلة لديك للتواصل مع فريقنا",
+        "connect": "تواصل",
+        "scan_qr_code": "امسح رمز الاستجابة السريعة",
+        "send_message": "إرسال رسالة",
+        "form_description": "املأ النموذج أدناه وسنعاود الاتصال بك في أقرب وقت ممكن",
+        "name": "الاسم",
+        "email": "البريد الإلكتروني",
+        "tel": "الهاتف",
+        "message": "الرسالة",
+        "name_placeholder": "أدخل اسمك الكامل",
+        "email_placeholder": "أدخل عنوان بريدك الإلكتروني",
+        "tel_placeholder": "أدخل رقم هاتفك",
+        "message_placeholder": "أخبرنا عن مشروعك أو استفسارك",
+        "sending": "جارٍ الإرسال...",
+        "success_message": "شكراً لك! تم إرسال رسالتك بنجاح. سنتواصل معك قريباً.",
+        "error_message": "عذراً، حدث خطأ أثناء إرسال رسالتك. يرجى المحاولة مرة أخرى.",
+        "error_name_required": "الاسم مطلوب",
+        "error_email_required": "البريد الإلكتروني مطلوب",
+        "error_email_invalid": "يرجى إدخال عنوان بريد إلكتروني صحيح",
+        "error_tel_required": "رقم الهاتف مطلوب",
+        "contact": "اتصال",
+        "click_to_call_or_message": "انقر للاتصال أو إرسال رسالة",
+        "wechat_scan_instruction": "يرجى مسح رمز الاستجابة السريعة أعلاه لإضافة جهة اتصال WeChat"
     }
 }
