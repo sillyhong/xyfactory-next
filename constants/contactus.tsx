@@ -139,6 +139,7 @@ export enum ContacusEnum {
     INSTAGRAM = 'Instagram',
     TIKTOK = 'TikTok',
     WECHAT = 'Wechat',
+    EMAIL = 'Email',
 }
 
 
@@ -217,9 +218,9 @@ export const ContactUs = [
         ]
     },
     {
-        value: 'hotmail',
+        value: 'xyglassaccessory@gmail.com',
         label: 'Email',
         icon: EmailIcon,
-        notShowInContactPage: true
+        connects: [{ value: 'xyglassaccessory@gmail.com', name: 'XY Glass Accessories' }]
     },
 ];

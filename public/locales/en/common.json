@@ -17,7 +17,8 @@
             "en": "English",
             "spanish": "Spanish",
             "arabic": "Arabic"
-        }
+        },
+        "tagline": "Premium Hardware"
     },
     "carousel": {
         "title1": "High Quality",
@@ -33,15 +34,39 @@
         "about_us": "About US"
     },
     "home_hot_product": {
-        "sub_title": "Hot Products"
+        "sub_title": "Hot Products",
+        "description": "Selected premium hardware products for reliable project solutions"
     },
     "home_product_categories": {
-        "sub_title": "Product Categories"
+        "sub_title": "Product Categories",
+        "description": "Explore our product categories, from door handles and shower hinges to glass hardware"
     },
     "home_about_us": {
-        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>has 15 years of export experience and enjoys a good reputation for the industry, especially in Canada, US and Australia. We mainly produce door handles, shower hinges and sliding door accessories, etc.  <br /><br />We have advanced production equipment and a numbers of skillful technical workers and we can offer you with the high quality products at a competitive price. <br /><br /><strong>We have also formed long-term cooperation with internationally renowned companies such as KFC and Pizza Hut to provide them with glass door accessories.  </strong><br /><br /> We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications. If you are interested in our product, please feel free to contact us. </div>",
+        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><p><strong>Xiangying Glass Hardware Factory</strong> has 15 years of export experience and enjoys a good reputation for the industry, especially in Canada, US and Australia. We mainly produce door handles, shower hinges and sliding door accessories, etc.</p><p>We have advanced production equipment and a numbers of skillful technical workers and we can offer you with the high quality products at a competitive price.</p><p><strong>We have also formed long-term cooperation with internationally renowned companies such as KFC and Pizza Hut to provide them with glass door accessories.</strong></p><p>We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications. If you are interested in our product, please feel free to contact us.</p></div>",
         "text_view_more": "View More",
-        "sub_title": "Xiangying Hardware"
+        "sub_title": "Xiangying Hardware",
+        "image_alt": "Xiangying Hardware Factory",
+        "overlay_title": "Professional Manufacturing",
+        "overlay_text": "Precision manufacturing · Quality focused",
+        "stats": {
+            "years": "Years Experience",
+            "clients": "Trusted Clients",
+            "countries": "Export Countries"
+        },
+        "features": {
+            "quality": {
+                "title": "Quality Assurance",
+                "description": "Strict quality control system"
+            },
+            "delivery": {
+                "title": "Fast Delivery",
+                "description": "Efficient production and logistics"
+            },
+            "service": {
+                "title": "Professional Service",
+                "description": "One-to-one customer support"
+            }
+        }
     },
     "portfolio": {
         "title": "Product Portfolio",
@@ -125,7 +150,7 @@
             "title": "Interested in Our Products?",
             "description": "Contact us for more information and custom solutions. We provide professional services",
             "contact": "Contact Now",
-            "catalog": "Download Catalog"
+            "catalog": "Browse Product Categories"
         }
     },
     "home_contact_us": {
@@ -155,6 +180,20 @@
     "about_us": {
         "text_company_profile": "Company Profile",
         "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong >Xiangying Glass Hardware Factory </strong>has 15 years of export experience and enjoys a good reputation for the industry, especially in Canada, US and Australia. We mainly produce door handles, shower hinges and sliding door accessories, etc.  <br /><br />We have advanced production equipment and a numbers of skillful technical workers and we can offer you with the high quality products at a competitive price. <br /><br /><strong>We have also formed long-term cooperation with internationally renowned companies such as KFC and Pizza Hut to provide them with glass door accessories.  </strong><br /><br /> We welcome all enquiries regarding Glass and Aluminium for Domestic, Architectural and Commercial applications. If you are interested in our product, please feel free to contact us. </div>",
+        "hero_banner_alt": "Xiangying Hardware Factory Company Introduction Banner",
+        "hero_title": "About Xiangying Hardware",
+        "hero_subtitle": "Professional hardware manufacturer, the perfect combination of quality and innovation",
+        "years_experience": "Years Experience",
+        "countries_served": "Countries Served",
+        "happy_clients": "Happy Clients",
+        "advantages_title": "Our Advantages",
+        "advantages_subtitle": "Discover what sets us apart in the hardware manufacturing industry",
+        "feature_1": "15+ Years Professional Experience",
+        "feature_2": "ISO Quality Certification",
+        "feature_3": "Global Sales Network",
+        "factory_image_alt": "Xiangying Hardware Factory Production Facility",
+        "factory_info_title": "Modern Production Base",
+        "factory_info_text": "Equipped with advanced production equipment to ensure product quality",
         "about_us_advantages": {
             "title1": "High Quality",
             "desc1": "Xiangying's mission is to always adhere to making good products that are 'perfect and affordable'.",
@@ -177,7 +216,6 @@
         "explore_more_text": "Explore our complete product range and find the perfect hardware solution for your needs",
         "product_categories": {
             "product_door_handle": {
-                "title": "Door Handles and Knobs",
                 "0": {
                     "title": "Door Handles and Knobs",
                     "desc": "Stainless Steel 304 Shower Room Door Knobs Door Handle",
@@ -306,10 +344,10 @@
                         "product_finish": "Satin/Mirror/Matte Black/Golden",
                         "product_size": "350mm-1800mm or customized"
                     }
-                }
+                },
+                "title": "Door Handles and Knobs"
             },
             "product_shower_hinge": {
-                "title": "Shower Hinges",
                 "0": {
                     "title": "Shower Hinges",
                     "desc": "Hot Sale Wall Mounted 90 Degree Shower Hinges",
@@ -428,10 +466,10 @@
                         "product_finish": "Satin/Mirror/Matte Black/Golden",
                         "product_glass_thinkness": "8-10mm Tempered Glass"
                     }
-                }
+                },
+                "title": "Shower Hinges"
             },
             "product_pipe_connectors": {
-                "title": "Pipe Connectors",
                 "0": {
                     "title": "Pipe Connectors",
                     "desc": "Mirror Polishing Stainless Steel Bathroom Hardware Parts Pipe Fitting Tube Connectors",
@@ -451,10 +489,10 @@
                         "product_finish": "Polish",
                         "product_glass_thinkness": "8-10mm"
                     }
-                }
+                },
+                "title": "Pipe Connectors"
             },
             "product_hanging_wheel": {
-                "title": "Hanging Wheel",
                 "0": {
                     "title": "Hanging Wheel",
                     "desc": "Stainless Steel Glass Sliding Door Roller Set Accessories Glass Hanging Wheel",
@@ -474,10 +512,10 @@
                         "product_finish": "Satin/Mirror/Matte Black/Golden",
                         "product_glass_thinkness": "6-12mm"
                     }
-                }
+                },
+                "title": "Hanging Wheel"
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "Bathroom Sliding Door Accessories",
                 "0": {
                     "title": "Bathroom Sliding Door Accessories",
                     "desc": "Prime Quality Stainless Steel Seamless Welded Pipe Tube",
@@ -514,10 +552,10 @@
                         "product_finish": "Satin/Mirror/Matte Black/Golden",
                         "product_glass_thinkness": "8-10mm Tempered Glass"
                     }
-                }
+                },
+                "title": "Bathroom Sliding Door Accessories"
             },
             "product_glass_floor_spring": {
-                "title": "Glass Floor Spring",
                 "0": {
                     "title": "Glass Floor Spring",
                     "desc": "G-220B Floor Spring for Glass Door Glass Door Closer",
@@ -565,7 +603,8 @@
                         "product_no": "H-220C",
                         "product_material": "SUS304"
                     }
-                }
+                },
+                "title": "Glass Floor Spring"
             }
         },
         "product_labels": {
@@ -579,7 +618,79 @@
             "place_of_origin": "Place of Origin",
             "product_size": "Size",
             "product_glass_thinkness": "Glass Thinkness"
-        }
+        },
+        "products_available": "Products Available",
+        "current_product": "Current Product",
+        "back_to_list": "Back to List",
+        "choose_category": "Choose your preferred category",
+        "categories_total": "Categories Total",
+        "specifications": "Specifications",
+        "product_details": "Product Details",
+        "features": "Features",
+        "product_specifications": "Product Specifications",
+        "specifications_count": "specifications",
+        "detailed_information": "Detailed Information",
+        "details_count": "details",
+        "feature_durability": "Superior Durability",
+        "feature_durability_desc": "Built to withstand heavy use and harsh conditions",
+        "feature_efficiency": "High Efficiency",
+        "feature_efficiency_desc": "Optimized design for maximum performance",
+        "feature_precision": "Precision Engineering",
+        "feature_precision_desc": "Manufactured to exact specifications and tolerances",
+        "feature_maintenance": "Easy Maintenance",
+        "feature_maintenance_desc": "Simple to clean and maintain for long-lasting use",
+        "product": "Product",
+        "unknown_category": "Unknown Category",
+        "product_highlights": "Product Highlights",
+        "highlight_quality": "Premium Quality Materials",
+        "highlight_precision": "Precision Manufacturing",
+        "highlight_durability": "Long-lasting Durability",
+        "quick_specifications": "Quick Specifications",
+        "contact_for_quote": "Contact for Quote",
+        "save_to_favorites": "Save to Favorites",
+        "saved_to_favorites": "Saved on This Device",
+        "explore_products": "Explore Products",
+        "discover_our_collection": "Discover our collection of premium hardware products",
+        "products_found": "products found",
+        "search_products": "Search products...",
+        "sort_default": "Default Sorting",
+        "sort_by_name": "Sort by Name",
+        "sort_by_popular": "Sort by Popular",
+        "view_details": "View Details",
+        "hot": "Hot",
+        "high_quality_description": "High-quality stainless steel construction with superior finish",
+        "durable": "Durable",
+        "premium": "Premium",
+        "no_products_found": "No Products Found",
+        "try_different_search": "Try adjusting your search or filter criteria",
+        "clear_filters": "Clear Filters"
+    },
+    "common": {
+        "close": "Close",
+        "back_to_top": "Back to top",
+        "skip_to_content": "Skip to main content",
+        "loading": "Loading...",
+        "learn_more": "Learn More",
+        "contact_us": "Contact Us",
+        "scroll_to_explore": "Scroll to explore more",
+        "view_details": "View Details",
+        "contact_now": "Contact Now",
+        "high_quality": "High Quality",
+        "durable": "Durable",
+        "precision": "Precision Crafted",
+        "multiple_styles": "Multiple Styles",
+        "explore_category": "Explore Category",
+        "product_category": "Product Category",
+        "product_image_alt": "Product image",
+        "category_description": "Professional-grade {{category}} products, expertly crafted for reliable quality",
+        "view_all_categories": "View All Product Categories",
+        "image_load_error": "Image could not be loaded",
+        "previous_slide": "Previous slide",
+        "next_slide": "Next slide",
+        "pause_slideshow": "Pause slideshow",
+        "play_slideshow": "Play slideshow",
+        "go_to_slide": "Go to slide {{index}}",
+        "toggle_navigation": "Toggle navigation"
     },
     "contact": {
         "contact_name": "Name",
@@ -593,7 +704,10 @@
         "connect": "Connect",
         "scan_qr_code": "Scan QR Code",
         "send_message": "Send Message",
-        "form_description": "Fill out the form below and we'll get back to you as soon as possible",
+        "form_description": "Fill in your inquiry to prepare a WhatsApp message. Review and send it in WhatsApp; this form does not send messages automatically.",
+        "open_whatsapp": "Continue in WhatsApp",
+        "message_prepared": "Your message is ready. Review and send it in WhatsApp. Your form entries have been kept here.",
+        "product_inquiry": "I would like a quotation for {{product}}.",
         "name": "Name",
         "email": "Email",
         "tel": "Phone",

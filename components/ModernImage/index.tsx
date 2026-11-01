@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
 import { motion } from 'framer-motion';
 import { PlaceholderValue } from 'next/dist/shared/lib/get-img-props';
 import styles from './index.module.css';
@@ -28,7 +29,7 @@ interface ModernImageProps {
   placeholder?: PlaceholderValue;
 }
 
-const ModernImage: React.FC<ModernImageProps> = ({
+const ModernImageContent: React.FC<ModernImageProps> = ({
   src,
   alt,
   className = '',
@@ -51,6 +52,7 @@ const ModernImage: React.FC<ModernImageProps> = ({
   zoomOnHover = false,
   placeholder = 'blur',
 }) => {
+  const { t } = useTranslation('common');
   const [isLoading, setIsLoading] = useState(true);
   const [hasError, setHasError] = useState(false);
 
@@ -110,7 +112,7 @@ const ModernImage: React.FC<ModernImageProps> = ({
               <path d="M2 12L12 17L22 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
           </div>
-          <p className={styles.errorText}>图片加载失败</p>
+          <p className={styles.errorText} role="status">{t('common.image_load_error')}</p>
         </div>
       )}
 
@@ -123,14 +125,14 @@ const ModernImage: React.FC<ModernImageProps> = ({
           width={!fill ? width : undefined}
           height={!fill ? height : undefined}
           fill={fill}
-          sizes={fill ? sizes : undefined}
+          sizes={sizes}
           priority={priority}
           loading={priority ? 'eager' : loading}
           quality={quality}
           onLoad={handleLoad}
           onError={handleError}
           style={{
-            objectFit: fill ? objectFit : undefined,
+            objectFit,
           }}
           placeholder={typeof src === 'string' ? 'empty' : placeholder}
         />
@@ -161,4 +163,11 @@ const ModernImage: React.FC<ModernImageProps> = ({
   );
 };
 
-export default ModernImage; 
+const ModernImage: React.FC<ModernImageProps> = (props) => (
+  <ModernImageContent
+    key={typeof props.src === 'string' ? props.src : props.src.src}
+    {...props}
+  />
+);
+
+export default ModernImage;

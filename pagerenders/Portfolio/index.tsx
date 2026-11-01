@@ -1,8 +1,9 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import SectionHeader from '@components/SectionHeader';
 import styles from './index.module.css';
 
@@ -21,6 +22,9 @@ import portfolio12 from '@assets/images/portfolio/portfolio-12.jpg';
 
 const Portfolio = () => {
   const { t } = useTranslation('common');
+  const router = useRouter();
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+  const previewRef = useRef<HTMLDialogElement>(null);
   const { ref, inView } = useInView({
     threshold: 0.1,
     triggerOnce: true,
@@ -102,6 +106,19 @@ const Portfolio = () => {
       }
     ];
   }, [t]);
+  const selectedPortfolio = selectedIndex === null ? null : Portfolios[selectedIndex];
+
+  useEffect(() => {
+    const dialog = previewRef.current;
+    if (!dialog || selectedIndex === null) return;
+    dialog.showModal();
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      dialog.close();
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [selectedIndex]);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -237,9 +254,9 @@ const Portfolio = () => {
                             {item.category}
                           </div>
                           <motion.button
+                            type="button"
+                            onClick={() => setSelectedIndex(index)}
                             className={styles.viewButton}
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
                           >
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                               <path d="M1 12S5 4 12 4S23 12 23 12S19 20 12 20S1 12 1 12Z" stroke="currentColor" strokeWidth="2"/>
@@ -277,6 +294,8 @@ const Portfolio = () => {
                       </div>
                       
                       <motion.button
+                        type="button"
+                        onClick={() => setSelectedIndex(index)}
                         className={styles.learnMoreButton}
                         whileHover={{ x: 5 }}
                         whileTap={{ scale: 0.95 }}
@@ -296,7 +315,7 @@ const Portfolio = () => {
           {/* 底部CTA区域 */}
           <motion.div
             initial={{ opacity: 0, y: 60 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1.5, duration: 0.8 }}
             className={styles.ctaSection}
           >
@@ -308,33 +327,35 @@ const Portfolio = () => {
                 <p className={styles.ctaDescription}>
                   {t('portfolio.cta.description', '联系我们获取更多信息和定制解决方案，我们将为您提供专业的服务')}
                 </p>
+              </div>
+
+              <div className={styles.ctaButtons}>
+                <motion.button
+                  type="button"
+                  onClick={() => router.push('/contact')}
+                  className={`btn btn-primary ${styles.ctaPrimaryButton}`}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('portfolio.cta.contact', '立即联系')}
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </motion.button>
                 
-                <div className={styles.ctaButtons}>
-                  <motion.button
-                    className={`btn btn-primary ${styles.ctaPrimaryButton}`}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {t('portfolio.cta.contact', '立即联系')}
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M22 2L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </motion.button>
-                  
-                  <motion.button
-                    className={`btn btn-outline ${styles.ctaSecondaryButton}`}
-                    whileHover={{ scale: 1.05, y: -2 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {t('portfolio.cta.catalog', '下载目录')}
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                      <path d="M21 15V19A2 2 0 0 1 19 21H5A2 2 0 0 1 3 19V15" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                      <line x1="12" y1="15" x2="12" y2="3" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
-                    </svg>
-                  </motion.button>
-                </div>
+                <motion.button
+                  type="button"
+                  onClick={() => router.push('/product')}
+                  className={`btn btn-outline ${styles.ctaSecondaryButton}`}
+                  whileHover={{ scale: 1.02, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  {t('common.view_all_categories')}
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                    <path d="M5 12H19M12 5L19 12L12 19" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </motion.button>
               </div>
               
               {/* CTA背景装饰 */}
@@ -346,6 +367,25 @@ const Portfolio = () => {
           </motion.div>
         </div>
       </section>
+      <dialog
+        ref={previewRef}
+        className={styles.previewDialog}
+        aria-labelledby="portfolio-preview-title"
+        onCancel={() => setSelectedIndex(null)}
+        onClick={(event) => {
+          if (event.target === event.currentTarget) setSelectedIndex(null);
+        }}
+      >
+        {selectedPortfolio && <div className={styles.previewContent}>
+          <button type="button" className={styles.previewClose} aria-label={t('common.close')} onClick={() => setSelectedIndex(null)}>×</button>
+          <Image src={selectedPortfolio.src} alt={selectedPortfolio.title} sizes="(max-width: 768px) 90vw, 720px" className={styles.previewImage} />
+          <h2 id="portfolio-preview-title">{selectedPortfolio.title}</h2>
+          <p>{selectedPortfolio.desc}</p>
+          <button type="button" className="btn btn-primary" onClick={() => router.push({ pathname: '/contact', query: { product: selectedPortfolio.title } })}>
+            {t('common.contact_now')}
+          </button>
+        </div>}
+      </dialog>
     </div>
   );
 };

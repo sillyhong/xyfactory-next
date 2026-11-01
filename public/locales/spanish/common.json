@@ -5,42 +5,58 @@
     },
     "nav": {
         "nav_home": "Inicio",
-        "nav_products": "Categoría de producto",
-        "nav_about_us": "Introducción de la empresa",
-        "nav_contact_us": "Contáctenos",
-        "nav_portfolio": "Presentación del caso del cliente",
+        "nav_products": "Productos",
+        "nav_about_us": "Nosotros",
+        "nav_contact_us": "Contacto",
+        "nav_portfolio": "Casos de éxito",
         "nav_search": "Buscar",
         "nav_language": {
-            "language": "idioma",
+            "language": "Idioma",
             "zh": "Chino",
-            "es": "inglés",
-            "español": "español",
-            "árabe": "Arábica"
-        }
-    },
-    "carrusel": {
-        "title1": "Buscar alta calidad",
-        "desc1": "La calidad del producto siempre ha sido la eterna búsqueda de Xiangying",
-        "title2": "Excelente equipo",
-        "desc2": "Contamos con equipos de producción avanzados y un grupo de trabajadores calificados",
-        "title3": "Precio competitivo",
-        "desc3": "Como fábrica, podemos ofrecerle los precios de productos más asequibles",
-        "title4": "Envío conveniente del producto",
-        "desc4": "Nuestra fábrica cuenta con muchos empleados calificados que pueden satisfacer mejor las necesidades de su pedido"
+            "en": "Inglés",
+            "spanish": "Español",
+            "arabic": "Árabe"
+        },
+        "nav_product_categories": "Categorías",
+        "tagline": "Herrajes de calidad"
     },
     "home_sub_header": {
         "about_us": "Introducción de la empresa"
     },
     "home_hot_product": {
-        "sub_title": "Gran Venta"
+        "sub_title": "Gran Venta",
+        "description": "Herrajes seleccionados para soluciones fiables en sus proyectos"
     },
     "home_product_categories": {
-        "sub_title": "categoria de producto"
+        "sub_title": "categoria de producto",
+        "description": "Explore nuestras categorías: manijas, bisagras de ducha y herrajes para vidrio"
     },
     "home_about_us": {
-        "text_homepage_about_us": "<div class='home-aboutus'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con producción avanzada equipo y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad.<br/><br/> Tenemos mucha experiencia exportando a todo el mundo, especialmente en Canadá, Holanda y Australia.< /br></br> También hemos formado una cooperación a largo plazo con empresas de renombre internacional como KFC y Pizza Hut para proporcionarles accesorios para puertas de vidrio. </br></br> Agradecemos todas las consultas sobre productos domésticos, arquitectónicos, comerciales de vidrio y aluminio.<br/><br/>Si está interesado en nuestros productos, no dude en comunicarse con nosotros.</div> ",
+        "text_homepage_about_us": "<div class='home-aboutus'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con producción avanzada equipo y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad.<br/><br/> Tenemos mucha experiencia exportando a todo el mundo, especialmente en Canadá, Holanda y Australia.<br /><br /> También hemos formado una cooperación a largo plazo con empresas de renombre internacional como KFC y Pizza Hut para proporcionarles accesorios para puertas de vidrio. <br /><br /> Agradecemos todas las consultas sobre productos domésticos, arquitectónicos, comerciales de vidrio y aluminio.<br/><br/>Si está interesado en nuestros productos, no dude en comunicarse con nosotros.</div> ",
         "text_view_more": "Ver más",
-        "sub_title": "Hardware Xiangying"
+        "sub_title": "Hardware Xiangying",
+        "image_alt": "Fábrica de herrajes Xiangying",
+        "overlay_title": "Fabricación profesional",
+        "overlay_text": "Fabricación de precisión · Compromiso con la calidad",
+        "stats": {
+            "years": "Años de experiencia",
+            "clients": "Clientes",
+            "countries": "Países de exportación"
+        },
+        "features": {
+            "quality": {
+                "title": "Control de calidad",
+                "description": "Sistema riguroso de control de calidad"
+            },
+            "delivery": {
+                "title": "Entrega rápida",
+                "description": "Producción y logística eficientes"
+            },
+            "service": {
+                "title": "Servicio profesional",
+                "description": "Atención personalizada"
+            }
+        }
     },
     "home_contact_us": {
         "text_connect": "Contacta con nosotras",
@@ -68,7 +84,7 @@
     },
     "about_us": {
         "text_company_profile": "Perfil de la empresa",
-        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con equipos de producción avanzados y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad. <br/><br/> También hemos formado una cooperación a largo plazo con empresas de renombre internacional como KFC y Pizza Hut para proporcionarles accesorios para puertas de vidrio. </br></br> Tenemos mucha experiencia exportando a todo el mundo, especialmente a Canadá, Holanda y Australia. </br></br>Agradecemos todas las consultas sobre productos de vidrio y aluminio para uso doméstico, arquitectónico y comercial. <br/><br/>Si está interesado en nuestros productos, no dude en contactarnos. </div>",
+        "text_homepage_about_us": "<div class='home-aboutus aboutus-custom'><strong>Xiang Ying Glass & Hardware Factory</strong> es una fábrica de 15 años, nos enfocamos en el servicio al cliente, la satisfacción y la artesanía perfecta. Con equipos de producción avanzados y un grupo de empleados calificados, podemos ofrecerle precios competitivos y productos de alta calidad. <br/><br/> También hemos formado una cooperación a largo plazo con empresas de renombre internacional como KFC y Pizza Hut para proporcionarles accesorios para puertas de vidrio. <br /><br /> Tenemos mucha experiencia exportando a todo el mundo, especialmente a Canadá, Holanda y Australia. <br /><br />Agradecemos todas las consultas sobre productos de vidrio y aluminio para uso doméstico, arquitectónico y comercial. <br/><br/>Si está interesado en nuestros productos, no dude en contactarnos. </div>",
         "about_us_advantages": {
             "title1": "alta calidad",
             "desc1": "La misión de Xiangying es insistir siempre en hacer buenos productos 'perfectos y asequibles'.",
@@ -78,7 +94,21 @@
             "desc3": "Tenemos muchos años de experiencia exportadora. No importa en qué ciudad se encuentre, podemos entregar los productos en su lugar a tiempo.",
             "title4": "Servicio OEM/ODM",
             "desc4": "Tenemos muchos años de experiencia en OEM para clientes principalmente de América del Norte y Europa."
-        }
+        },
+        "hero_banner_alt": "Presentación de la fábrica de herrajes Xiangying",
+        "hero_title": "Acerca de Xiangying",
+        "hero_subtitle": "Fabricante profesional de herrajes: calidad e innovación",
+        "years_experience": "Años de experiencia",
+        "countries_served": "Países atendidos",
+        "happy_clients": "Clientes satisfechos",
+        "advantages_title": "Nuestras ventajas",
+        "advantages_subtitle": "Conozca lo que nos distingue en la fabricación de herrajes",
+        "feature_1": "Más de 15 años de experiencia",
+        "feature_2": "Certificación de calidad ISO",
+        "feature_3": "Red de ventas internacional",
+        "factory_image_alt": "Instalaciones de producción de Xiangying",
+        "factory_info_title": "Centro de producción moderno",
+        "factory_info_text": "Equipos de producción avanzados para garantizar la calidad"
     },
     "product": {
         "btn_detail": "Detalles",
@@ -91,25 +121,26 @@
         "explore_more_text": "Explore nuestra gama completa de productos y encuentre la solución de hardware perfecta para sus necesidades",
         "product_categories": {
             "product_door_handle": {
-                "title": "Serie de manijas",
                 "0": {
                     "title": "Serie de manijas",
                     "desc": "Manija de la puerta del baño de acero inoxidable 304 manija de la puerta",
                     "profile": {
                         "product_name": "Pomo de la puerta",
                         "product_no": "XY-D033H",
-                        "producto_material": "SUS304",
                         "product_finish": "Níquel cepillado, negro mate, cromo, etc.",
-                        "producto_diámetro": "68 mm"
+                        "product_material": "SUS304",
+                        "product_diameter": "68 mm",
+                        "product_size": "/"
                     },
                     "detail": {
                         "brand_name": "Xiangying hardware",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "Pomo de la puerta",
                         "product_no": "XY-D033H",
-                        "producto_material": "SUS304",
                         "product_finish": "Níquel cepillado, negro mate, cromo, etc.",
-                        "producto_diámetro": "68 mm"
+                        "product_material": "SUS304",
+                        "product_diameter": "68 mm",
+                        "product_size": "/"
                     }
                 },
                 "1": {
@@ -117,57 +148,66 @@
                     "profile": {
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D028H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                        "product_size": "350 mm-1800 mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "Xiangying hardware",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D028H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "350 mm-1800 mm, se puede personalizar"
-                    }
+                        "product_size": "350 mm-1800 mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
+                    },
+                    "title": "Serie de manijas"
                 },
                 "2": {
                     "desc": "Manija de puerta de vidrio de ducha de alta calidad",
                     "profile": {
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D661H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "25*300*500mm, se puede personalizar"
+                        "product_size": "25*300*500mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "Xiangying hardware",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D661H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "25*300*500mm, se puede personalizar"
-                    }
+                        "product_size": "25*300*500mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
+                    },
+                    "title": "Serie de manijas"
                 },
                 "3": {
                     "desc": "Manija de puerta nueva de alta calidad manija de puerta de vidrio fijo sólido para baño",
                     "profile": {
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D056H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "350 mm-1800 mm, se puede personalizar"
+                        "product_size": "350 mm-1800 mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "Xiangying hardware",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "Manija de la puerta",
                         "product_no": "XY-D056H",
-                        "producto_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_size": "350 mm-1800 mm, se puede personalizar"
-                    }
+                        "product_size": "350 mm-1800 mm, se puede personalizar",
+                        "product_material": "SUS304",
+                        "product_diameter": "/"
+                    },
+                    "title": "Serie de manijas"
                 },
                 "4": {
                     "desc": "Tubo redondo de acero inoxidable soldado sin costura de acero inoxidable de alta calidad, tubo cuadrado",
@@ -176,7 +216,8 @@
                         "product_no": "XY-D030H",
                         "product_material": "Latón",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_glass_thinkness": "6-12 mm"
+                        "product_glass_thinkness": "6-12 mm",
+                        "product_diameter": "30mm"
                     },
                     "detail": {
                         "brand_name": "Xiangying hardware",
@@ -185,8 +226,10 @@
                         "product_no": "XY-D030H",
                         "product_material": "Latón",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
-                        "product_glass_thinkness": "6-12 mm"
-                    }
+                        "product_glass_thinkness": "6-12 mm",
+                        "product_diameter": "30mm"
+                    },
+                    "title": "Serie de manijas"
                 },
                 "5": {
                     "desc": "manija de la puerta de vidrio cuarto de ducha manija de la puerta de vidrio corredera manija de la puerta",
@@ -205,11 +248,12 @@
                         "product_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro Mate, Oro",
                         "product_size": "350 mm-1800 mm, se puede personalizar"
-                    }
-                }
+                    },
+                    "title": "Serie de manijas"
+                },
+                "title": "Serie de manijas"
             },
             "product_shower_hinge": {
-                "title": "Serie de clips de baño",
                 "0": {
                     "title": "Serie de clips de baño",
                     "desc": "Venta caliente pared clip de vidrio de 90 grados bisagra de acero inoxidable puerta de vidrio clip de baño",
@@ -247,7 +291,8 @@
                         "product_material": "Latón, SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "8-12 mm"
-                    }
+                    },
+                    "title": "Serie de clips de baño"
                 },
                 "2": {
                     "desc": "clip de puerta de baño cuadrado de 180 grados clip de baño de puerta de vidrio con bisagras estándar",
@@ -266,7 +311,8 @@
                         "product_material": "Latón, SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "8-12 mm"
-                    }
+                    },
+                    "title": "Serie de clips de baño"
                 },
                 "3": {
                     "desc": "Accesorios para puertas de vidrio Bisagra para ducha de 135 grados Bisagra para vidrio",
@@ -285,7 +331,8 @@
                         "product_material": "Latón, SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "8-12 mm"
-                    }
+                    },
+                    "title": "Serie de clips de baño"
                 },
                 "4": {
                     "desc": "clip de vidrio de 180 grados, accesorios para puerta de ducha, bisagra de clip para puerta de vidrio",
@@ -304,7 +351,8 @@
                         "product_material": "Latón, SUS304",
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "8-12 mm"
-                    }
+                    },
+                    "title": "Serie de clips de baño"
                 },
                 "5": {
                     "desc": "Abrazaderas de vidrio para cabinas de ducha de vidrio sin marco 0º 90º 135º 180º Vidrio a vidrio",
@@ -323,34 +371,35 @@
                         "product_material": "Latón",
                         "product_finish": "Arena, Espejo, Negro Mate, Oro",
                         "product_glass_thinkness": "vidrio templado de 8-10 mm"
-                    }
-                }
+                    },
+                    "title": "Serie de clips de baño"
+                },
+                "title": "Serie de clips de baño"
             },
             "product_pipe_connectors": {
-                "title": "Serie de conectores de tubería",
                 "0": {
                     "title": "Serie de conectores de tubería",
                     "desc": "Accesorios de baño de acero inoxidable Accesorios de tubería Accesorios de tubería Conectores de tubería",
                     "profile": {
                         "product_name": "Conector de tubería",
                         "product_no": "XY-P101C",
-                        "producto_material": "SUS304",
                         "product_finish": "Luz de espejo",
-                        "product_glass_thinkness": "8-10 mm"
+                        "product_glass_thinkness": "8-10 mm",
+                        "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "Fábrica de hardware Xiangying",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "Conector de tubería",
                         "product_no": "XY-P101C",
-                        "producto_material": "SUS304",
                         "product_finish": "Luz de espejo",
-                        "product_glass_thinkness": "8-10 mm"
+                        "product_glass_thinkness": "8-10 mm",
+                        "product_material": "SUS304"
                     }
-                }
+                },
+                "title": "Serie de conectores de tubería"
             },
             "product_hanging_wheel": {
-                "title": "Serie de ruedas colgantes",
                 "0": {
                     "title": "Serie de ruedas colgantes",
                     "desc": "Juego de rodillos para puertas corredizas de vidrio y acero inoxidable, accesorios, rueda para colgar puertas de vidrio",
@@ -370,10 +419,10 @@
                         "product_finish": "Arena, Espejo, Negro mate, Dorado",
                         "product_glass_thinkness": "6-12 mm"
                     }
-                }
+                },
+                "title": "Serie de ruedas colgantes"
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "Accesorios para puertas correderas de baño",
                 "0": {
                     "title": "Accesorios para puertas correderas de baño",
                     "desc": "Tubo redondo de acero inoxidable soldado sin costura de acero inoxidable de alta calidad, tubo cuadrado",
@@ -409,25 +458,26 @@
                         "product_material": "SUS304",
                         "product_finish": "Arena, Espejo, Negro Mate, Oro",
                         "product_glass_thinkness": "vidrio templado de 8-10 mm"
-                    }
-                }
+                    },
+                    "title": "Accesorios para puertas correderas de baño"
+                },
+                "title": "Accesorios para puertas correderas de baño"
             },
             "product_glass_floor_spring": {
-                "title": "primavera de piso",
                 "0": {
                     "title": "primavera de piso",
                     "desc": "G-220B resorte de piso puerta de vidrio puerta de madera puerta enmarcada puerta sin marco accesorios de cierre automático de puertas resorte de piso",
                     "profile": {
                         "product_name": "muelle de piso",
                         "product_no": "G-220B",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "Fábrica de hardware Xiangying",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "muelle de piso",
                         "product_no": "G-220B",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     }
                 },
                 "1": {
@@ -436,14 +486,14 @@
                     "profile": {
                         "product_name": "muelle de suelo",
                         "product_no": "G-220C",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "Fábrica de hardware Xiangying",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "muelle de piso",
                         "product_no": "G-220C",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     }
                 },
                 "2": {
@@ -452,30 +502,103 @@
                     "profile": {
                         "product_name": "muelle de piso",
                         "product_no": "H-220C",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     },
                     "detail": {
                         "brand_name": "Fábrica de hardware Xiangying",
                         "place_of_origin": "Ciudad de Zhaoqing, provincia de Guangdong",
                         "product_name": "muelle de piso",
                         "product_no": "H-220C",
-                        "producto_material": "SUS304"
+                        "product_material": "SUS304"
                     }
-                }
+                },
+                "title": "primavera de piso"
             }
         },
         "product_labels": {
             "product_name": "Nombre del producto",
             "product_no": "Número de producto",
-            "producto_material": "Material",
             "product_finish": "Acabado de superficie",
             "product_diameter": "Diámetro",
             "product_outer_diameter": "Diámetro exterior",
             "product_brand_name": "Nombre de la marca",
             "place_of_origin": "Origen",
             "product_size": "Tamaño",
-            "product_glass_thinkness": "Grosor del vidrio"
-        }
+            "product_glass_thinkness": "Grosor del vidrio",
+            "product_material": "Material"
+        },
+        "products_available": "Productos Disponibles",
+        "current_product": "Producto Actual",
+        "back_to_list": "Volver a la Lista",
+        "choose_category": "Elija su categoría preferida",
+        "categories_total": "Total de Categorías",
+        "specifications": "Especificaciones",
+        "product_details": "Detalles del Producto",
+        "features": "Características",
+        "product_specifications": "Especificaciones del Producto",
+        "specifications_count": "especificaciones",
+        "detailed_information": "Información Detallada",
+        "details_count": "detalles",
+        "feature_durability": "Durabilidad Superior",
+        "feature_durability_desc": "Construido para soportar uso intensivo y condiciones adversas",
+        "feature_efficiency": "Alta Eficiencia",
+        "feature_efficiency_desc": "Diseño optimizado para máximo rendimiento",
+        "feature_precision": "Ingeniería de Precisión",
+        "feature_precision_desc": "Fabricado según especificaciones y tolerancias exactas",
+        "feature_maintenance": "Fácil Mantenimiento",
+        "feature_maintenance_desc": "Simple de limpiar y mantener para uso duradero",
+        "product": "Producto",
+        "unknown_category": "Categoría Desconocida",
+        "product_highlights": "Destacados del Producto",
+        "highlight_quality": "Materiales de Calidad Premium",
+        "highlight_precision": "Fabricación de Precisión",
+        "highlight_durability": "Durabilidad Duradera",
+        "quick_specifications": "Especificaciones Rápidas",
+        "contact_for_quote": "Contactar para Cotización",
+        "save_to_favorites": "Guardar en Favoritos",
+        "saved_to_favorites": "Guardado en este dispositivo",
+        "discover_our_collection": "Descubra nuestra colección de productos de hardware premium",
+        "products_found": "productos encontrados",
+        "search_products": "Buscar productos...",
+        "sort_default": "Orden Predeterminado",
+        "sort_by_name": "Ordenar por Nombre",
+        "sort_by_popular": "Ordenar por Popular",
+        "view_details": "Ver Detalles",
+        "hot": "Popular",
+        "high_quality_description": "Construcción de acero inoxidable de alta calidad con acabado superior",
+        "durable": "Duradero",
+        "premium": "Premium",
+        "no_products_found": "No se Encontraron Productos",
+        "try_different_search": "Pruebe ajustando sus criterios de búsqueda o filtro",
+        "clear_filters": "Limpiar Filtros",
+        "explore_products": "Explorar productos"
+    },
+    "common": {
+        "close": "Cerrar",
+        "back_to_top": "Volver arriba",
+        "skip_to_content": "Saltar al contenido principal",
+        "learn_more": "Más información",
+        "contact_us": "Contáctenos",
+        "scroll_to_explore": "Desplácese para descubrir más",
+        "view_details": "Ver detalles",
+        "contact_now": "Consultar ahora",
+        "high_quality": "Alta calidad",
+        "durable": "Duradero",
+        "precision": "Fabricación de precisión",
+        "multiple_styles": "Varios estilos",
+        "explore_category": "Explorar categoría",
+        "product_category": "Categoría de productos",
+        "product_image_alt": "Imagen del producto",
+        "category_description": "Productos profesionales de {{category}}, fabricados para ofrecer calidad y fiabilidad",
+        "view_all_categories": "Ver todas las categorías de productos",
+        "loading": "Cargando...",
+        "image_load_error": "No se pudo cargar la imagen",
+        "previous_slide": "Imagen anterior",
+        "next_slide": "Imagen siguiente",
+        "pause_slideshow": "Pausar presentación",
+        "play_slideshow": "Reproducir presentación",
+        "go_to_slide": "Ir a la imagen {{index}}",
+        "toggle_navigation": "Mostrar u ocultar navegación"
     },
     "contact": {
         "contact_name": "Nombre",
@@ -489,7 +612,10 @@
         "connect": "Conectar",
         "scan_qr_code": "Escanear Código QR",
         "send_message": "Enviar Mensaje",
-        "form_description": "Complete el formulario a continuación y nos pondremos en contacto con usted lo antes posible",
+        "form_description": "Complete su consulta para preparar un mensaje de WhatsApp. Revíselo y envíelo en WhatsApp; el formulario no envía mensajes automáticamente.",
+        "open_whatsapp": "Continuar en WhatsApp",
+        "message_prepared": "Su mensaje está preparado. Revíselo y envíelo en WhatsApp. Los datos del formulario se han conservado aquí.",
+        "product_inquiry": "Me gustaría solicitar una cotización de {{product}}.",
         "name": "Nombre",
         "email": "Correo Electrónico",
         "tel": "Teléfono",
@@ -508,5 +634,100 @@
         "contact": "Contacto",
         "click_to_call_or_message": "Haga clic para llamar o enviar mensaje",
         "wechat_scan_instruction": "Por favor escanee el código QR de arriba para agregar contacto de WeChat"
+    },
+    "carousel": {
+        "title1": "Buscar alta calidad",
+        "desc1": "La calidad del producto siempre ha sido la eterna búsqueda de Xiangying",
+        "title2": "Excelente equipo",
+        "desc2": "Contamos con equipos de producción avanzados y un grupo de trabajadores calificados",
+        "title3": "Precio competitivo",
+        "desc3": "Como fábrica, podemos ofrecerle los precios de productos más asequibles",
+        "title4": "Envío conveniente del producto",
+        "desc4": "Nuestra fábrica cuenta con muchos empleados calificados que pueden satisfacer mejor las necesidades de su pedido"
+    },
+    "portfolio": {
+        "title": "Catálogo de productos",
+        "description": "Descubra nuestra gama de herrajes, fabricados con precisión para ofrecer durabilidad",
+        "stats": {
+            "categories": "Categorías",
+            "products": "Tipos de productos",
+            "years": "Años de experiencia"
+        },
+        "items": {
+            "item_1": {
+                "title": "Manijas de primera calidad",
+                "desc": "Acero inoxidable de calidad y fabricación de precisión"
+            },
+            "item_2": {
+                "title": "Bisagras de ducha modernas",
+                "desc": "Resistentes al agua y a la corrosión"
+            },
+            "item_3": {
+                "title": "Accesorios para puertas de vidrio",
+                "desc": "Diseño elegante e instalación sencilla"
+            },
+            "item_4": {
+                "title": "Sistemas deslizantes a medida",
+                "desc": "Movimiento suave y silencioso"
+            },
+            "item_5": {
+                "title": "Herrajes arquitectónicos",
+                "desc": "Calidad para proyectos de construcción"
+            },
+            "item_6": {
+                "title": "Conectores para muebles",
+                "desc": "Fabricación precisa, estable y fiable"
+            },
+            "item_7": {
+                "title": "Conectores de tubos",
+                "desc": "Conexiones seguras y fiables"
+            },
+            "item_8": {
+                "title": "Bisagras industriales",
+                "desc": "Para aplicaciones de uso intensivo"
+            },
+            "item_9": {
+                "title": "Accesorios decorativos",
+                "desc": "Estética, funcionalidad y calidad"
+            },
+            "item_10": {
+                "title": "Serie de cerraduras",
+                "desc": "Protección y calidad"
+            },
+            "item_11": {
+                "title": "Piezas pequeñas de precisión",
+                "desc": "Acabados cuidados y dimensiones precisas"
+            },
+            "item_12": {
+                "title": "Soluciones a medida",
+                "desc": "Fabricación por encargo y servicio profesional"
+            }
+        },
+        "categories": {
+            "door_hardware": "Herrajes para puertas",
+            "bathroom_accessories": "Accesorios de baño",
+            "glass_hardware": "Herrajes para vidrio",
+            "sliding_accessories": "Accesorios deslizantes",
+            "architectural_hardware": "Herrajes arquitectónicos",
+            "furniture_hardware": "Herrajes para muebles",
+            "pipe_accessories": "Accesorios de tubos",
+            "industrial_hardware": "Herrajes industriales",
+            "decorative_hardware": "Herrajes decorativos",
+            "security_hardware": "Herrajes de seguridad",
+            "precision_parts": "Piezas de precisión",
+            "custom_products": "Productos a medida"
+        },
+        "view_details": "Ver detalles",
+        "learn_more": "Más información",
+        "tags": {
+            "premium": "Calidad superior",
+            "durable": "Duradero"
+        },
+        "cta": {
+            "title": "¿Le interesan nuestros productos?",
+            "description": "Contáctenos para obtener información y soluciones a medida.",
+            "contact": "Contactar",
+            "catalog": "Explorar categorías"
+        }
     }
 }

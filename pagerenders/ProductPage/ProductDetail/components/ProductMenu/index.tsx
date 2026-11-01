@@ -55,12 +55,14 @@ function ProductMenu({ handleMenuClick }: ProductMenuProps) {
       </motion.div>
 
       <motion.div variants={itemVariants} className={styles.menuList}>
-        {ProductCategories(t).map((item, index) => {
-          const isActive = asPath.includes(item.key);
+        {ProductCategories(t).map((item) => {
+          const isActive = asPath.split('#')[1]?.split('?')[0] === item.key;
           
           return (
-            <motion.div
+            <motion.button
               key={item.path}
+              type="button"
+              aria-current={isActive ? 'page' : undefined}
               variants={itemVariants}
               whileHover={{ scale: 1.02, x: 4 }}
               whileTap={{ scale: 0.98 }}
@@ -102,7 +104,7 @@ function ProductMenu({ handleMenuClick }: ProductMenuProps) {
                   transition={{ duration: 0.3 }}
                 />
               )}
-            </motion.div>
+            </motion.button>
           );
         })}
       </motion.div>

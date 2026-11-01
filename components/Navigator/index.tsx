@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,20 +7,24 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
 import Image from 'next/image';
-import Router, { useRouter } from 'next/router';
+import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'next-i18next';
-import { ProductCategories, UrlPrefix } from '@constants/index';
+import { ProductCategories } from '@constants/index';
 import Logo from '@assets/images/logo.png';
 import styles from './index.module.css';
 import { Languages } from '@/constants/language';
+import { rememberLanguage } from '@/utils/languge';
 
 function Navigator() {
   const [productNavShow, setProductNavShow] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [expanded, setExpanded] = useState(false);
   const { t } = useTranslation('common');
-  const router: any = useRouter();
+  const router = useRouter();
   const { pathname = '', asPath = '', locale = 'en' } = router;
+  const dropdownRef = useRef<HTMLDivElement | null>(null);
 
   // 监听滚动事件，实现导航栏透明度变化
   useEffect(() => {
@@ -33,55 +37,66 @@ function Navigator() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const handleWindowClick = useCallback((e: any) => {
-    const target = e.target;
-    const classList = target?.classList;
-    if (!productNavShow) return;
-    if (productNavShow && classList?.[0] === 'dropdown-toggle') {
+  useEffect(() => {
+    const handleRouteStart = () => setIsLoading(true);
+    const handleRouteDone = () => {
+      setIsLoading(false);
+      setExpanded(false);
       setProductNavShow(false);
+    };
+
+    router.events.on('routeChangeStart', handleRouteStart);
+    router.events.on('routeChangeComplete', handleRouteDone);
+    router.events.on('routeChangeError', handleRouteDone);
+    router.events.on('hashChangeComplete', handleRouteDone);
+
+    return () => {
+      router.events.off('routeChangeStart', handleRouteStart);
+      router.events.off('routeChangeComplete', handleRouteDone);
+      router.events.off('routeChangeError', handleRouteDone);
+      router.events.off('hashChangeComplete', handleRouteDone);
+    };
+  }, [router.events]);
+
+  const handleWindowClick = useCallback((e: MouseEvent) => {
+    if (!productNavShow || !dropdownRef.current) {
       return;
     }
-    if (classList?.[0] === 'dropdown-toggle' || classList?.[0] === 'dropdown-item') {
+
+    const target = e.target as Node | null;
+    if (target && dropdownRef.current.contains(target)) {
       return;
     }
+
     setProductNavShow(false);
   }, [productNavShow]);
 
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      window.addEventListener('click', handleWindowClick);
-      return () => {
-        window.removeEventListener('click', handleWindowClick);
-      };
+    if (typeof window === 'undefined') {
+      return undefined;
     }
+
+    window.addEventListener('click', handleWindowClick);
+    return () => {
+      window.removeEventListener('click', handleWindowClick);
+    };
   }, [handleWindowClick]);
 
-  const handleProductClick = useCallback((e: any) => {
-    e.stopPropagation();
-    setProductNavShow(!productNavShow);
-  }, [productNavShow]);
-
-  const handleDropDownItemClick = useCallback((pathname: string) => {
-    setIsLoading(true);
-    Router.push(pathname || "home");
+  const closeNavigation = () => {
     setProductNavShow(false);
-    setTimeout(() => setIsLoading(false), 1000);
-  }, []);
+    setExpanded(false);
+  };
 
   const handleLocaleChange = useCallback((currentLocal: string) => {
-    setIsLoading(true);
-    localStorage.setItem('language', currentLocal);
-    let { asPath, locale } = router;
-    asPath = asPath.replace('/', '');
-    router.push(`/${locale}/${asPath}`, asPath, { locale: currentLocal });
-    setTimeout(() => setIsLoading(false), 1000);
-  }, [router]);
+    if (currentLocal === locale) {
+      return;
+    }
 
-  const handleNavClick = useCallback((href: string) => {
-    setIsLoading(true);
-    Router.push(href);
-    setTimeout(() => setIsLoading(false), 1000);
-  }, []);
+    rememberLanguage(currentLocal);
+    setExpanded(false);
+    setProductNavShow(false);
+    router.push(asPath, asPath, { locale: currentLocal });
+  }, [asPath, locale, router]);
 
   return (
     <motion.div
@@ -92,21 +107,20 @@ function Navigator() {
       <Navbar 
         className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`} 
         variant="dark" 
-        expand="lg"
+        expand="xxl"
         fixed="top"
+        expanded={expanded}
       >
         <Container fluid className={styles.navContainer}>
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <Navbar.Brand 
-              href={`${UrlPrefix}home`} 
+            <Navbar.Brand
+              as={Link}
+              href="/home"
               className={styles.brand}
-              onClick={(e) => {
-                e.preventDefault();
-                handleNavClick(`${UrlPrefix}home`);
-              }}
+              onClick={closeNavigation}
             >
               <div className={styles.logo}>
                 <div className={styles.logoWrapper}>
@@ -115,22 +129,28 @@ function Navigator() {
                 </div>
                 <div className={styles.logoText}>
                   <div className={styles.companyName}>{t('factory_name')}</div>
-                  <div className={styles.tagline}>Premium Hardware</div>
+                  <div className={styles.tagline}>{t('nav.tagline')}</div>
                 </div>
               </div>
             </Navbar.Brand>
           </motion.div>
 
-          <Navbar.Toggle aria-controls="navbarScroll" className={styles.toggleButton} />
+          <Navbar.Toggle
+            label={t('common.toggle_navigation')}
+            aria-controls="navbarScroll"
+            aria-expanded={expanded}
+            className={styles.toggleButton}
+            onClick={() => setExpanded((current) => !current)}
+          />
           
           <Navbar.Collapse id="navbarScroll">
             <Nav className={`${styles.navLinks} me-auto`}>
               {[
-                { href: `${UrlPrefix}home`, label: t('nav.nav_home'), active: pathname === '/' || pathname === '/home' },
-                { href: `${UrlPrefix}product`, label: t('nav.nav_products'), active: pathname === '/product' || pathname.includes('/product') },
-                { href: `${UrlPrefix}portfolio`, label: t('nav.nav_portfolio'), active: pathname === '/portfolio' },
-                { href: `${UrlPrefix}about`, label: t('nav.nav_about_us'), active: pathname === '/about' },
-                { href: `${UrlPrefix}contact`, label: t('nav.nav_contact_us'), active: pathname === '/contact' },
+                { href: '/home', label: t('nav.nav_home'), active: pathname === '/' || pathname === '/home' },
+                { href: '/product', label: t('nav.nav_products'), active: pathname === '/product' || pathname.includes('/product') },
+                { href: '/portfolio', label: t('nav.nav_portfolio'), active: pathname === '/portfolio' },
+                { href: '/about', label: t('nav.nav_about_us'), active: pathname === '/about' },
+                { href: '/contact', label: t('nav.nav_contact_us'), active: pathname === '/contact' },
               ].map((item, index) => (
                 <motion.div
                   key={item.href}
@@ -139,12 +159,10 @@ function Navigator() {
                   transition={{ delay: index * 0.1 + 0.3 }}
                 >
                   <Nav.Link 
+                    as={Link}
                     href={item.href}
                     className={`${styles.navLink} ${item.active ? styles.active : ''}`}
-                    onClick={(e) => {
-                      e.preventDefault();
-                      handleNavClick(item.href);
-                    }}
+                    onClick={closeNavigation}
                   >
                     {item.label}
                     {item.active && <div className={styles.activeIndicator}></div>}
@@ -157,37 +175,37 @@ function Navigator() {
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8 }}
-                className={styles.productDropdown}
+                className={`${styles.productDropdown} ${pathname.includes('/product') ? styles.productDropdownActive : ''}`}
+                ref={dropdownRef}
               >
                 <NavDropdown 
-                  title={null} // 不显示主项标题
+                  title={<span className={styles.dropdownTriggerLabel}>{t('nav.nav_product_categories')}</span>}
                   id="navbarScrollingDropdown" 
                   show={productNavShow}
-                  onClick={handleProductClick}
-                  className={styles.navLink}
+                  onToggle={(nextShow) => setProductNavShow(nextShow)}
+                  className={styles.dropdownTrigger}
                 >
                   <div className={styles.dropdownContent}>
-                    <AnimatePresence>
-                      {productNavShow && ProductCategories(t).map((item, index) => (
-                        <motion.div
-                          key={item.label + index}
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={{ opacity: 1, x: 0 }}
-                          exit={{ opacity: 0, x: -20 }}
-                          transition={{ delay: index * 0.05 }}
+                    {productNavShow && ProductCategories(t).map((item, index) => (
+                      <motion.div
+                        key={item.label + index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: index * 0.05 }}
+                      >
+                        <NavDropdown.Item
+                          as={Link}
+                          href={item.path}
+                          className={styles.dropdownItem}
+                          onClick={closeNavigation}
                         >
-                          <NavDropdown.Item 
-                            className={styles.dropdownItem}
-                            onClick={() => handleDropDownItemClick(item.path)}
-                          >
-                            <div className={styles.dropdownItemContent}>
-                              <span>{item.label}</span>
-                              <div className={styles.dropdownItemHover}></div>
-                            </div>
-                          </NavDropdown.Item>
-                        </motion.div>
-                      ))}
-                    </AnimatePresence>
+                          <div className={styles.dropdownItemContent}>
+                            <span>{item.label}</span>
+                            <div className={styles.dropdownItemHover}></div>
+                          </div>
+                        </NavDropdown.Item>
+                      </motion.div>
+                    ))}
                   </div>
                 </NavDropdown>
               </motion.div>
@@ -204,7 +222,7 @@ function Navigator() {
                 title={
                   <div className={styles.languageButton}>
                     <span>{t('nav.nav_language.language')}</span>
-                    {isLoading && <div className="loading-spinner"></div>}
+                    {isLoading && <span className={styles.loadingDot} aria-hidden="true"></span>}
                   </div>
                 }
                 className={styles.dropdownButton}

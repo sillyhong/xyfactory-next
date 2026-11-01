@@ -1,11 +1,24 @@
-import React, { useCallback } from 'react';
+import React, { useCallback, useRef, useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import { motion } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ContactUs, ContacusEnum } from '@constants/contactus';
 import { useRouter } from 'next/router';
 import { ProductCategories } from '@constants/index';
 import styles from './index.module.css';
+
+type HeartParticle = {
+  id: number;
+  drift: number;
+};
+
+const CONTACT_LINKS: Record<string, string> = {
+  [ContacusEnum.WHATSAPP]: 'https://wa.me/8613124932180',
+  [ContacusEnum.FACEBOOK]: 'https://www.facebook.com/profile.php?id=100035082511602',
+  [ContacusEnum.INSTAGRAM]: 'https://www.instagram.com/xyglass_accessory_factory',
+  [ContacusEnum.TIKTOK]: 'https://www.tiktok.com/@xyglasshardwarefactory',
+  [ContacusEnum.EMAIL]: 'mailto:xyglassaccessory@gmail.com',
+};
 
 function FooterComp() {
   const { t } = useTranslation('common');
@@ -14,32 +27,37 @@ function FooterComp() {
     threshold: 0.2,
     triggerOnce: true,
   });
+  const [heartParticles, setHeartParticles] = useState<HeartParticle[]>([]);
+  const nextHeartId = useRef(0);
+  const shouldReduceMotion = useReducedMotion();
 
   const getCurrentYear = new Date().getFullYear();
 
   const handleContactClick = useCallback((contactInfo: any, e: any) => {
     e.stopPropagation();
-    const { value, label } = contactInfo;
-    
-    const contactLinks: Record<string, string> = {
-      [ContacusEnum.WHATSAPP]: 'https://wa.me/8613124932180',
-      [ContacusEnum.FACEBOOK]: 'https://www.facebook.com/profile.php?id=100035082511602',
-      [ContacusEnum.INSTAGRAM]: 'https://www.instagram.com/xyglass_accessory_factory',
-      [ContacusEnum.TIKTOK]: 'https://www.tiktok.com/@xyglasshardwarefactory',
-    };
+    const { label } = contactInfo;
 
-    if (contactLinks[label]) {
-      window.open(contactLinks[label], '_blank');
+    if (CONTACT_LINKS[label]) {
+      window.open(CONTACT_LINKS[label], '_blank', 'noopener,noreferrer');
       return;
     }
-    
-    console.log({ value, label });
-    router.push('contact');
+
+    router.push('/contact');
   }, [router]);
 
   const handleProductClick = useCallback((path: string) => {
     router.push(path);
   }, [router]);
+
+  const handleMadeWithLoveClick = useCallback(() => {
+    const id = nextHeartId.current++;
+    const drift = Math.round((Math.random() - 0.5) * 40);
+    setHeartParticles((particles) => [...particles, { id, drift }]);
+  }, []);
+
+  const handleHeartAnimationComplete = useCallback((id: number) => {
+    setHeartParticles((particles) => particles.filter((particle) => particle.id !== id));
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -144,8 +162,9 @@ function FooterComp() {
             
             <div className={styles.productGrid}>
               {ProductCategories(t).map((item, index) => (
-                <motion.div
+                <motion.button
                   key={item.label + index}
+                  type="button"
                   className={styles.productItem}
                   variants={iconVariants}
                   onClick={() => handleProductClick(item.path)}
@@ -157,7 +176,7 @@ function FooterComp() {
                 >
                   <span className={styles.productLabel}>{item.label}</span>
                   <span className={styles.productArrow}>→</span>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           </motion.div>
@@ -171,8 +190,9 @@ function FooterComp() {
             
             <div className={styles.contactGrid}>
               {ContactUs.map((item, index) => (
-                <motion.div
+                <motion.button
                   key={item.label + index}
+                  type="button"
                   className={styles.contactItem}
                   variants={iconVariants}
                   onClick={(e) => handleContactClick(item, e)}
@@ -187,7 +207,7 @@ function FooterComp() {
                   </div>
                   <span className={styles.contactLabel}>{item.label}</span>
                   <div className={styles.contactGlow}></div>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           </motion.div>
@@ -206,8 +226,9 @@ function FooterComp() {
                 { label: t('nav.nav_portfolio'), path: '/portfolio' },
                 { label: t('nav.nav_contact_us'), path: '/contact' }
               ].map((link, index) => (
-                <motion.div
+                <motion.button
                   key={link.label + index}
+                  type="button"
                   className={styles.linkItem}
                   onClick={() => router.push(link.path)}
                   whileHover={{ x: 10 }}
@@ -215,7 +236,7 @@ function FooterComp() {
                 >
                   <span className={styles.linkBullet}>•</span>
                   <span className={styles.linkText}>{link.label}</span>
-                </motion.div>
+                </motion.button>
               ))}
             </div>
           </motion.div>
@@ -240,13 +261,32 @@ function FooterComp() {
             </div>
             
             <div className={styles.copyrightRight}>
-              <motion.div 
+              <motion.button
+                type="button"
                 className={styles.madeBadge}
+                onClick={handleMadeWithLoveClick}
+                aria-label={t('footer.made_with_love')}
                 whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.96 }}
               >
                 <span className={styles.madeText}>{t('footer.made_with_love')}</span>
-                <span className={styles.heartIcon}>❤️</span>
-              </motion.div>
+                <span className={styles.heartIcon} aria-hidden="true">❤️</span>
+                {heartParticles.map(({ id, drift }) => (
+                  <motion.span
+                    key={id}
+                    className={styles.floatingHeart}
+                    aria-hidden="true"
+                    initial={shouldReduceMotion ? { opacity: 0, scale: 0.8 } : { opacity: 0, y: 4, scale: 0.7 }}
+                    animate={shouldReduceMotion
+                      ? { opacity: [0, 1, 0], scale: [0.8, 1.15, 1] }
+                      : { opacity: [0, 1, 0], y: [4, -42, -104], x: [0, drift, drift * 0.55], scale: [0.7, 1.1, 0.9] }}
+                    transition={{ duration: shouldReduceMotion ? 0.25 : 1.15, ease: 'easeOut' }}
+                    onAnimationComplete={() => handleHeartAnimationComplete(id)}
+                  >
+                    ❤️
+                  </motion.span>
+                ))}
+              </motion.button>
             </div>
           </div>
         </motion.div>

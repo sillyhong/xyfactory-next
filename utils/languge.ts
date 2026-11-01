@@ -1,39 +1,64 @@
-
 import { useEffect } from 'react';
+import type { NextRouter } from 'next/router';
 import { LanugaeMap } from '@/constants/language';
+import { localeAttributes } from '@/constants/locales';
 
+const LANGUAGE_STORAGE_KEY = 'language';
+
+export function rememberLanguage(locale: string) {
+  try {
+    window.localStorage.setItem(LANGUAGE_STORAGE_KEY, locale);
+  } catch {
+    // Language navigation must still work when browser storage is unavailable.
+  }
+}
+
+function getStoredLanguage() {
+  try {
+    const locale = window.localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    return locale && localeAttributes[locale] ? locale : null;
+  } catch {
+    return null;
+  }
+}
 
 export const getLanuage = (): string => {
-  // @ts-ignore
-  let lang = navigator.language || navigator.userLanguage //常规浏览器和 ie 浏览器
-  lang = lang.substr(0, 2)
-  // console.log('lang123', lang);
-  localStorage.setItem('language', lang)
-  return lang || 'en'
-}
+  if (typeof window === 'undefined') {
+    return 'en';
+  }
 
-export const useChangeLanguage = (router: any) => {
+  const browserLanguage = navigator.language || 'en';
+  const lang = browserLanguage.slice(0, 2).toLowerCase();
+  const normalizedLanguage = LanugaeMap.get(lang) || 'en';
 
+  return normalizedLanguage;
+};
+
+export const useChangeLanguage = (router: NextRouter) => {
+  const { isReady, locale, defaultLocale, asPath, replace } = router;
   useEffect(() => {
-    const localStorageLanguage = localStorage.getItem('language')
-    //如果localstorage已经存在，不需要自动更新
-    if (localStorageLanguage) return
-    const lang: string = getLanuage()
-    const currentLocale = LanugaeMap.get(lang) || 'en'
-    const { asPath, locale, pathname } = router
-    console.log('router123', router, '123', { pathname, asPath, lang, locale, '当前获取的语言': currentLocale, '是否更新': !(locale === currentLocale) });
-    if (locale === currentLocale) return
+    if (!isReady) {
+      return;
+    }
 
-    // 缓存进入localstorage
-    localStorage.setItem('language', currentLocale)
-    console.log('====================================');
-    console.log('push123');
-    console.log('====================================');
-    router.push(`/${locale}/${asPath}`, asPath, { locale: currentLocale })
-  }, [router])
+    // An explicit localized URL takes precedence over browser preferences.
+    const urlLocale = window.location.pathname.split('/')[1];
+    if (locale && (locale !== defaultLocale || urlLocale === locale)) {
+      rememberLanguage(locale);
+      return;
+    }
 
-}
+    if (getStoredLanguage()) {
+      return;
+    }
 
+    const currentLocale = getLanuage();
+    rememberLanguage(currentLocale);
+    if (locale !== currentLocale) {
+      void replace(asPath, asPath, { locale: currentLocale });
+    }
+  }, [isReady, locale, defaultLocale, asPath, replace]);
+};
 
 
 

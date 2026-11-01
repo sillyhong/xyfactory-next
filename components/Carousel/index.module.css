@@ -14,6 +14,10 @@
   background: var(--neutral-900);
 }
 
+.productCarouselWrapper {
+  background: #fff;
+}
+
 .modernCarousel {
   position: relative;
   width: 100%;
@@ -47,8 +51,42 @@
   display: block !important;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important;
+  object-fit: cover;
   transition: transform 0.5s ease;
+}
+
+.productCarouselContainer {
+  margin-bottom: 0;
+}
+
+.modernCarousel.productCarousel {
+  height: auto !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.productCarousel :global(.carousel-inner) {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.productCarousel :global(.carousel-item),
+.productCarousel .imageContainer,
+.productCarousel .imageWrapper {
+  height: 100%;
+}
+
+.productCarousel .carouselImage {
+  object-fit: contain;
+  background: #fff;
+}
+
+.productCarousel .imageOverlay {
+  display: none;
 }
 
 .imageOverlay {
@@ -203,7 +241,7 @@
 .playButton {
   position: absolute;
   top: var(--spacing-xl);
-  right: calc(var(--spacing-xl) + 80px); /* 避免与右侧按钮重叠 */
+  inset-inline-end: calc(var(--spacing-xl) + 80px);
   width: 50px;
   height: 50px;
   z-index: 4;
@@ -250,10 +288,15 @@
 .progressBar {
   position: absolute;
   top: 0;
-  left: 0;
+  inset-inline-start: 0;
   height: 100%;
   background: var(--gradient-primary);
   border-radius: var(--radius-full);
+}
+
+.prevButton:dir(rtl) svg,
+.nextButton:dir(rtl) svg {
+  transform: rotate(180deg);
 }
 
 /* 滚动提示 */
@@ -296,34 +339,34 @@
     height: 70vh;
     min-height: 500px;
   }
-  
+
   .captionContent {
     padding: var(--spacing-2xl);
   }
-  
+
   .captionTitle {
     font-size: 3rem;
   }
-  
+
   .captionDesc {
     font-size: 1.1rem;
   }
-  
+
   .captionActions {
     flex-direction: column;
     gap: var(--spacing-md);
     align-items: flex-start;
   }
-  
+
   .actionButton {
     padding: var(--spacing-sm) var(--spacing-lg);
     font-size: 1rem;
   }
-  
+
   .customControls {
     padding: 0 var(--spacing-md);
   }
-  
+
   .controlButton {
     width: 50px;
     height: 50px;
@@ -335,28 +378,28 @@
     height: 60vh;
     min-height: 400px;
   }
-  
+
   .captionContent {
     padding: var(--spacing-xl);
   }
-  
+
   .captionTitle {
     font-size: 2.5rem;
   }
-  
+
   .captionDesc {
     font-size: 1rem;
   }
-  
+
   .customIndicators {
     bottom: var(--spacing-md);
   }
-  
+
   .indicator {
     width: 40px;
     height: 4px;
   }
-  
+
   .scrollHint {
     display: none;
   }
@@ -367,38 +410,38 @@
     height: 50vh;
     min-height: 350px;
   }
-  
+
   .captionContent {
     padding: var(--spacing-lg);
   }
-  
+
   .captionTitle {
     font-size: 2rem;
   }
-  
+
   .captionDesc {
     font-size: 0.9rem;
   }
-  
+
   .actionButton {
     width: 100%;
     text-align: center;
   }
-  
+
   .customControls {
     padding: 0 var(--spacing-sm);
   }
-  
+
   .controlButton {
     width: 40px;
     height: 40px;
   }
-  
+
   .playButton {
     width: 40px;
     height: 40px;
     top: var(--spacing-md);
-    right: var(--spacing-md);
+    inset-inline-end: var(--spacing-md);
   }
 }
 
@@ -407,7 +450,7 @@
   .carouselWrapper {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
   }
-  
+
   .imageOverlay {
     background: linear-gradient(
       135deg,
@@ -416,4 +459,4 @@
       rgba(0, 0, 0, 0.8) 100%
     );
   }
-} 
+}

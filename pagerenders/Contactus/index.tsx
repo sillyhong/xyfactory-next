@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { ContactUs } from '@constants/contactus';
 import styles from './index.module.css';
 
@@ -19,6 +20,7 @@ interface FormErrors {
 
 function Contactus() {
   const { t } = useTranslation('common');
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -26,9 +28,14 @@ function Contactus() {
     message: ''
   });
   const [formErrors, setFormErrors] = useState<FormErrors>({});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'prepared'>('idle');
   const [activeContact, setActiveContact] = useState<number>(0);
+
+  useEffect(() => {
+    if (!router.isReady || typeof router.query.product !== 'string') return;
+    const message = t('contact.product_inquiry', { product: router.query.product });
+    setFormData((current) => current.message ? current : { ...current, message });
+  }, [router.isReady, router.query.product, t]);
 
   const { ref: heroRef, inView: heroInView } = useInView({
     threshold: 0.2,
@@ -54,7 +61,7 @@ function Contactus() {
 
     if (!formData.email.trim()) {
       errors.email = t('contact.error_email_required');
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email.trim())) {
       errors.email = t('contact.error_email_invalid');
     }
 
@@ -63,12 +70,15 @@ function Contactus() {
     }
 
     setFormErrors(errors);
+    const firstError = Object.keys(errors)[0];
+    if (firstError) document.getElementById(firstError)?.focus();
     return Object.keys(errors).length === 0;
   };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    setSubmitStatus('idle');
     
     // Clear error when user starts typing
     if (formErrors[name]) {
@@ -76,29 +86,21 @@ function Contactus() {
     }
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) return;
 
-    setIsSubmitting(true);
-    
-    try {
-      // Simulate API call
-      await new Promise(resolve => setTimeout(resolve, 2000));
-      
-      console.log('Form submitted:', formData);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', tel: '', message: '' });
-      
-      // Reset success message after 5 seconds
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } catch (error) {
-      setSubmitStatus('error');
-      setTimeout(() => setSubmitStatus('idle'), 5000);
-    } finally {
-      setIsSubmitting(false);
-    }
+    const recipient = ContactUs.find((contact) => contact.label === 'WhatsApp')?.connects?.[0]?.value;
+    if (!recipient) return;
+    const message = [
+      `${t('contact.name')}: ${formData.name.trim()}`,
+      `${t('contact.email')}: ${formData.email.trim()}`,
+      `${t('contact.tel')}: ${formData.tel.trim()}`,
+      formData.message.trim(),
+    ].filter(Boolean).join('\n');
+    window.open(`https://wa.me/${recipient.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
+    setSubmitStatus('prepared');
   };
 
   const containerVariants = {
@@ -130,7 +132,60 @@ function Contactus() {
     }
   };
 
-  const visibleContacts = ContactUs.filter(contact => !contact.notShowInContactPage);
+  const visibleContacts = useMemo(
+    () => ContactUs.filter((contact) => !contact.notShowInContactPage),
+    [],
+  );
+  const currentContact = visibleContacts[activeContact];
+
+  const getContactAction = (contactLabel: string, value?: string) => {
+    if (!value) {
+      return {
+        href: '',
+        label: t('contact.connect'),
+        disabled: true,
+      };
+    }
+
+    if (contactLabel === 'WhatsApp') {
+      return {
+        href: `https://wa.me/${value.replace(/\+/g, '')}`,
+        label: t('contact.connect'),
+        disabled: false,
+        external: true,
+      };
+    }
+
+    if (contactLabel === 'FaceBook') {
+      return {
+        href: `tel:${value}`,
+        label: t('contact.connect'),
+        disabled: false,
+      };
+    }
+
+    if (contactLabel === 'Email') {
+      return {
+        href: `mailto:${value}`,
+        label: t('contact.connect'),
+        disabled: false,
+      };
+    }
+
+    if (contactLabel === 'Wechat') {
+      return {
+        href: '',
+        label: t('contact.scan_qr_code'),
+        disabled: true,
+      };
+    }
+
+    return {
+      href: '',
+      label: t('contact.connect'),
+      disabled: true,
+    };
+  };
 
   return (
     <div className={styles.contactusSection}>
@@ -208,7 +263,10 @@ function Contactus() {
               className={styles.contactContent}
             >
               <div className={styles.contactGrid}>
-                {visibleContacts[activeContact]?.connects?.map((connect, connectIndex) => (
+                {currentContact?.connects?.map((connect, connectIndex) => {
+                  const action = getContactAction(currentContact.label, connect.value);
+
+                  return (
                   <motion.div
                     key={connectIndex}
                     variants={cardVariants}
@@ -224,7 +282,7 @@ function Contactus() {
                   >
                     <div className={styles.contactCardHeader}>
                       <div className={styles.contactCardIcon}>
-                        {React.createElement(visibleContacts[activeContact].icon)}
+                        {React.createElement(currentContact.icon)}
                       </div>
                       <div className={styles.contactCardTitle}>
                         {(connect as any).name && (
@@ -245,12 +303,9 @@ function Contactus() {
                           src={(connect as any).qrcode}
                           width={200}
                           height={200}
-                          alt={`${visibleContacts[activeContact].label} QR Code`}
+                          alt={`${currentContact.label} QR Code`}
                           className={styles.qrcodeImage}
-                          priority={true}
-                          onError={(e) => {
-                            console.error('QR Code image failed to load:', e);
-                          }}
+                          priority={connectIndex === 0}
                         />
                         <div className={styles.qrcodeLabel}>
                           {t('contact.scan_qr_code')}
@@ -264,7 +319,7 @@ function Contactus() {
                           </svg>
                           <div className={styles.contactText}>
                             <span className={styles.contactLabel}>
-                              {visibleContacts[activeContact].label} {t('contact.contact')}
+                              {currentContact.label} {t('contact.contact')}
                             </span>
                             <span className={styles.contactValue}>{connect.value}</span>
                           </div>
@@ -284,27 +339,30 @@ function Contactus() {
                     <div className={styles.contactCardActions}>
                       <motion.button
                         className={styles.contactButton}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
+                        whileHover={action.disabled ? undefined : { scale: 1.05 }}
+                        whileTap={action.disabled ? undefined : { scale: 0.95 }}
+                        disabled={action.disabled}
                         onClick={() => {
-                          if (visibleContacts[activeContact].label === 'WhatsApp') {
-                            window.open(`https://wa.me/${connect.value.replace(/\+/g, '')}`, '_blank');
-                          } else if (visibleContacts[activeContact].label === 'FaceBook') {
-                            window.open(`tel:${connect.value}`, '_blank');
-                          } else if (visibleContacts[activeContact].label === 'Wechat') {
-                            // WeChat QR code is displayed above
-                            alert(t('contact.wechat_scan_instruction'));
+                          if (!action.href) {
+                            return;
                           }
+
+                          if (action.external) {
+                            window.open(action.href, '_blank', 'noopener,noreferrer');
+                            return;
+                          }
+
+                          window.location.href = action.href;
                         }}
                       >
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        {t('contact.connect')}
+                        {action.label}
                       </motion.button>
                     </div>
                   </motion.div>
-                ))}
+                )})}
               </div>
             </motion.div>
           </AnimatePresence>
@@ -326,7 +384,7 @@ function Contactus() {
           </motion.div>
 
           <motion.div variants={itemVariants} className={styles.formWrapper}>
-            <form onSubmit={handleSubmit} className={styles.contactForm}>
+            <form onSubmit={handleSubmit} noValidate className={styles.contactForm}>
               <div className={styles.formGrid}>
                 <div className={styles.formGroup}>
                   <label htmlFor="name" className={styles.formLabel}>
@@ -336,13 +394,17 @@ function Contactus() {
                     type="text"
                     id="name"
                     name="name"
+                    autoComplete="name"
+                    required
+                    aria-invalid={Boolean(formErrors.name)}
+                    aria-describedby={formErrors.name ? 'name-error' : undefined}
                     value={formData.name}
                     onChange={handleInputChange}
                     className={`${styles.formInput} ${formErrors.name ? styles.formInputError : ''}`}
                     placeholder={t('contact.name_placeholder')}
                   />
                   {formErrors.name && (
-                    <span className={styles.errorMessage}>{formErrors.name}</span>
+                    <span id="name-error" className={styles.errorMessage}>{formErrors.name}</span>
                   )}
                 </div>
 
@@ -352,15 +414,20 @@ function Contactus() {
                   </label>
                   <input
                     type="email"
+                    dir="ltr"
                     id="email"
                     name="email"
+                    autoComplete="email"
+                    required
+                    aria-invalid={Boolean(formErrors.email)}
+                    aria-describedby={formErrors.email ? 'email-error' : undefined}
                     value={formData.email}
                     onChange={handleInputChange}
                     className={`${styles.formInput} ${formErrors.email ? styles.formInputError : ''}`}
                     placeholder={t('contact.email_placeholder')}
                   />
                   {formErrors.email && (
-                    <span className={styles.errorMessage}>{formErrors.email}</span>
+                    <span id="email-error" className={styles.errorMessage}>{formErrors.email}</span>
                   )}
                 </div>
 
@@ -370,15 +437,20 @@ function Contactus() {
                   </label>
                   <input
                     type="tel"
+                    dir="ltr"
                     id="tel"
                     name="tel"
+                    autoComplete="tel"
+                    required
+                    aria-invalid={Boolean(formErrors.tel)}
+                    aria-describedby={formErrors.tel ? 'tel-error' : undefined}
                     value={formData.tel}
                     onChange={handleInputChange}
                     className={`${styles.formInput} ${formErrors.tel ? styles.formInputError : ''}`}
                     placeholder={t('contact.tel_placeholder')}
                   />
                   {formErrors.tel && (
-                    <span className={styles.errorMessage}>{formErrors.tel}</span>
+                    <span id="tel-error" className={styles.errorMessage}>{formErrors.tel}</span>
                   )}
                 </div>
 
@@ -401,24 +473,14 @@ function Contactus() {
               <div className={styles.formActions}>
                 <motion.button
                   type="submit"
-                  disabled={isSubmitting}
-                  className={`${styles.submitButton} ${isSubmitting ? styles.submitting : ''}`}
-                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
+                  className={styles.submitButton}
+                  whileHover={{ scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
                 >
-                  {isSubmitting ? (
-                    <>
-                      <div className={styles.spinner} />
-                      {t('contact.sending')}
-                    </>
-                  ) : (
-                    <>
                       <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                         <path d="M22 2L11 13M22 2L15 22L11 13M22 2L2 9L11 13" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
-                      {t('contact.send_message')}
-                    </>
-                  )}
+                      {t('contact.open_whatsapp')}
                 </motion.button>
               </div>
 
@@ -428,25 +490,11 @@ function Contactus() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -10 }}
-                    className={`${styles.statusMessage} ${
-                      submitStatus === 'success' ? styles.statusSuccess : styles.statusError
-                    }`}
+                    className={`${styles.statusMessage} ${styles.statusSuccess}`}
+                    role="status"
+                    aria-live="polite"
                   >
-                    {submitStatus === 'success' ? (
-                      <>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                          <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        {t('contact.success_message')}
-                      </>
-                    ) : (
-                      <>
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                          <path d="M12 9V13M12 17H12.01M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                        </svg>
-                        {t('contact.error_message')}
-                      </>
-                    )}
+                    {t('contact.message_prepared')}
                   </motion.div>
                 )}
               </AnimatePresence>

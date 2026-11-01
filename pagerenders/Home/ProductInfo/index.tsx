@@ -88,7 +88,7 @@ function ProductInfo() {
             titleClass="text-center"
           />
           <p className={styles.sectionDescription}>
-            {t('home_product_categories.description', '探索我们丰富的产品类别，涵盖门把手、淋浴铰链、玻璃配件等多个领域')}
+            {t('home_product_categories.description')}
           </p>
         </motion.div>
 
@@ -109,7 +109,7 @@ function ProductInfo() {
                 <div className={styles.imageSection}>
                   <ModernImage
                     src={item.src}
-                    alt={item.title || '产品图片'}
+                    alt={item.title || t('common.product_image_alt')}
                     fill={false}
                     width={400}
                     height={240}
@@ -151,7 +151,7 @@ function ProductInfo() {
                   </motion.h3>
                   
                   <p className={styles.categoryDescription}>
-                    {item.desc || `专业级${item.title}产品，工艺精湛，品质可靠`}
+                    {item.desc || t('common.category_description', { category: item.title })}
                   </p>
 
                   <div className={styles.cardFooter}>
@@ -166,7 +166,7 @@ function ProductInfo() {
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
                           <path d="M20 6L9 17L4 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
-                        {t('common.multiple_styles', '多样式')}
+                        {t('common.multiple_styles')}
                       </span>
                     </div>
                     
@@ -205,7 +205,7 @@ function ProductInfo() {
             whileTap={{ scale: 0.95 }}
             onClick={() => router.push('/product')}
           >
-            {t('common.view_all_categories', '查看所有产品分类')}
+            {t('common.view_all_categories')}
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
               <path 
                 d="M9 18L15 12L9 6" 

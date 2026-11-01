@@ -54,7 +54,7 @@ function Aboutus() {
             <div className={styles.imageContainer}>
               <ModernImage
                 src={factory}
-                alt="工厂生产场景"
+                alt={t('home_about_us.image_alt')}
                 fill
                 aspectRatio="4/3"
                 objectFit="cover"
@@ -72,8 +72,8 @@ function Aboutus() {
                       whileHover={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <h4>专业制造</h4>
-                      <p>20年经验 · 品质保证</p>
+                      <h4>{t('home_about_us.overlay_title')}</h4>
+                      <p>{t('home_about_us.overlay_text')}</p>
                     </motion.div>
                   </div>
                 }
@@ -104,7 +104,7 @@ function Aboutus() {
                   transition={{ delay: 0.6, duration: 0.5 }}
                 >
                   <div className={styles.statNumber}>20+</div>
-                  <div className={styles.statLabel}>年行业经验</div>
+                  <div className={styles.statLabel}>{t('home_about_us.stats.years')}</div>
                 </motion.div>
                 
                 <motion.div
@@ -114,7 +114,7 @@ function Aboutus() {
                   transition={{ delay: 0.7, duration: 0.5 }}
                 >
                   <div className={styles.statNumber}>1000+</div>
-                  <div className={styles.statLabel}>客户信赖</div>
+                  <div className={styles.statLabel}>{t('home_about_us.stats.clients')}</div>
                 </motion.div>
                 
                 <motion.div
@@ -124,7 +124,7 @@ function Aboutus() {
                   transition={{ delay: 0.8, duration: 0.5 }}
                 >
                   <div className={styles.statNumber}>50+</div>
-                  <div className={styles.statLabel}>国家出口</div>
+                  <div className={styles.statLabel}>{t('home_about_us.stats.countries')}</div>
                 </motion.div>
               </div>
 
@@ -171,8 +171,8 @@ function Aboutus() {
                   <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
-              <h4>品质保证</h4>
-              <p>严格的质量控制体系</p>
+              <h4>{t('home_about_us.features.quality.title')}</h4>
+              <p>{t('home_about_us.features.quality.description')}</p>
             </div>
             
             <div className={styles.featureItem}>
@@ -181,8 +181,8 @@ function Aboutus() {
                   <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h4>快速交付</h4>
-              <p>高效的生产和物流</p>
+              <h4>{t('home_about_us.features.delivery.title')}</h4>
+              <p>{t('home_about_us.features.delivery.description')}</p>
             </div>
             
             <div className={styles.featureItem}>
@@ -194,8 +194,8 @@ function Aboutus() {
                   <path d="M16 3.13C16.8604 3.35031 17.623 3.85071 18.1676 4.55232C18.7122 5.25392 19.0078 6.11683 19.0078 7.005C19.0078 7.89318 18.7122 8.75608 18.1676 9.45769C17.623 10.1593 16.8604 10.6597 16 10.88" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
               </div>
-              <h4>专业服务</h4>
-              <p>一对一客户服务支持</p>
+              <h4>{t('home_about_us.features.service.title')}</h4>
+              <p>{t('home_about_us.features.service.description')}</p>
             </div>
           </div>
         </motion.div>

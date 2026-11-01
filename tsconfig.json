@@ -22,7 +22,7 @@
         "@constants/*": ["./constants/*"],
         "@pages/*": ["./pages/*"],
         "@pagerenders/*": ["./pagerenders/*"],
-        "@papublicges/*": ["./public/*"],
+        "@public/*": ["./public/*"],
         "@styles/*": ["./styles/*"],
         "@utils/*": ["./utils/*"]
     }

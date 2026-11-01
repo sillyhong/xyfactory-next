@@ -1,37 +1,27 @@
-import { useMemo } from 'react';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { ProductInfos } from '../../../constants/productInfo';
+import { ProductCategories } from '@/constants';
 import Image from 'next/image';
 import SectionHeader from '../../../components/SectionHeader';
 import styles from './index.module.css';
 
 function ProductList() {
     const { t } = useTranslation('common');
-    const router = useRouter();
     const { ref, inView } = useInView({
         threshold: 0.2,
         triggerOnce: true,
     });
 
-    const showFirstFromAll = useMemo(() => {
-        /* 只展示每个系列的第一项 */
-        const showProducts: any = [];
-        const currentProductInfos: any = ProductInfos(t);
-        const productKeys = Object.keys(currentProductInfos);
-        productKeys.forEach(key => {
-            const firstProduct = currentProductInfos[key]?.[0];
-            if (firstProduct && !showProducts.includes(firstProduct))
-                showProducts.push(firstProduct);
-        });
-        return showProducts;
-    }, [t]);
-
-    const handleProductItemClick = (path: string) => {
-        router.push(path);
-    };
+    const productInfos = ProductInfos(t);
+    const categories = ProductCategories(t).map((category) => {
+        const products = productInfos[category.key];
+        // A shared product must not remove a category from the overview.
+        const cover = products.find((product) => product.path.startsWith(`${category.path}?`)) || products[0];
+        return { ...category, cover };
+    });
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -79,21 +69,20 @@ function ProductList() {
                     className={styles.productsGrid}
                     variants={containerVariants}
                 >
-                    {showFirstFromAll.map((item: any, index: number) => (
+                    {categories.map((item, index) => (
                         <motion.div
-                            key={item.desc + index}
+                            key={item.key}
                             variants={itemVariants}
                             className={styles.productCard}
-                            onClick={() => handleProductItemClick(item.path)}
                             whileHover={{ y: -8 }}
                             whileTap={{ scale: 0.98 }}
                         >
-                            <div className={styles.cardContainer}>
+                            <Link href={item.path} className={styles.cardContainer}>
                                 <div className={styles.imageSection}>
                                     <div className={styles.imageWrapper}>
                                         <Image
-                                            src={item.src}
-                                            alt={item.desc}
+                                            src={item.cover.src}
+                                            alt={item.label}
                                             width={400}
                                             height={300}
                                             style={{ width: '100%', height: '100%', objectFit: 'cover' }}
@@ -116,7 +105,7 @@ function ProductList() {
                                         animate={{ opacity: 1 }}
                                         transition={{ delay: 0.2 }}
                                     >
-                                        {item.desc}
+                                        {item.label}
                                     </motion.h3>
                                     
                                     <p className={styles.productDescription}>
@@ -124,18 +113,16 @@ function ProductList() {
                                     </p>
 
                                     <div className={styles.cardActions}>
-                                        <motion.button
+                                        <span
                                             className={`btn btn-outline-primary ${styles.actionButton}`}
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
                                         >
                                             {t('home_about_us.text_view_more')}
-                                        </motion.button>
+                                        </span>
                                     </div>
                                 </div>
 
                                 <div className={styles.cardGlow}></div>
-                            </div>
+                            </Link>
                         </motion.div>
                     ))}
                 </motion.div>

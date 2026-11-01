@@ -1,18 +1,21 @@
-/* 现代化关于我们页面样式 */
+/* 现代化关于我们页面样式 - 全面优化版本 */
 
 /* 容器 */
 .aboutUsContainer {
   width: 100%;
-  background: var(--neutral-50);
+  background: linear-gradient(135deg, #f8fafc 0%, rgba(83, 101, 175, 0.02) 50%, #f1f5f9 100%);
   position: relative;
   overflow: hidden;
+  min-height: 100vh;
 }
 
-/* 头部横幅 */
+/* 头部横幅 - 优化布局防止遮挡 */
 .heroBanner {
   position: relative;
   width: 100%;
-  height: 500px;
+  height: 70vh;
+  min-height: 500px;
+  max-height: 800px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -30,6 +33,7 @@
   height: 100%;
   object-fit: cover;
   display: block;
+  filter: brightness(0.8) contrast(1.1);
 }
 
 .heroOverlay {
@@ -40,67 +44,135 @@
   bottom: 0;
   background: linear-gradient(
     135deg,
-    rgba(15, 23, 42, 0.7) 0%,
-    rgba(83, 101, 175, 0.5) 50%,
-    rgba(15, 23, 42, 0.7) 100%
+    rgba(15, 23, 42, 0.8) 0%,
+    rgba(83, 101, 175, 0.6) 40%,
+    rgba(15, 23, 42, 0.8) 100%
   );
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-3xl) var(--spacing-lg);
   z-index: 2;
 }
 
+.heroContent {
+  max-width: 1000px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
 .heroTitle {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800;
   color: white;
-  margin-bottom: var(--spacing-lg);
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-  line-height: 1.2;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  line-height: 1.1;
+  margin: 0;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .heroSubtitle {
-  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 700px;
-  line-height: 1.6;
+  font-size: clamp(1.1rem, 3vw, 1.6rem);
+  color: rgba(255, 255, 255, 0.95);
+  max-width: 800px;
+  line-height: 1.7;
   margin: 0;
-  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  font-weight: 400;
 }
 
-/* 内容区域 */
+/* 新增：统计数据展示 */
+.heroStats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-2xl);
+  margin-top: var(--spacing-lg);
+  padding: var(--spacing-xl);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.statItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-sm);
+  text-align: center;
+}
+
+.statNumber {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.statLabel {
+  font-size: clamp(0.9rem, 2vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* 内容区域 - 改进间距和布局 */
 .contentSection {
-  padding: var(--spacing-4xl) 0;
+  padding: var(--spacing-5xl) 0;
+  padding-bottom: 12px;
   position: relative;
   background: transparent;
+  z-index: 1;
 }
 
 .sectionHeaderWrapper {
   text-align: center;
-  margin-bottom: var(--spacing-3xl);
+  margin-top: 24px;
+  margin-bottom: var(--spacing-4xl);
+  padding: 0 var(--spacing-lg);
 }
 
-/* 优势网格 */
+.sectionSubtitle {
+  font-size: 1.25rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+  max-width: 600px;
+  margin: var(--spacing-lg) auto 0;
+  text-align: center;
+}
+
+/* 优势网格 - 改进响应式布局 */
 .advantagesGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: var(--spacing-2xl);
-  margin-bottom: var(--spacing-5xl);
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: var(--spacing-3xl);
+  margin-bottom: var(--spacing-6xl);
+  padding: 0 var(--spacing-lg);
 }
 
 .advantageCard {
   background: white;
-  border-radius: var(--radius-xl);
-  padding: var(--spacing-2xl);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-3xl) var(--spacing-2xl);
   text-align: center;
-  box-shadow: var(--shadow-sm);
-  border: 1px solid var(--neutral-200);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(83, 101, 175, 0.1);
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
+  transform-style: preserve-3d;
+  will-change: transform;
 }
 
 .advantageCard::before {
@@ -113,11 +185,12 @@
   background: linear-gradient(
     45deg,
     transparent,
-    rgba(83, 101, 175, 0.05),
+    rgba(83, 101, 175, 0.08),
     transparent
   );
   transform: rotate(-45deg) translate(-100%, -100%);
   transition: transform var(--transition-slow);
+  z-index: 1;
 }
 
 .advantageCard:hover::before {
@@ -125,45 +198,71 @@
 }
 
 .advantageCard:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--shadow-2xl);
-  border-color: var(--primary-200);
+  border-color: var(--primary-300);
+  box-shadow: 0 20px 40px rgba(83, 101, 175, 0.15);
 }
 
-.iconWrapper {
-  margin-bottom: var(--spacing-xl);
-  display: flex;
-  justify-content: center;
-}
-
-.iconContainer {
-  width: 80px;
-  height: 80px;
-  background: var(--gradient-primary);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: var(--shadow-lg);
-  position: relative;
-}
-
-.iconContainer::after {
-  content: '';
+/* 新增：发光效果 */
+.cardGlow {
   position: absolute;
   top: -2px;
   left: -2px;
   right: -2px;
   bottom: -2px;
   background: var(--gradient-primary);
+  border-radius: var(--radius-2xl);
+  z-index: -1;
+  filter: blur(8px);
+  opacity: 0;
+}
+
+.cardContent {
+  position: relative;
+  z-index: 2;
+}
+
+.iconWrapper {
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.iconContainer {
+  width: 90px;
+  height: 90px;
+  background: var(--gradient-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(83, 101, 175, 0.3);
+  position: relative;
+  transition: all var(--transition-normal);
+}
+
+.iconContainer::after {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: var(--gradient-primary);
   border-radius: 50%;
   z-index: -1;
   opacity: 0;
+  filter: blur(8px);
   transition: opacity var(--transition-normal);
 }
 
+.advantageCard:hover .iconContainer {
+  transform: translateY(-4px);
+}
+
 .advantageCard:hover .iconContainer::after {
-  opacity: 0.3;
+  opacity: 0.4;
 }
 
 .advantageIcon {
@@ -175,322 +274,397 @@
   font-size: 1.5rem;
   font-weight: 700;
   color: var(--neutral-900);
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   line-height: 1.3;
+  position: relative;
+  z-index: 2;
 }
 
 .advantageDesc {
   color: var(--neutral-600);
-  font-size: 1rem;
-  line-height: 1.6;
+  font-size: 1.05rem;
+  line-height: 1.7;
   margin: 0;
+  position: relative;
+  z-index: 2;
 }
 
-/* 公司简介 */
+/* 公司简介 - 改进布局避免遮挡 */
 .companyProfile {
-  margin-top: var(--spacing-4xl);
+  margin-top: 24px;
+  padding: 0 var(--spacing-lg);
 }
 
 .profileContent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-4xl);
-  align-items: center;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+  gap: var(--spacing-5xl);
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .profileText {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xl);
+  position: relative;
 }
 
 .companyDescription {
-  font-size: 1.125rem;
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.65;
   color: var(--neutral-700);
+  text-align: left;
 }
 
 .companyDescription p {
-  margin-bottom: var(--spacing-lg);
+  margin: 0 0 var(--spacing-md);
 }
 
-.companyDescription p:first-letter {
-  float: left;
-  font-size: 4em;
-  font-weight: bold;
-  line-height: 1;
-  color: var(--primary-600);
-  text-shadow: 2px 2px 6px rgba(83, 101, 175, 0.3);
-  margin: -0.07em 0.1em -0.1em 0;
+.companyDescription p:last-child {
+  margin-bottom: 0;
 }
 
 .profileFeatures {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-xl);
 }
 
 .featureItem {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md);
+  gap: var(--spacing-lg);
   font-size: 1.1rem;
   color: var(--neutral-700);
   font-weight: 500;
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: rgba(83, 101, 175, 0.05);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(83, 101, 175, 0.1);
+  transition: all var(--transition-normal);
+}
+
+.featureItem:hover {
+  background: rgba(83, 101, 175, 0.1);
+  transform: translateX(8px);
 }
 
 .featureIcon {
-  width: 24px;
-  height: 24px;
-  background: var(--success);
+  width: 32px;
+  height: 32px;
+  background: var(--gradient-primary);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   font-weight: 700;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   flex-shrink: 0;
-  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(83, 101, 175, 0.3);
 }
 
-/* 工厂图片区域 */
+/* 工厂图片区域 - 改进容器结构 */
 .profileImage {
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.profileImage > .factoryImageFrame {
+  display: block;
+  width: 100%;
+  max-width: 600px;
+  aspect-ratio: 4 / 3;
+  margin-inline: auto;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: var(--radius-2xl);
+  background: var(--neutral-100);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.14);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
 }
 
 .factoryImage {
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  transition: all var(--transition-normal);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
 }
 
-.factoryImage:hover {
-  transform: scale(1.02);
-  box-shadow: var(--shadow-2xl);
+.factoryImageFrame:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 54px rgba(15, 23, 42, 0.18);
 }
 
-/* 悬浮信息卡片 */
-.infoCard {
-  position: absolute;
-  bottom: var(--spacing-xl);
-  right: var(--spacing-xl);
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(20px);
-  border-radius: var(--radius-lg);
-  padding: var(--spacing-lg);
-  box-shadow: var(--shadow-xl);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  max-width: 250px;
-  z-index: 3;
+.factoryImageFrame:hover .factoryImage {
+  transform: scale(1.025);
 }
 
-.infoCardContent {
-  text-align: left;
+/* 响应式设计 - 重点优化 */
+@media (max-width: 1400px) {
+  .profileContent {
+    gap: var(--spacing-4xl);
+  }
+
+  .contentSection {
+    padding: var(--spacing-4xl) 0;
+  }
 }
 
-.infoCardTitle {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--neutral-900);
-  margin-bottom: var(--spacing-sm);
-  line-height: 1.3;
-}
-
-.infoCardText {
-  font-size: 0.9rem;
-  color: var(--neutral-600);
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* 响应式设计 */
 @media (max-width: 1200px) {
+  .heroStats {
+    gap: var(--spacing-xl);
+    padding: var(--spacing-lg);
+  }
+
+  .advantagesGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-2xl);
+  }
+
   .profileContent {
     gap: var(--spacing-3xl);
-  }
-  
-  .heroBanner {
-    height: 400px;
-  }
-  
-  .heroTitle {
-    font-size: clamp(2rem, 4vw, 3rem);
   }
 }
 
 @media (max-width: 992px) {
+  .heroBanner {
+    height: 60vh;
+    min-height: 400px;
+  }
+
+  .heroStats {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-lg);
+    padding: var(--spacing-md);
+  }
+
   .profileContent {
     grid-template-columns: 1fr;
-    gap: var(--spacing-2xl);
+    gap: var(--spacing-3xl);
   }
-  
+
+  .profileImage {
+    order: -1;
+  }
+
+  .profileImage > .factoryImageFrame {
+    aspect-ratio: 16 / 9;
+    max-width: none;
+  }
+
   .advantagesGrid {
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: var(--spacing-xl);
   }
-  
-  .heroBanner {
-    height: 350px;
-  }
-  
+
   .contentSection {
     padding: var(--spacing-3xl) 0;
   }
 }
 
 @media (max-width: 768px) {
+  .heroBanner {
+    height: 50vh;
+    min-height: 350px;
+  }
+
+  .heroOverlay {
+    padding: var(--spacing-2xl) var(--spacing-lg);
+  }
+
+  .heroStats {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+    padding: var(--spacing-lg);
+  }
+
+  .statItem {
+    flex-direction: row;
+    justify-content: center;
+    gap: var(--spacing-lg);
+  }
+
   .advantagesGrid {
     grid-template-columns: 1fr;
     gap: var(--spacing-lg);
+    padding: 0 var(--spacing-md);
   }
-  
+
   .advantageCard {
-    padding: var(--spacing-xl);
+    padding: var(--spacing-2xl) var(--spacing-xl);
   }
-  
+
   .iconContainer {
     width: 70px;
     height: 70px;
   }
-  
+
   .advantageIcon {
     font-size: 36px !important;
   }
-  
-  .heroBanner {
-    height: 300px;
+
+  .sectionHeaderWrapper,
+  .companyProfile {
+    padding: 0 var(--spacing-md);
   }
-  
-  .heroOverlay {
-    padding: var(--spacing-xl);
-  }
-  
-  .heroTitle {
-    font-size: clamp(1.8rem, 5vw, 2.5rem);
-  }
-  
-  .heroSubtitle {
-    font-size: clamp(1rem, 3vw, 1.2rem);
-  }
-  
-  .infoCard {
-    position: static;
-    margin-top: var(--spacing-lg);
-    max-width: none;
-  }
-  
+
   .companyDescription p:first-letter {
-    font-size: 3em;
+    font-size: 3.5em;
+  }
+
+  .featureItem {
+    padding: var(--spacing-lg);
   }
 }
 
 @media (max-width: 576px) {
   .heroBanner {
-    height: 250px;
+    height: 45vh;
+    min-height: 300px;
   }
-  
+
+  .heroOverlay {
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+
   .contentSection {
     padding: var(--spacing-2xl) 0;
   }
-  
+
   .advantageCard {
-    padding: var(--spacing-lg);
+    padding: var(--spacing-xl) var(--spacing-lg);
   }
-  
+
   .iconContainer {
     width: 60px;
     height: 60px;
   }
-  
+
   .advantageIcon {
     font-size: 30px !important;
   }
-  
+
   .advantageTitle {
-    font-size: 1.25rem;
+    font-size: 1.3rem;
+  }
+
+  .heroStats {
+    padding: var(--spacing-md);
+  }
+
+  .statItem {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+  }
+
+  .featureIcon {
+    width: 28px;
+    height: 28px;
+    font-size: 1rem;
   }
 }
 
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   .aboutUsContainer {
-    background: var(--neutral-100);
+    background: linear-gradient(135deg, #0f172a 0%, rgba(83, 101, 175, 0.05) 50%, #1e293b 100%);
   }
-  
+
   .advantageCard {
-    background: var(--neutral-100);
-    border-color: var(--neutral-300);
+    background: rgba(15, 23, 42, 0.8);
+    border-color: rgba(83, 101, 175, 0.2);
   }
-  
+
   .advantageCard:hover {
     border-color: var(--primary-400);
   }
-  
+
   .advantageTitle {
-    color: var(--neutral-800);
+    color: var(--text-primary);
   }
-  
+
   .advantageDesc {
-    color: var(--neutral-600);
+    color: var(--text-primary);
   }
-  
+
   .companyDescription {
-    color: var(--neutral-600);
+    color: var(--text-primary);
   }
-  
+
   .featureItem {
-    color: var(--neutral-600);
+    color: var(--text-primary);
+    background: rgba(83, 101, 175, 0.1);
+    border-color: rgba(83, 101, 175, 0.2);
   }
-  
-  .infoCard {
-    background: rgba(15, 23, 42, 0.95);
-    border-color: rgba(255, 255, 255, 0.1);
-  }
-  
-  .infoCardTitle {
-    color: white;
-  }
-  
-  .infoCardText {
-    color: var(--neutral-300);
+
+  .sectionSubtitle {
+    color: var(--text-secondary);
   }
 }
 
 /* 动画优化 */
 @media (prefers-reduced-motion: reduce) {
-  .advantageCard::before {
+  .advantageCard::before,
+  .cardGlow {
     display: none;
   }
-  
+
   .iconContainer,
-  .factoryImage {
+  .factoryImageFrame,
+  .factoryImage,
+  .advantageCard {
     transition: none;
   }
-  
+
+  .factoryImageFrame:hover,
+  .factoryImageFrame:hover .factoryImage {
+    transform: none;
+  }
+
   .advantageCard:hover {
+    transform: none;
+  }
+
+  .featureItem:hover {
     transform: none;
   }
 }
 
-/* 旧样式保留（为了兼容性） */
-.aboutusWrapper span {
-  display: block;
+/* 高对比度模式支持 */
+@media (prefers-contrast: high) {
+  .advantageCard {
+    border-width: 2px;
+    border-color: var(--neutral-900);
+  }
+
+  .heroOverlay {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
 }
 
-.article {
-  font-size: 15px;
-}
+/* 打印样式 */
+@media print {
+  .heroBanner {
+    height: auto;
+    page-break-inside: avoid;
+  }
 
-.article::first-letter {
-  float: left;
-  font-size: 5em;
-  font-weight: bold;
-  line-height: 1;
-  color: var(--primary-600);
-  text-shadow: 2px 2px 6px var(--primary-600);
-  margin: -0.07em 0.1em -0.1em 0;
+  .heroOverlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .advantagesGrid {
+    page-break-inside: avoid;
+  }
+
+  .companyProfile {
+    page-break-inside: avoid;
+  }
 }

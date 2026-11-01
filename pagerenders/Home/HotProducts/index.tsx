@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -81,7 +82,7 @@ function ProductInfo() {
             titleClass="text-center"
           />
           <p className={styles.sectionDescription}>
-            精选优质五金产品，为您的项目提供可靠的解决方案
+            {t('home_hot_product.description')}
           </p>
         </motion.div>
 
@@ -93,12 +94,11 @@ function ProductInfo() {
         >
           {hotProducts.map((item, index) => (
             <motion.div
-              key={item.desc || index}
+              key={item.id || `${item.src?.src || item.title}-${index}`}
               variants={itemVariants}
               className={styles.productCardWrapper}
               onHoverStart={() => handleItemHover(item.desc)}
               onHoverEnd={() => handleItemHover(null)}
-              onClick={() => handleItemClick(item)}
             >
               <div className={`${styles.productCard} product-card`}>
                 <div className={styles.imageContainer}>
@@ -106,7 +106,7 @@ function ProductInfo() {
                     <Image
                       className={styles.productImage}
                       src={item.src}
-                      alt={item.title}
+                      alt={item.desc}
                       fill
                       style={{ objectFit: 'cover' }}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 25vw"
@@ -125,18 +125,22 @@ function ProductInfo() {
                   >
                     <div className={styles.hoverContent}>
                       <motion.button
+                        type="button"
+                        onClick={() => handleItemClick(item)}
                         className={`btn btn-primary ${styles.viewButton}`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        查看详情
+                          {t('common.view_details')}
                       </motion.button>
                       <motion.button
+                        type="button"
+                        onClick={() => router.push({ pathname: '/contact', query: { product: `${item.id}: ${item.desc}` } })}
                         className={`btn btn-outline ${styles.contactButton}`}
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                       >
-                        立即咨询
+                        {t('common.contact_now')}
                       </motion.button>
                     </div>
                   </motion.div>
@@ -155,23 +159,26 @@ function ProductInfo() {
                     }}
                     transition={{ duration: 0.3 }}
                   >
-                    {item.title}
+                    <Link href={item.path}>{item.desc}</Link>
                   </motion.h3>
                   
                   {item.desc && (
                     <p className={styles.productDescription}>
-                      {item.desc}
+                      {t('product.high_quality_description')}
                     </p>
                   )}
 
                   <div className={styles.cardFooter}>
                     <div className={styles.productFeatures}>
-                      <span className={styles.feature}>高品质</span>
-                      <span className={styles.feature}>耐用</span>
-                      <span className={styles.feature}>精工</span>
+                      <span className={styles.feature}>{t('common.high_quality')}</span>
+                      <span className={styles.feature}>{t('common.durable')}</span>
+                      <span className={styles.feature}>{t('common.precision')}</span>
                     </div>
                     
-                    <motion.div
+                    <motion.button
+                      type="button"
+                      aria-label={t('common.contact_now')}
+                      onClick={() => router.push({ pathname: '/contact', query: { product: `${item.id}: ${item.desc}` } })}
                       className={styles.arrowIcon}
                       animate={{
                         x: hoveredItem === item.desc ? 5 : 0,
@@ -188,7 +195,7 @@ function ProductInfo() {
                           strokeLinejoin="round"
                         />
                       </svg>
-                    </motion.div>
+                    </motion.button>
                   </div>
                 </div>
 

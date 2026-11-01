@@ -25,6 +25,9 @@
 
 /* 主要Footer区域 */
 .footerSection {
+  --footer-text-primary: #f1f5f9;
+  --footer-text-secondary: #e2e8f0;
+  --footer-text-muted: #cbd5e1;
   background: linear-gradient(135deg,
     var(--neutral-900) 0%,
     var(--primary-900) 20%,
@@ -35,7 +38,7 @@
   position: relative;
   overflow: hidden;
   padding: var(--spacing-4xl) 0 0;
-  color: var(--neutral-100);
+  color: var(--footer-text-primary);
 }
 
 .footerSection::before {
@@ -101,13 +104,13 @@
   padding: var(--spacing-lg);
   background: rgba(255, 255, 255, 0.02);
   border-radius: var(--radius-lg);
-  border-left: 4px solid var(--primary-400);
+  border-inline-start: 4px solid var(--primary-400);
 }
 
 .companyDescription p {
   margin: 0;
   line-height: 1.6;
-  color: var(--neutral-300);
+  color: var(--footer-text-muted);
 }
 
 .certifications {
@@ -141,7 +144,7 @@
 .certText {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--neutral-200);
+  color: var(--footer-text-secondary);
 }
 
 /* 区域通用样式 */
@@ -171,7 +174,7 @@
   gap: var(--spacing-sm);
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--neutral-100);
+  color: var(--footer-text-primary);
   margin: 0 0 var(--spacing-xl);
   padding-bottom: var(--spacing-md);
   border-bottom: 2px solid rgba(103, 125, 214, 0.3);
@@ -199,7 +202,10 @@
   border: 1px solid rgba(255, 255, 255, 0.05);
   cursor: pointer;
   transition: all var(--transition-normal);
-  group: true;
+  width: 100%;
+  text-align: start;
+  font: inherit;
+  border: 0;
 }
 
 .productItem:hover {
@@ -209,7 +215,7 @@
 
 .productLabel {
   font-size: 0.95rem;
-  color: var(--neutral-200);
+  color: var(--footer-text-secondary);
   font-weight: 500;
 }
 
@@ -244,6 +250,10 @@
   position: relative;
   overflow: hidden;
   transform-style: preserve-3d;
+  width: 100%;
+  border-width: 1px;
+  text-align: center;
+  font: inherit;
 }
 
 .contactItem:hover {
@@ -288,7 +298,7 @@
 
 .contactLabel {
   font-size: 0.85rem;
-  color: var(--neutral-300);
+  color: var(--footer-text-muted);
   font-weight: 500;
   text-align: center;
 }
@@ -326,11 +336,16 @@
   border-radius: var(--radius-md);
   cursor: pointer;
   transition: all var(--transition-normal);
+  width: 100%;
+  text-align: start;
+  font: inherit;
+  border: 0;
+  background: transparent;
 }
 
 .linkItem:hover {
   background: rgba(103, 125, 214, 0.1);
-  padding-left: var(--spacing-lg);
+  padding-inline-start: var(--spacing-lg);
 }
 
 .linkBullet {
@@ -340,13 +355,13 @@
 }
 
 .linkText {
-  color: var(--neutral-300);
+  color: var(--footer-text-muted);
   font-size: 0.95rem;
   font-weight: 500;
 }
 
 .linkItem:hover .linkText {
-  color: var(--neutral-100);
+  color: var(--footer-text-primary);
 }
 
 /* 版权区域 */
@@ -381,11 +396,25 @@
   cursor: pointer;
 }
 
+.madeBadge {
+  position: relative;
+  isolation: isolate;
+  overflow: visible;
+  appearance: none;
+  font: inherit;
+  color: inherit;
+}
+
 .copyrightBadge:hover,
 .madeBadge:hover {
   background: rgba(103, 125, 214, 0.1);
   border-color: var(--primary-400);
   box-shadow: 0 4px 15px rgba(103, 125, 214, 0.2);
+}
+
+.madeBadge:focus-visible {
+  outline: 3px solid var(--primary-300);
+  outline-offset: 4px;
 }
 
 .copyrightIcon {
@@ -397,12 +426,23 @@
 .copyrightText,
 .madeText {
   font-size: 0.9rem;
-  color: var(--neutral-300);
+  color: var(--footer-text-muted);
   font-weight: 500;
 }
 
 .heartIcon {
   animation: heartbeat 2s ease-in-out infinite;
+}
+
+.floatingHeart {
+  position: absolute;
+  z-index: 2;
+  top: 12%;
+  left: 6%;
+  pointer-events: none;
+  line-height: 1;
+  filter: drop-shadow(0 2px 5px rgba(244, 63, 94, 0.35));
+  will-change: transform, opacity;
 }
 
 @keyframes heartbeat {

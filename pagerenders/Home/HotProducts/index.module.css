@@ -237,10 +237,21 @@
 }
 
 .arrowIcon {
+  background: transparent;
+  border: 0;
+  padding: 8px;
   color: var(--primary-600);
   display: flex;
   align-items: center;
   transition: all var(--transition-normal);
+}
+
+.productTitle a {
+  color: inherit;
+}
+
+.productCardWrapper:focus-within .hoverOverlay {
+  opacity: 1 !important;
 }
 
 /* 光晕效果 */

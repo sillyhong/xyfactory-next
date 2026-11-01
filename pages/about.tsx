@@ -6,18 +6,16 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { useRouter } from 'next/router';
 import { useChangeLanguage } from '@/utils/languge';
 
-
-
-const ContactUs: NextPage = () => {
+const AboutUs: NextPage = () => {
   const router = useRouter()
   useChangeLanguage(router)
 
-  const ContactUsPage = useMemo(() => {
+  const AboutUsPageComponent = useMemo(() => {
     return PageContainer(AboutUsPage);
   }, [])
 
   return (
-      <ContactUsPage />
+      <AboutUsPageComponent />
   )
 }
 
@@ -29,7 +27,7 @@ export const getStaticProps = async ({ locale }: any) => {
   })
 }
 
-export default ContactUs
+export default AboutUs
 
 
 

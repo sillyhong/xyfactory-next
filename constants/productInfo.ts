@@ -178,8 +178,8 @@ export const ProductInfos = (t: any) => {
       }
     },
     {
-      id: 'D033H',
-      path: `/product#doorhandle?id=D033H`,
+      id: 'D661H',
+      path: `/product#doorhandle?id=D661H`,
       homeProductCategory: true,
       src: doorhandlesD661H1,
       desc: t('product.product_categories.product_door_handle.2.desc'),

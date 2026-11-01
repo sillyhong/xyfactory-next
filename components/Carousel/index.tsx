@@ -1,8 +1,10 @@
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { checkIsMobile } from '@/utils/mobile';
 import styles from './index.module.css';
 
@@ -15,16 +17,28 @@ interface CarouselItem {
 interface CarouselProps {
   carouselList: CarouselItem[];
   desc?: string;
+  variant?: 'hero' | 'product';
+  initialIndex?: number;
+  activeIndex?: number;
+  onSelect?: (index: number) => void;
+  autoPlay?: boolean;
 }
 
-function CarouselComp({ carouselList, desc }: CarouselProps) {
+function CarouselComp({ carouselList, desc, variant = 'hero', initialIndex = 0, activeIndex: controlledIndex, onSelect, autoPlay = true }: CarouselProps) {
+  const { t } = useTranslation('common');
+  const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [internalIndex, setInternalIndex] = useState(initialIndex);
   const [isPlaying, setIsPlaying] = useState(true);
+  const shouldReduceMotion = useReducedMotion();
+  const activeIndex = Math.max(0, Math.min(controlledIndex ?? internalIndex, Math.max(0, carouselList.length - 1)));
+  const canAutoPlay = autoPlay && isPlaying && !shouldReduceMotion;
   const { ref, inView } = useInView({
     threshold: 0.3,
     triggerOnce: false,
   });
+  const hasMultipleSlides = carouselList.length > 1;
+  const shouldShowScrollHint = carouselList.some((item) => item.title || item.desc);
 
   useEffect(() => {
     const checkResult = checkIsMobile();
@@ -32,17 +46,29 @@ function CarouselComp({ carouselList, desc }: CarouselProps) {
   }, []);
 
   useEffect(() => {
-    if (!isPlaying || !inView) return;
+    if (!carouselList.length) {
+      setInternalIndex(0);
+      return;
+    }
+
+    setInternalIndex(Math.max(0, Math.min(initialIndex, carouselList.length - 1)));
+  }, [carouselList.length, initialIndex]);
+
+  useEffect(() => {
+    if (!canAutoPlay || !inView || !hasMultipleSlides) return;
 
     const interval = setInterval(() => {
-      setActiveIndex((current) => (current + 1) % carouselList.length);
+      const nextIndex = (activeIndex + 1) % carouselList.length;
+      setInternalIndex(nextIndex);
+      onSelect?.(nextIndex);
     }, 5000);
 
     return () => clearInterval(interval);
-  }, [carouselList.length, isPlaying, inView]);
+  }, [activeIndex, carouselList.length, hasMultipleSlides, inView, canAutoPlay, onSelect]);
 
   const handleSelect = (selectedIndex: number) => {
-    setActiveIndex(selectedIndex);
+    setInternalIndex(selectedIndex);
+    onSelect?.(selectedIndex);
   };
 
   const handlePlayPause = () => {
@@ -50,13 +76,11 @@ function CarouselComp({ carouselList, desc }: CarouselProps) {
   };
 
   const goToPrevious = () => {
-    setActiveIndex((current) => 
-      current === 0 ? carouselList.length - 1 : current - 1
-    );
+    handleSelect(activeIndex === 0 ? carouselList.length - 1 : activeIndex - 1);
   };
 
   const goToNext = () => {
-    setActiveIndex((current) => (current + 1) % carouselList.length);
+    handleSelect((activeIndex + 1) % carouselList.length);
   };
 
   return (
@@ -65,40 +89,42 @@ function CarouselComp({ carouselList, desc }: CarouselProps) {
       initial={{ opacity: 0, y: 50 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      className={styles.carouselContainer}
+      className={`${styles.carouselContainer} ${variant === 'product' ? styles.productCarouselContainer : ''}`}
     >
-      <div className={styles.carouselWrapper}>
+      <div className={`${styles.carouselWrapper} ${variant === 'product' ? styles.productCarouselWrapper : ''}`}>
         <Carousel
           activeIndex={activeIndex}
           onSelect={handleSelect}
           controls={false}
           indicators={false}
+          interval={null}
           pause={false}
-          className={styles.modernCarousel}
+          className={`${styles.modernCarousel} ${variant === 'product' ? styles.productCarousel : ''}`}
+          style={variant === 'product' ? { height: 'auto', minHeight: 0, maxHeight: 'none', aspectRatio: '1 / 1' } : undefined}
         >
           {carouselList.map((item, index) => (
             <Carousel.Item key={`carousel-${index}`} className={styles.carouselItem}>
               <div className={styles.imageContainer}>
                 <motion.div
-                  initial={{ scale: 1.1 }}
+                  initial={{ scale: variant === 'product' ? 1 : 1.1 }}
                   animate={{ scale: 1 }}
                   transition={{ duration: 1.5, ease: "easeOut" }}
                   className={styles.imageWrapper}
                 >
                   <Image 
                     src={item.src} 
-                    alt={item.title || desc || 'Carousel image'} 
+                    alt={item.title || desc || t('common.product_image_alt')}
                     width={1920}
                     height={1080}
                     style={{ 
                       width: '100%',
                       height: '100%',
-                      objectFit: 'cover'
+                      objectFit: variant === 'product' ? 'contain' : 'cover'
                     }}
                     priority={index === 0}
                     loading={index === 0 ? 'eager' : 'lazy'}
                     quality={90}
-                    sizes="100vw"
+                    sizes={variant === 'product' ? '(max-width: 1024px) 100vw, 50vw' : '100vw'}
                     className={styles.carouselImage}
                   />
                   <div className={styles.imageOverlay}></div>
@@ -140,11 +166,19 @@ function CarouselComp({ carouselList, desc }: CarouselProps) {
                         transition={{ delay: 1.1, duration: 0.5 }}
                         className={styles.captionActions}
                       >
-                        <button className={`btn btn-primary ${styles.actionButton}`}>
-                          了解更多
+                        <button
+                          type="button"
+                          className={`btn btn-primary ${styles.actionButton}`}
+                          onClick={() => router.push('/about')}
+                        >
+                          {t('common.learn_more')}
                         </button>
-                        <button className={`btn btn-outline ${styles.actionButton}`}>
-                          联系我们
+                        <button
+                          type="button"
+                          className={`btn btn-outline ${styles.actionButton}`}
+                          onClick={() => router.push('/contact')}
+                        >
+                          {t('common.contact_us')}
                         </button>
                       </motion.div>
                     </div>
@@ -155,98 +189,105 @@ function CarouselComp({ carouselList, desc }: CarouselProps) {
           ))}
         </Carousel>
 
-        {/* 自定义控制器 */}
-        <div className={styles.customControls}>
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={goToPrevious}
-            className={`${styles.controlButton} ${styles.prevButton}`}
-            aria-label="Previous slide"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </motion.button>
+        {hasMultipleSlides && (
+          <>
+            {/* 自定义控制器 */}
+            <div className={styles.customControls}>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={goToPrevious}
+                className={`${styles.controlButton} ${styles.prevButton}`}
+                aria-label={t('common.previous_slide')}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M15 18L9 12L15 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={goToNext}
-            className={`${styles.controlButton} ${styles.nextButton}`}
-            aria-label="Next slide"
-          >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </motion.button>
+              <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={goToNext}
+                className={`${styles.controlButton} ${styles.nextButton}`}
+                aria-label={t('common.next_slide')}
+              >
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M9 18L15 12L9 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                </svg>
+              </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            onClick={handlePlayPause}
-            className={`${styles.controlButton} ${styles.playButton}`}
-            aria-label={isPlaying ? "Pause slideshow" : "Play slideshow"}
-          >
-            {isPlaying ? (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
-                <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
-              </svg>
-            ) : (
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                <polygon points="5,3 19,12 5,21" fill="currentColor"/>
-              </svg>
-            )}
-          </motion.button>
-        </div>
-
-        {/* 自定义指示器 */}
-        <div className={styles.customIndicators}>
-          {carouselList.map((_, index) => (
-            <motion.button
-              key={`indicator-${index}`}
-              whileHover={{ scale: 1.2 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={() => handleSelect(index)}
-              className={`${styles.indicator} ${
-                index === activeIndex ? styles.activeIndicator : ''
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            >
-              <div className={styles.indicatorProgress}>
-                {index === activeIndex && (
-                  <motion.div
-                    className={styles.progressBar}
-                    initial={{ width: 0 }}
-                    animate={{ width: '100%' }}
-                    transition={{ duration: 5, ease: 'linear' }}
-                    key={`progress-${activeIndex}`}
-                  />
+              {autoPlay && !shouldReduceMotion && <motion.button
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+                onClick={handlePlayPause}
+                className={`${styles.controlButton} ${styles.playButton}`}
+                aria-label={t(isPlaying ? 'common.pause_slideshow' : 'common.play_slideshow')}
+              >
+                {isPlaying ? (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <rect x="6" y="4" width="4" height="16" fill="currentColor"/>
+                    <rect x="14" y="4" width="4" height="16" fill="currentColor"/>
+                  </svg>
+                ) : (
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <polygon points="5,3 19,12 5,21" fill="currentColor"/>
+                  </svg>
                 )}
-              </div>
-            </motion.button>
-          ))}
-        </div>
+              </motion.button>}
+            </div>
+
+            {/* 自定义指示器 */}
+            <div className={styles.customIndicators}>
+              {carouselList.map((_, index) => (
+                <motion.button
+                  key={`indicator-${index}`}
+                  whileHover={{ scale: 1.2 }}
+                  whileTap={{ scale: 0.9 }}
+                  onClick={() => handleSelect(index)}
+                  className={`${styles.indicator} ${
+                    index === activeIndex ? styles.activeIndicator : ''
+                  }`}
+                  aria-label={t('common.go_to_slide', { index: index + 1 })}
+                  aria-current={index === activeIndex ? 'true' : undefined}
+                >
+                  <div className={styles.indicatorProgress}>
+                    {index === activeIndex && canAutoPlay && inView && (
+                      <motion.div
+                        className={styles.progressBar}
+                        initial={{ width: 0 }}
+                        animate={{ width: '100%' }}
+                        transition={{ duration: 5, ease: 'linear' }}
+                        key={`progress-${activeIndex}`}
+                      />
+                    )}
+                  </div>
+                </motion.button>
+              ))}
+            </div>
+          </>
+        )}
 
         {/* 滚动提示 */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2, duration: 0.8 }}
-          className={styles.scrollHint}
-        >
+        {shouldShowScrollHint && (
           <motion.div
-            animate={{ y: [0, 10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className={styles.scrollIcon}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 2, duration: 0.8 }}
+            className={styles.scrollHint}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <motion.div
+              animate={{ y: [0, 10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className={styles.scrollIcon}
+            >
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M7 10L12 15L17 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </motion.div>
+            <span className={styles.scrollText}>{t('common.scroll_to_explore')}</span>
           </motion.div>
-          <span className={styles.scrollText}>向下滚动探索更多</span>
-        </motion.div>
+        )}
       </div>
     </motion.div>
   );

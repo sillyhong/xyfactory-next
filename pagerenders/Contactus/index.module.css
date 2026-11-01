@@ -5,6 +5,7 @@
   overflow: hidden;
   min-height: 100vh;
   padding: var(--spacing-4xl) 0;
+  padding-bottom: 12px;
   isolation: isolate; /* 防止样式冲突 */
 }
 
@@ -57,8 +58,8 @@
   line-height: 1.6;
   margin-bottom: var(--spacing-3xl);
   max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
 }
 
 .heroStats {
@@ -372,6 +373,13 @@
 .contactButton:hover {
   background: linear-gradient(135deg, var(--primary-700) 0%, var(--primary-500) 100%);
   box-shadow: 0 4px 16px rgba(83, 101, 175, 0.3);
+}
+
+.contactButton:disabled {
+  cursor: default;
+  opacity: 0.72;
+  background: linear-gradient(135deg, rgba(83, 101, 175, 0.7) 0%, rgba(83, 101, 175, 0.55) 100%);
+  box-shadow: none;
 }
 
 .contactButton:active {
@@ -718,11 +726,11 @@
 /* 深色模式支持 */
 @media (prefers-color-scheme: dark) {
   .contactusSection {
-    background: linear-gradient(135deg, var(--neutral-900) 0%, rgba(83, 101, 175, 0.05) 50%, var(--neutral-800) 100%);
+    background: linear-gradient(135deg, var(--surface-page) 0%, rgba(83, 101, 175, 0.05) 50%, var(--surface-raised) 100%);
   }
   
   .heroTitle {
-    background: linear-gradient(135deg, var(--neutral-100) 0%, var(--primary-400) 100%);
+    background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-400) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -730,11 +738,11 @@
   
   .heroDescription,
   .sectionDescription {
-    color: var(--neutral-400);
+    color: var(--text-secondary);
   }
   
   .sectionTitle {
-    color: var(--neutral-100);
+    color: var(--text-primary);
   }
   
   .statItem,
@@ -755,13 +763,13 @@
   }
   
   .statLabel {
-    color: var(--neutral-400);
+    color: var(--text-secondary);
   }
   
   .contactTab {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
-    color: var(--neutral-300);
+    color: var(--text-primary);
   }
   
   .contactTab:hover {
@@ -775,22 +783,22 @@
   }
   
   .contactCardTitle h4 {
-    color: var(--neutral-200);
+    color: var(--text-primary);
   }
   
   .contactValue {
-    color: var(--neutral-400);
+    color: var(--text-secondary);
   }
   
   .formLabel {
-    color: var(--neutral-300);
+    color: var(--text-primary);
   }
   
   .formInput,
   .formTextarea {
     background: rgba(255, 255, 255, 0.05);
     border-color: rgba(255, 255, 255, 0.1);
-    color: var(--neutral-200);
+    color: var(--text-primary);
   }
   
   .formInput:focus,

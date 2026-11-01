@@ -17,7 +17,8 @@
             "en": "英文",
             "spanish": "西班牙文",
             "arabic": "阿拉伯文"
-        }
+        },
+        "tagline": "品质五金"
     },
     "carousel": {
         "title1": "追求高质量",
@@ -33,15 +34,39 @@
         "about_us": "公司介绍"
     },
     "home_hot_product": {
-        "sub_title": "热卖产品"
+        "sub_title": "热卖产品",
+        "description": "精选优质五金产品，为您的项目提供可靠的解决方案"
     },
     "home_product_categories": {
-        "sub_title": "产品分类"
+        "sub_title": "产品分类",
+        "description": "探索我们丰富的产品类别，涵盖门把手、淋浴铰链、玻璃配件等多个领域"
     },
     "home_about_us": {
-        "text_homepage_about_us": "<div class='home-aboutus'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，位于拥有“中国小五金之乡”之称的广东省高要市金利镇。 我们主要生产大门拉手、淋浴铰链和推拉门配件等五金产品。<br/><br/> 我们拥有先进的生产设备和一批技术精湛的技术工人，我们可以以十分优惠的价格为您提供高质量的产品。</br></br>我们还与肯德基、必胜客等国际知名企业形成长期合作关系，为他们提供玻璃门配件。<br/><br/>祥盈五金厂有多年的出口经验，尤其是出口到加拿大、荷兰和澳大利亚等国家。祥盈五金以“不断创新，精益求精，服务至上”为宗旨。愿与各客商携手共进，共创双赢。<br/><br/> 我们欢迎所有关于用于家庭、建筑和商业应用的玻璃以及铝制品的咨询， 热情欢迎国内外客商亲临或来电洽谈。</div>",
+        "text_homepage_about_us": "<div class='home-aboutus'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，位于拥有\\\"中国小五金之乡\\\"之称的广东省高要市金利镇。 我们主要生产大门拉手、淋浴铰链和推拉门配件等五金产品。<br/><br/> 我们拥有先进的生产设备和一批技术精湛的技术工人，我们可以以十分优惠的价格为您提供高质量的产品。</br></br>我们还与肯德基、必胜客等国际知名企业形成长期合作关系，为他们提供玻璃门配件。<br/><br/>祥盈五金厂有多年的出口经验，尤其是出口到加拿大、荷兰和澳大利亚等国家。祥盈五金以\\\"不断创新，精益求精，服务至上\\\"为宗旨。愿与各客商携手共进，共创双赢。<br/><br/> 我们欢迎所有关于用于家庭、建筑和商业应用的玻璃以及铝制品的咨询， 热情欢迎国内外客商亲临或来电洽谈。</div>",
         "text_view_more": "查看更多",
-        "sub_title": "祥盈五金"
+        "sub_title": "祥盈五金",
+        "image_alt": "祥盈五金厂",
+        "overlay_title": "专业制造",
+        "overlay_text": "精密制造 · 专注品质",
+        "stats": {
+            "years": "年行业经验",
+            "clients": "客户信赖",
+            "countries": "国家出口"
+        },
+        "features": {
+            "quality": {
+                "title": "品质保证",
+                "description": "严格的质量控制体系"
+            },
+            "delivery": {
+                "title": "快速交付",
+                "description": "高效的生产和物流"
+            },
+            "service": {
+                "title": "专业服务",
+                "description": "一对一客户服务支持"
+            }
+        }
     },
     "portfolio": {
         "title": "产品作品集",
@@ -125,7 +150,7 @@
             "title": "对我们的产品感兴趣？",
             "description": "联系我们获取更多信息和定制解决方案，我们将为您提供专业的服务",
             "contact": "立即联系",
-            "catalog": "下载目录"
+            "catalog": "浏览产品分类"
         }
     },
     "home_contact_us": {
@@ -154,16 +179,30 @@
     },
     "about_us": {
         "text_company_profile": "公司简介",
-        "text_homepage_about_us": "<div class='home-aboutus'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，位于拥有“中国小五金之乡”之称的广东省高要市金利镇。 我们主要生产大门拉手、淋浴铰链和推拉门配件等五金产品。<br/><br/> 我们拥有先进的生产设备和一批技术精湛的技术工人，我们可以以十分优惠的价格为您提供高质量的产品。</br></br>我们还与肯德基、必胜客等国际知名企业形成长期合作关系，为他们提供玻璃门配件。<br/><br/>祥盈五金厂有多年的出口经验，尤其是出口到加拿大、荷兰和澳大利亚等国家。祥盈五金以“不断创新，精益求精，服务至上”为宗旨。愿与各客商携手共进，共创双赢。<br/><br/> 我们欢迎所有关于用于家庭、建筑和商业应用的玻璃以及铝制品的咨询， 热情欢迎国内外客商亲临或来电洽谈。</div>",
+        "text_homepage_about_us": "<div class='home-aboutus'><strong>祥盈玻璃五金厂</strong>是一家拥有15年历史的工厂，位于拥有\\\"中国小五金之乡\\\"之称的广东省高要市金利镇。 我们主要生产大门拉手、淋浴铰链和推拉门配件等五金产品。<br/><br/> 我们拥有先进的生产设备和一批技术精湛的技术工人，我们可以以十分优惠的价格为您提供高质量的产品。</br></br>我们还与肯德基、必胜客等国际知名企业形成长期合作关系，为他们提供玻璃门配件。<br/><br/>祥盈五金厂有多年的出口经验，尤其是出口到加拿大、荷兰和澳大利亚等国家。祥盈五金以\\\"不断创新，精益求精，服务至上\\\"为宗旨。愿与各客商携手共进，共创双赢。<br/><br/> 我们欢迎所有关于用于家庭、建筑和商业应用的玻璃以及铝制品的咨询， 热情欢迎国内外客商亲临或来电洽谈。</div>",
+        "hero_banner_alt": "祥盈五金厂公司介绍横幅",
+        "hero_title": "关于祥盈五金",
+        "hero_subtitle": "专业五金制造商，品质与创新的完美结合",
+        "years_experience": "年经验",
+        "countries_served": "服务国家",
+        "happy_clients": "满意客户",
+        "advantages_title": "我们的优势",
+        "advantages_subtitle": "了解我们在五金制造行业的独特优势",
+        "feature_1": "15+年专业经验",
+        "feature_2": "ISO质量认证",
+        "feature_3": "全球销售网络",
+        "factory_image_alt": "祥盈五金厂生产基地图片",
+        "factory_info_title": "现代化生产基地",
+        "factory_info_text": "配备先进生产设备，确保产品品质",
         "about_us_advantages": {
-            "title1": "High Quality",
-            "desc1": "Xiangying's mission is to always adhere to making good products that are 'perfect and affordable'.",
-            "title2": "Professional Team",
-            "desc2": "We have many skilled technicians who have worked for us for many years. It has always been our philosophy to provide customers with products of consistent quality and high quality",
-            "title3": "Fast Delivery",
-            "desc3": "We have many years of export experience. No matter which city you are, we can transport the goods to your place as scheduled",
-            "title4": "OEM/ODM Service",
-            "desc4": "We have many years OEM experience for clients mainly from North America and Europe."
+            "title1": "高品质",
+            "desc1": "祥盈的使命是始终坚持制造\\\"完美且实惠\\\"的好产品。",
+            "title2": "专业团队",
+            "desc2": "我们拥有许多为我们工作多年的熟练技术人员。为客户提供品质稳定、质量上乘的产品一直是我们的理念。",
+            "title3": "快速交付",
+            "desc3": "我们有多年的出口经验。无论您在哪个城市，我们都能按时将货物运送到您的所在地。",
+            "title4": "OEM/ODM服务",
+            "desc4": "我们为主要来自北美和欧洲的客户提供多年的OEM经验。"
         }
     },
     "product": {
@@ -177,7 +216,6 @@
         "explore_more_text": "探索我们完整的产品系列，为您的需求找到完美的五金解决方案",
         "product_categories": {
             "product_door_handle": {
-                "title": "拉手系列",
                 "0": {
                     "title": "拉手系列",
                     "desc": "不锈钢304浴室门把手门拉手",
@@ -186,7 +224,8 @@
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
                         "product_finish": "刷镍、哑光黑、铬等等",
-                        "product_diameter": "68mm"
+                        "product_diameter": "68mm",
+                        "product_size": "/"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -195,7 +234,8 @@
                         "product_no": "XY-D033H",
                         "product_material": "SUS304",
                         "product_finish": "刷镍、哑光黑、铬等等",
-                        "product_diameter": "68mm"
+                        "product_diameter": "68mm",
+                        "product_size": "/"
                     }
                 },
                 "1": {
@@ -205,7 +245,8 @@
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "350mm-1800mm，可定制"
+                        "product_size": "350mm-1800mm，可定制",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -214,8 +255,10 @@
                         "product_no": "XY-D028H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "350mm-1800mm，可定制"
-                    }
+                        "product_size": "350mm-1800mm，可定制",
+                        "product_diameter": "/"
+                    },
+                    "title": "拉手系列"
                 },
                 "2": {
                     "desc": "高品质淋浴玻璃门拉手",
@@ -224,7 +267,8 @@
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "25*300*500mm，可定制"
+                        "product_size": "25*300*500mm，可定制",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -233,8 +277,10 @@
                         "product_no": "XY-D661H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "25*300*500mm，可定制"
-                    }
+                        "product_size": "25*300*500mm，可定制",
+                        "product_diameter": "/"
+                    },
+                    "title": "拉手系列"
                 },
                 "3": {
                     "desc": "高品质新型门把手浴室实心固定玻璃门拉手",
@@ -243,7 +289,8 @@
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "350mm-1800mm，可定制"
+                        "product_size": "350mm-1800mm，可定制",
+                        "product_diameter": "/"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -252,8 +299,10 @@
                         "product_no": "XY-D056H",
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_size": "350mm-1800mm，可定制"
-                    }
+                        "product_size": "350mm-1800mm，可定制",
+                        "product_diameter": "/"
+                    },
+                    "title": "拉手系列"
                 },
                 "4": {
                     "desc": "优质不锈钢无缝焊接管不锈钢方管圆管",
@@ -262,7 +311,8 @@
                         "product_no": "XY-D030H",
                         "product_material": "黄铜",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_glass_thinkness": "6-12mm"
+                        "product_glass_thinkness": "6-12mm",
+                        "product_diameter": "30mm"
                     },
                     "detail": {
                         "brand_name": "祥盈五金厂",
@@ -271,8 +321,10 @@
                         "product_no": "XY-D030H",
                         "product_material": "黄铜",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
-                        "product_glass_thinkness": "6-12mm"
-                    }
+                        "product_glass_thinkness": "6-12mm",
+                        "product_diameter": "30mm"
+                    },
+                    "title": "拉手系列"
                 },
                 "5": {
                     "desc": "玻璃门拉手 淋浴房 滑动玻璃门拉手门把手",
@@ -291,11 +343,12 @@
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_size": "350mm-1800mm，可定制"
-                    }
-                }
+                    },
+                    "title": "拉手系列"
+                },
+                "title": "拉手系列"
             },
             "product_shower_hinge": {
-                "title": "浴室夹系列",
                 "0": {
                     "desc": "热销壁90度玻璃夹不锈钢合页玻璃门浴室夹",
                     "profile": {
@@ -313,7 +366,8 @@
                         "product_material": "黄铜、SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "6-10mm"
-                    }
+                    },
+                    "title": "浴室夹系列"
                 },
                 "1": {
                     "desc": "90度淋浴房钢化玻璃固定夹玻璃门不锈钢门铰链",
@@ -332,7 +386,8 @@
                         "product_material": "黄铜、SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-12mm"
-                    }
+                    },
+                    "title": "浴室夹系列"
                 },
                 "2": {
                     "desc": "180度方形浴室门夹标准铰链玻璃门浴室夹",
@@ -351,7 +406,8 @@
                         "product_material": "黄铜、SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-12mm"
-                    }
+                    },
+                    "title": "浴室夹系列"
                 },
                 "3": {
                     "desc": "玻璃门配件135度淋浴铰链玻璃合页",
@@ -370,7 +426,8 @@
                         "product_material": "黄铜、SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-12mm"
-                    }
+                    },
+                    "title": "浴室夹系列"
                 },
                 "4": {
                     "desc": "180度玻璃夹淋浴门配件铰链玻璃门夹合页",
@@ -389,7 +446,8 @@
                         "product_material": "黄铜、SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-12mm"
-                    }
+                    },
+                    "title": "浴室夹系列"
                 },
                 "5": {
                     "desc": "用于无框玻璃淋浴房玻璃夹 0º 90º 135º 180º 玻璃对玻璃",
@@ -408,11 +466,12 @@
                         "product_material": "黄铜",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-10mm钢化玻璃"
-                    }
-                }
+                    },
+                    "title": "浴室夹系列"
+                },
+                "title": "浴室夹系列"
             },
             "product_pipe_connectors": {
-                "title": "管连接件系列",
                 "0": {
                     "title": "管连接件系列",
                     "desc": "不锈钢浴室五金配件管接头管连接件",
@@ -432,10 +491,10 @@
                         "product_finish": "镜光",
                         "product_glass_thinkness": "8-10mm"
                     }
-                }
+                },
+                "title": "管连接件系列"
             },
             "product_hanging_wheel": {
-                "title": "吊轮系列",
                 "0": {
                     "title": "吊轮系列",
                     "desc": "不锈钢玻璃推拉门滚轮组配件玻璃门吊轮",
@@ -455,10 +514,10 @@
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "6-12mm"
                     }
-                }
+                },
+                "title": "吊轮系列"
             },
             "product_bathroom_sliding_door_accessories": {
-                "title": "浴室移门配件",
                 "0": {
                     "title": "浴室移门配件",
                     "desc": "优质不锈钢无缝焊接管不锈钢方管圆管",
@@ -494,11 +553,12 @@
                         "product_material": "SUS304",
                         "product_finish": "砂光、镜光、哑光黑、镀金",
                         "product_glass_thinkness": "8-10mm钢化玻璃"
-                    }
-                }
+                    },
+                    "title": "浴室移门配件"
+                },
+                "title": "浴室移门配件"
             },
             "product_glass_floor_spring": {
-                "title": "地弹簧",
                 "0": {
                     "title": "地弹簧",
                     "desc": "G-220B地弹簧玻璃门木门有框门无框门自动关门配件地弹簧",
@@ -546,7 +606,8 @@
                         "product_no": "H-220C",
                         "product_material": "SUS304"
                     }
-                }
+                },
+                "title": "地弹簧"
             }
         },
         "product_labels": {
@@ -560,7 +621,79 @@
             "place_of_origin": "产地",
             "product_size": "尺寸",
             "product_glass_thinkness": "玻璃厚度"
-        }
+        },
+        "products_available": "可选产品",
+        "current_product": "当前产品",
+        "back_to_list": "返回列表",
+        "choose_category": "选择您偏好的产品类别",
+        "categories_total": "类别总数",
+        "specifications": "规格参数",
+        "product_details": "产品详情",
+        "features": "产品特性",
+        "product_specifications": "产品规格",
+        "specifications_count": "项规格",
+        "detailed_information": "详细信息",
+        "details_count": "项详情",
+        "feature_durability": "卓越耐用性",
+        "feature_durability_desc": "经久耐用，能够承受重度使用和恶劣环境",
+        "feature_efficiency": "高效性能",
+        "feature_efficiency_desc": "优化设计，提供最佳性能表现",
+        "feature_precision": "精密工程",
+        "feature_precision_desc": "按照精确规格和公差制造",
+        "feature_maintenance": "易于维护",
+        "feature_maintenance_desc": "清洁和维护简单，确保长期使用",
+        "product": "产品",
+        "unknown_category": "未知类别",
+        "product_highlights": "产品亮点",
+        "highlight_quality": "优质材料",
+        "highlight_precision": "精密制造",
+        "highlight_durability": "持久耐用",
+        "quick_specifications": "快速规格",
+        "contact_for_quote": "联系询价",
+        "save_to_favorites": "收藏",
+        "saved_to_favorites": "已收藏到本机",
+        "discover_our_collection": "探索我们的优质五金产品系列",
+        "products_found": "个产品",
+        "search_products": "搜索产品...",
+        "sort_default": "默认排序",
+        "sort_by_name": "按名称排序",
+        "sort_by_popular": "按热门排序",
+        "view_details": "查看详情",
+        "hot": "热门",
+        "high_quality_description": "高品质不锈钢结构，表面处理优良",
+        "durable": "耐用",
+        "premium": "优质",
+        "no_products_found": "未找到产品",
+        "try_different_search": "请尝试调整搜索或过滤条件",
+        "clear_filters": "清除筛选",
+        "explore_products": "浏览产品"
+    },
+    "common": {
+        "close": "关闭",
+        "back_to_top": "返回顶部",
+        "skip_to_content": "跳到正文",
+        "loading": "加载中...",
+        "learn_more": "了解更多",
+        "contact_us": "联系我们",
+        "scroll_to_explore": "向下滚动探索更多",
+        "view_details": "查看详情",
+        "contact_now": "立即咨询",
+        "high_quality": "高品质",
+        "durable": "耐用",
+        "precision": "精工制造",
+        "multiple_styles": "多样式",
+        "explore_category": "探索分类",
+        "product_category": "产品分类",
+        "product_image_alt": "产品图片",
+        "category_description": "专业级{{category}}产品，工艺精湛，品质可靠",
+        "view_all_categories": "查看所有产品分类",
+        "image_load_error": "图片加载失败",
+        "previous_slide": "上一张图片",
+        "next_slide": "下一张图片",
+        "pause_slideshow": "暂停轮播",
+        "play_slideshow": "播放轮播",
+        "go_to_slide": "查看第 {{index}} 张图片",
+        "toggle_navigation": "展开或收起导航"
     },
     "contact": {
         "contact_name": "名字",
@@ -574,7 +707,10 @@
         "connect": "联系",
         "scan_qr_code": "扫描二维码",
         "send_message": "发送消息",
-        "form_description": "请填写下面的表单，我们会尽快回复您",
+        "form_description": "填写咨询内容后，将在 WhatsApp 中生成消息，请确认后自行发送。本表单不会自动发送消息。",
+        "open_whatsapp": "前往 WhatsApp 确认发送",
+        "message_prepared": "咨询内容已准备好，请在 WhatsApp 中确认发送。这里保留了您的表单内容。",
+        "product_inquiry": "我想咨询 {{product}} 的报价。",
         "name": "姓名",
         "email": "邮箱",
         "tel": "电话",
