@@ -5,12 +5,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 First, run the development server:
 
 ```bash
+nvm use
+npm ci
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:7000](http://localhost:7000) with your browser to see the result. The repository is maintained with npm only; commit `package-lock.json` when dependencies change and do not use pnpm or yarn.
+
+The required runtime is Node.js 16.18.0 with npm 8.19.2. `.nvmrc` and `package.json` enforce these versions, and `.npmrc` enables strict dependency engine checks.
 
 You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
 
